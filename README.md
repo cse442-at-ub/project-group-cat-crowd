@@ -1,1 +1,1 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=11772137)
+Godot, gdscript, and C++ references can be found here; https://docs.google.com/document/d/1kCvJmuJuKmc5YA645kUwS2WyFPOf_n8m5yliRPooIw0/edit?usp=sharing
