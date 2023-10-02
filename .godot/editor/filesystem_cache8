@@ -1,4 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696187730
-icon.svg::CompressedTexture2D::1998394348202043497::1695000985::1695000985::1::::<><>::
-README.md::TextFile::-1::1696173686::0::1::::<><>::
+::res://::1696209169
+cafe_screen.tscn::PackedScene::5867140645898026242::1696205315::0::1::::<><>::
+cat_shop.tscn::PackedScene::8317158483307941660::1696205315::0::1::::<><>::
+garden_screen.tscn::PackedScene::8838431079461654944::1696205315::0::1::::<><>::
+home_screen.tscn::PackedScene::3264960691911371487::1696205315::0::1::::<><>::
+icon.svg::CompressedTexture2D::1998394348202043497::1696026901::1696026901::1::::<><>::
+kitchen_screen.tscn::PackedScene::7873365870363915135::1696208137::0::1::::<><>::uid://kdsqre5egvxx::::res://Temp Art/settings_temp.png<>uid://cvtvdwtq5tsr2::::res://Temp Art/shop_icon_temp.jpg<>uid://dqolioidpuoir::::res://Temp Art/Kitchen/floor_temp.jpg<>uid://dk5gaqy827sbi::::res://Temp Art/Kitchen/stove_temp.png<>uid://du5myxgdukr14::::res://Temp Art/cat1.png<>uid://885n84evkx0j::::res://Temp Art/cat2.png
+README.md::TextFile::-1::1696205315::0::1::::<><>::
+settings_screen.tscn::PackedScene::1757211129707989759::1696205315::0::1::::<><>::
+::res://Temp Art/::1696209173
+cat1.png::CompressedTexture2D::8625742936897985605::1695307617::1696207729::1::::<><>::
+cat2.png::CompressedTexture2D::2386202809322906903::1695307785::1696207728::1::::<><>::
+settings_temp.png::CompressedTexture2D::709203948659616937::1696206669::1696207405::1::::<><>::
+shop_icon_temp.jpg::CompressedTexture2D::6287311860974640477::1696207116::1696207405::1::::<><>::
+::res://Temp Art/Kitchen/::1696209173
+counter_temp.png::CompressedTexture2D::515690714002013572::1696209051::1696209186::1::::<><>::
+floor_temp.jpg::CompressedTexture2D::8311867758958819657::1696207961::1696207964::1::::<><>::
+stove_temp.png::CompressedTexture2D::7923447001023656002::1696207307::1696207966::1::::<><>::
