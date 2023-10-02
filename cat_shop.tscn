@@ -1,3 +1,134 @@
-[gd_scene format=3 uid="uid://dqq5ndeyi0m2o"]
+[gd_scene load_steps=6 format=3 uid="uid://dqq5ndeyi0m2o"]
+
+[ext_resource type="Texture2D" uid="uid://gxonma8hcl71" path="res://Cat Accessories Icon.png" id="1_rlynf"]
+[ext_resource type="Texture2D" uid="uid://cpj7yem3mbky1" path="res://Cafe Upgrades Icon.png" id="2_w5l67"]
+[ext_resource type="Texture2D" uid="uid://dkdkn5ivvfxbx" path="res://Cat Shop Icon.png" id="3_mu5at"]
+[ext_resource type="Texture2D" uid="uid://bs8wcow2rq42q" path="res://Exit Icon.png" id="4_1s4l3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_va5b8"]
+load_path = "res://.godot/imported/Coins Amount (2).png-7b180d3e1da1a8d0a78f49d9ecd8910e.ctex"
 
 [node name="Cat Shop" type="Node2D"]
+
+[node name="Background Color" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.694118, 0.65098, 0.494118, 1)
+
+[node name="Tabs Panel" type="Panel" parent="."]
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 632.0
+
+[node name="Accessories Icon" type="TextureRect" parent="."]
+offset_left = 24.0
+offset_top = 440.0
+offset_right = 232.0
+offset_bottom = 616.0
+texture = ExtResource("1_rlynf")
+
+[node name="Interior Icon" type="TextureRect" parent="."]
+offset_left = 32.0
+offset_top = 222.0
+offset_right = 216.0
+offset_bottom = 416.0
+texture = ExtResource("2_w5l67")
+
+[node name="Cat Icon" type="TextureRect" parent="."]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 232.0
+offset_bottom = 198.0
+texture = ExtResource("3_mu5at")
+
+[node name="Shop Panel" type="Panel" parent="."]
+offset_left = 248.0
+offset_top = 16.0
+offset_right = 1128.0
+offset_bottom = 632.0
+
+[node name="Exit Icon" type="TextureRect" parent="."]
+offset_left = 1075.0
+offset_top = 16.0
+offset_right = 1127.0
+offset_bottom = 64.0
+texture = ExtResource("4_1s4l3")
+
+[node name="Purchase Option 1" type="Panel" parent="."]
+offset_left = 320.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 192.0
+
+[node name="TextureRect" type="TextureRect" parent="Purchase Option 1"]
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 182.0
+texture = SubResource("CompressedTexture2D_va5b8")
+
+[node name="Purchase Option 2" type="Panel" parent="."]
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 640.0
+offset_bottom = 192.0
+
+[node name="Purchase Option 3" type="Panel" parent="."]
+offset_left = 704.0
+offset_top = 64.0
+offset_right = 832.0
+offset_bottom = 192.0
+
+[node name="Purchase Option 4" type="Panel" parent="."]
+offset_left = 896.0
+offset_top = 64.0
+offset_right = 1024.0
+offset_bottom = 192.0
+
+[node name="Purchase Option 5" type="Panel" parent="."]
+offset_left = 320.0
+offset_top = 256.0
+offset_right = 448.0
+offset_bottom = 384.0
+
+[node name="Purchase Option 6" type="Panel" parent="."]
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 640.0
+offset_bottom = 384.0
+
+[node name="Purchase Option 7" type="Panel" parent="."]
+offset_left = 704.0
+offset_top = 256.0
+offset_right = 832.0
+offset_bottom = 384.0
+
+[node name="Purchase Option 8" type="Panel" parent="."]
+offset_left = 896.0
+offset_top = 256.0
+offset_right = 1024.0
+offset_bottom = 384.0
+
+[node name="Purchase Option 9" type="Panel" parent="."]
+offset_left = 320.0
+offset_top = 448.0
+offset_right = 448.0
+offset_bottom = 576.0
+
+[node name="Purchase Option 10" type="Panel" parent="."]
+offset_left = 512.0
+offset_top = 448.0
+offset_right = 640.0
+offset_bottom = 576.0
+
+[node name="Purchase Option 11" type="Panel" parent="."]
+offset_left = 704.0
+offset_top = 448.0
+offset_right = 832.0
+offset_bottom = 576.0
+
+[node name="Purchase Option 12" type="Panel" parent="."]
+offset_left = 896.0
+offset_top = 448.0
+offset_right = 1024.0
+offset_bottom = 576.0
