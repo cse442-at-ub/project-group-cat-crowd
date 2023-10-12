@@ -1,0 +1,181 @@
+[gd_scene load_steps=26 format=3 uid="uid://lq6fkm38osu8"]
+
+[ext_resource type="Texture2D" uid="uid://bps6tdqpest1p" path="res://House_interior_by_Styl0o/living/individuals files/living-wall.png" id="1_r0qct"]
+[ext_resource type="Texture2D" uid="uid://dg8sr6ps3l1ec" path="res://House_interior_by_Styl0o/living/individuals files/living-floor.png" id="2_dv8yf"]
+[ext_resource type="Texture2D" uid="uid://beua2yh654x1i" path="res://House_interior_by_Styl0o/living/individuals files/shelf-books.png" id="3_j52k1"]
+[ext_resource type="Texture2D" uid="uid://bvxytsg8cvvxt" path="res://House_interior_by_Styl0o/living/individuals files/sofa.png" id="4_rnnu1"]
+[ext_resource type="Texture2D" uid="uid://dwy5vbve5phgj" path="res://House_interior_by_Styl0o/living/individuals files/window.png" id="5_xvvlb"]
+[ext_resource type="Texture2D" uid="uid://blb5xidy3nde5" path="res://House_interior_by_Styl0o/living/individuals files/computer.png" id="6_8oyvi"]
+[ext_resource type="Texture2D" uid="uid://b66h4spgvcewx" path="res://House_interior_by_Styl0o/kitchen/individuals files/door.png" id="7_oom72"]
+[ext_resource type="Texture2D" uid="uid://cjp5lc36nn8tf" path="res://House_interior_by_Styl0o/kitchen/individuals files/carpet.png" id="8_5o3m1"]
+[ext_resource type="Texture2D" uid="uid://fs8j3v0rp0ne" path="res://House_interior_by_Styl0o/kitchen/individuals files/watch.png" id="9_705cp"]
+[ext_resource type="Texture2D" uid="uid://dot3y1ajgfyhf" path="res://BVA2/ballBounce.png" id="10_7mc0w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nto8"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(0, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6wjw"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(15, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lui3"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(30, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt7mo"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(45, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rkf8"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(60, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os51l"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(75, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwl1o"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(90, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0de3p"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(105, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwe6j"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(120, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n28hb"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(135, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s04hh"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(150, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7313"]
+atlas = ExtResource("10_7mc0w")
+region = Rect2(165, 0, 15, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1pr5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nto8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6wjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lui3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt7mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rkf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_os51l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwl1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0de3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwe6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n28hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s04hh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7313")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_5nos8"]
+script/source = "extends AnimatedSprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _input(event):
+	if event is InputEventMouseButton:
+		$AnimationPlayer.play(\"move\")
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d31hk"]
+radius = 22.0227
+
+[node name="Lounge" type="Node2D"]
+
+[node name="Living-wall" type="Sprite2D" parent="."]
+position = Vector2(576.5, 264.5)
+scale = Vector2(2.39375, 4.48305)
+texture = ExtResource("1_r0qct")
+
+[node name="Living-floor" type="Sprite2D" parent="."]
+position = Vector2(576.5, 590)
+scale = Vector2(2.56667, 3.05263)
+texture = ExtResource("2_dv8yf")
+
+[node name="Shelf-books" type="Sprite2D" parent="."]
+position = Vector2(110.875, 384)
+scale = Vector2(5.1686, 5.77419)
+texture = ExtResource("3_j52k1")
+
+[node name="Sofa" type="Sprite2D" parent="."]
+position = Vector2(758, 452)
+scale = Vector2(6.94388, 5.75)
+texture = ExtResource("4_rnnu1")
+
+[node name="Window" type="Sprite2D" parent="."]
+position = Vector2(663, 208)
+scale = Vector2(4.11842, 4.13372)
+texture = ExtResource("5_xvvlb")
+
+[node name="Computer" type="Sprite2D" parent="."]
+position = Vector2(111, 187)
+scale = Vector2(2.82609, 2.41667)
+texture = ExtResource("6_8oyvi")
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(1032.13, 344)
+scale = Vector2(4.98077, 4.95333)
+texture = ExtResource("7_oom72")
+
+[node name="Carpet" type="Sprite2D" parent="."]
+position = Vector2(477, 575)
+scale = Vector2(10.0541, 5.6)
+texture = ExtResource("8_5o3m1")
+
+[node name="Watch" type="Sprite2D" parent="."]
+position = Vector2(394, 206)
+scale = Vector2(4.33333, 4.14706)
+texture = ExtResource("9_705cp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(273.375, 521)
+scale = Vector2(3.81667, 3.1)
+sprite_frames = SubResource("SpriteFrames_t1pr5")
+autoplay = "default"
+frame_progress = 0.0677515
+speed_scale = 2.0
+script = SubResource("GDScript_5nos8")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2(274, 531)
+shape = SubResource("CircleShape2D_d31hk")
