@@ -12,6 +12,7 @@ offset_bottom = 653.0
 texture = ExtResource("1_wwna8")
 
 [node name="potted plant" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 407.0
 offset_top = 371.0
 offset_right = 683.0
@@ -21,6 +22,7 @@ text = "potted plant image"
 
 [node name="TextEdit" type="TextEdit" parent="TextureRect"]
 custom_minimum_size = Vector2(300, 300)
+layout_mode = 0
 offset_left = 150.0
 offset_top = 72.0
 offset_right = 937.0
