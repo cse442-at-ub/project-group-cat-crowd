@@ -1,0 +1,136 @@
+[gd_scene load_steps=18 format=3 uid="uid://b4woqk0bdplph"]
+
+[ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="1_gaqpu"]
+[ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="2_65er1"]
+[ext_resource type="Texture2D" uid="uid://vkfu8qp3tvqu" path="res://Images and Vectors/Rectangle 11.png" id="3_jdads"]
+[ext_resource type="Theme" uid="uid://cb0wglo3womqd" path="res://Cafe Upgrades Shop/Interior Color 1.tres" id="3_kbhbf"]
+[ext_resource type="Theme" uid="uid://bmpfkqlyartyg" path="res://Cafe Upgrades Shop/Interior Color 2.tres" id="4_mps7y"]
+[ext_resource type="Theme" uid="uid://cvfg2s6hkenkl" path="res://Cafe Upgrades Shop/Accessory Button.tres" id="4_rptqs"]
+[ext_resource type="Theme" uid="uid://cg65komddhqen" path="res://Cafe Upgrades Shop/Interior Shop Button.tres" id="5_dt0fi"]
+[ext_resource type="Script" path="res://Cafe Upgrades Shop/Accessories Button.gd" id="5_qdn8h"]
+[ext_resource type="Theme" uid="uid://haxert1g42j1" path="res://Cafe Upgrades Shop/Interior Color 3.tres" id="5_rencg"]
+[ext_resource type="Theme" uid="uid://chbk3unwn4ubg" path="res://Cafe Upgrades Shop/Interior Color 4.tres" id="6_dv1it"]
+[ext_resource type="Theme" uid="uid://cs6f7h0rmqtyn" path="res://Cafe Upgrades Shop/Cat Shop Button.tres" id="6_jxlpj"]
+[ext_resource type="Theme" uid="uid://b11yeyywqh0k3" path="res://Cafe Upgrades Shop/Interior Color 5.tres" id="7_rmlqe"]
+[ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="7_ydqov"]
+[ext_resource type="Theme" uid="uid://cg0llh0yg4lvg" path="res://Cafe Upgrades Shop/Interior Color 6.tres" id="8_0aa0y"]
+[ext_resource type="Script" path="res://Cafe Upgrades Shop/Cat Shop Button.gd" id="8_aalu8"]
+[ext_resource type="Theme" uid="uid://bh3bbao56wq46" path="res://Cafe Upgrades Shop/Interior Color 7.tres" id="9_csan7"]
+[ext_resource type="Theme" uid="uid://dd4p3ntgal5or" path="res://Cafe Upgrades Shop/Interior Color 8.tres" id="10_aafjh"]
+
+[node name="Cafe Upgrades Shop" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_gaqpu")
+
+[node name="Purchase Options" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 24.0
+offset_right = 1112.0
+offset_bottom = 616.0
+texture = ExtResource("2_65er1")
+
+[node name="Color 1" type="Button" parent="TextureRect/Purchase Options"]
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 192.0
+offset_bottom = 232.0
+theme = ExtResource("3_kbhbf")
+
+[node name="Color 2" type="Button" parent="TextureRect/Purchase Options"]
+offset_left = 216.0
+offset_top = 38.0
+offset_right = 376.0
+offset_bottom = 232.0
+theme = ExtResource("4_mps7y")
+
+[node name="Color 3" type="Button" parent="TextureRect/Purchase Options"]
+offset_left = 400.0
+offset_top = 40.0
+offset_right = 560.0
+offset_bottom = 232.0
+theme = ExtResource("5_rencg")
+
+[node name="Color 4" type="Button" parent="TextureRect/Purchase Options"]
+offset_left = 584.0
+offset_top = 40.0
+offset_right = 744.0
+offset_bottom = 232.0
+theme = ExtResource("6_dv1it")
+
+[node name="Color 5" type="Button" parent="TextureRect/Purchase Options"]
+offset_left = 32.0
+offset_top = 320.0
+offset_right = 192.0
+offset_bottom = 504.0
+theme = ExtResource("7_rmlqe")
+
+[node name="Color 6" type="Button" parent="TextureRect/Purchase Options"]
+offset_left = 216.0
+offset_top = 320.0
+offset_right = 376.0
+offset_bottom = 504.0
+theme = ExtResource("8_0aa0y")
+
+[node name="Color 7" type="Button" parent="TextureRect/Purchase Options"]
+offset_left = 400.0
+offset_top = 316.0
+offset_right = 560.0
+offset_bottom = 504.0
+theme = ExtResource("9_csan7")
+
+[node name="Color 8" type="Button" parent="TextureRect/Purchase Options"]
+offset_left = 584.0
+offset_top = 320.0
+offset_right = 744.0
+offset_bottom = 504.0
+theme = ExtResource("10_aafjh")
+
+[node name="Shop Icons" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 256.0
+offset_bottom = 616.0
+texture = ExtResource("3_jdads")
+
+[node name="Accessories Button" type="Button" parent="TextureRect/Shop Icons"]
+layout_mode = 0
+offset_top = 392.0
+offset_right = 240.0
+offset_bottom = 576.0
+theme = ExtResource("4_rptqs")
+script = ExtResource("5_qdn8h")
+
+[node name="Interior Button" type="Button" parent="TextureRect/Shop Icons"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 208.0
+offset_right = 216.0
+offset_bottom = 383.0
+theme = ExtResource("5_dt0fi")
+
+[node name="Cat Shop Button" type="Button" parent="TextureRect/Shop Icons"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 224.0
+offset_bottom = 195.0
+theme = ExtResource("6_jxlpj")
+script = ExtResource("8_aalu8")
+
+[node name="Exit Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 30.0
+offset_right = 1104.0
+offset_bottom = 94.0
+theme = ExtResource("7_ydqov")
+
+[connection signal="pressed" from="TextureRect/Shop Icons/Accessories Button" to="TextureRect/Shop Icons/Accessories Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Shop Icons/Cat Shop Button" to="TextureRect/Shop Icons/Cat Shop Button" method="_on_pressed"]
