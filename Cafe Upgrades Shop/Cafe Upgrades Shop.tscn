@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b4woqk0bdplph"]
+[gd_scene load_steps=27 format=3 uid="uid://b4woqk0bdplph"]
 
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="1_gaqpu"]
 [ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="2_65er1"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" path="res://Cafe Upgrades Shop/Color 6.gd" id="14_gma6j"]
 [ext_resource type="Script" path="res://Cafe Upgrades Shop/Color 7.gd" id="16_yajtn"]
 [ext_resource type="Script" path="res://Cafe Upgrades Shop/Color 8.gd" id="18_7qeln"]
+[ext_resource type="Script" path="res://Cafe Upgrades Shop/Exit Button.gd" id="26_kyvmn"]
 
 [node name="Cafe Upgrades Shop" type="Node"]
 
@@ -155,6 +156,7 @@ offset_top = 30.0
 offset_right = 1104.0
 offset_bottom = 94.0
 theme = ExtResource("7_ydqov")
+script = ExtResource("26_kyvmn")
 
 [connection signal="pressed" from="TextureRect/Purchase Options/Color 1" to="TextureRect/Purchase Options/Color 1" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Purchase Options/Color 2" to="TextureRect/Purchase Options/Color 2" method="_on_pressed"]
@@ -166,3 +168,4 @@ theme = ExtResource("7_ydqov")
 [connection signal="pressed" from="TextureRect/Purchase Options/Color 8" to="TextureRect/Purchase Options/Color 8" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Shop Icons/Accessories Button" to="TextureRect/Shop Icons/Accessories Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Shop Icons/Cat Shop Button" to="TextureRect/Shop Icons/Cat Shop Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Exit Button" to="TextureRect/Exit Button" method="_on_pressed"]

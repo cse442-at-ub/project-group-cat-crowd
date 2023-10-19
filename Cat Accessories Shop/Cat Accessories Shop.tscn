@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://di4fn5n7xwnjw"]
+[gd_scene load_steps=25 format=3 uid="uid://di4fn5n7xwnjw"]
 
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="1_stsu1"]
 [ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="2_u8spd"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://Cat Accessories Shop/Cat Bowtie.gd" id="12_blm6p"]
 [ext_resource type="Script" path="res://Cat Accessories Shop/Cat Necklace.gd" id="14_hrwhy"]
 [ext_resource type="Script" path="res://Cat Accessories Shop/Cat Bell.gd" id="16_ussvf"]
+[ext_resource type="Script" path="res://Cat Accessories Shop/Exit Button.gd" id="24_olrtn"]
 
 [node name="Cat Accessories Shop" type="Node"]
 
@@ -144,6 +145,7 @@ offset_top = 30.0
 offset_right = 1104.0
 offset_bottom = 94.0
 theme = ExtResource("7_pcwhr")
+script = ExtResource("24_olrtn")
 
 [connection signal="pressed" from="TextureRect/Purchase Options/Cat Shirt" to="TextureRect/Purchase Options/Cat Shirt" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Purchase Options/Cat BFF CHarm" to="TextureRect/Purchase Options/Cat BFF CHarm" method="_on_pressed"]
@@ -154,3 +156,4 @@ theme = ExtResource("7_pcwhr")
 [connection signal="pressed" from="TextureRect/Purchase Options/Cat Bell" to="TextureRect/Purchase Options/Cat Bell" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Shop Icons/Interior Button" to="TextureRect/Shop Icons/Interior Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Shop Icons/Cat Shop Button" to="TextureRect/Shop Icons/Cat Shop Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Exit Button" to="TextureRect/Exit Button" method="_on_pressed"]

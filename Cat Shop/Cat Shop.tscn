@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dhrgaqpee34jd"]
+[gd_scene load_steps=27 format=3 uid="uid://dhrgaqpee34jd"]
 
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="1_8glfn"]
 [ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="2_i0rng"]
@@ -25,6 +25,7 @@
 [ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="15_uk0ma"]
 [ext_resource type="Script" path="res://Cat Shop/Scottish Fold Cat.gd" id="16_21vgx"]
 [ext_resource type="Script" path="res://Cat Shop/Sphynx Cat.gd" id="18_qfsfu"]
+[ext_resource type="Script" path="res://Cat Shop/Exit Button.gd" id="26_kbe07"]
 
 [node name="Node" type="Node"]
 
@@ -155,6 +156,7 @@ offset_top = 30.0
 offset_right = 1104.0
 offset_bottom = 94.0
 theme = ExtResource("15_uk0ma")
+script = ExtResource("26_kbe07")
 
 [connection signal="pressed" from="TextureRect/Purchase Options/Siamese Cat" to="TextureRect/Purchase Options/Siamese Cat" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Purchase Options/Persian Cat" to="TextureRect/Purchase Options/Persian Cat" method="_on_pressed"]
@@ -166,3 +168,4 @@ theme = ExtResource("15_uk0ma")
 [connection signal="pressed" from="TextureRect/Purchase Options/Sphynx Cat" to="TextureRect/Purchase Options/Sphynx Cat" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Shop Icons/Accessories Button" to="TextureRect/Shop Icons/Accessories Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Shop Icons/Interior Button" to="TextureRect/Shop Icons/Interior Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Exit Button" to="TextureRect/Exit Button" method="_on_pressed"]
