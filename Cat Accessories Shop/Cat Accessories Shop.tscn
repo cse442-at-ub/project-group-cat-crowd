@@ -1,21 +1,28 @@
-[gd_scene load_steps=17 format=3 uid="uid://di4fn5n7xwnjw"]
+[gd_scene load_steps=24 format=3 uid="uid://di4fn5n7xwnjw"]
 
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="1_stsu1"]
 [ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="2_u8spd"]
 [ext_resource type="Theme" uid="uid://de4rhh5705vb3" path="res://Cat Accessories Shop/Cat Shirt.tres" id="3_e2xjl"]
 [ext_resource type="Texture2D" uid="uid://vkfu8qp3tvqu" path="res://Images and Vectors/Rectangle 11.png" id="3_ivge6"]
+[ext_resource type="Script" path="res://Cat Accessories Shop/Cat Shirt.gd" id="4_4oddi"]
 [ext_resource type="Theme" uid="uid://d3mkg5s681lod" path="res://Cat Accessories Shop/Accessory Button.tres" id="4_ihkd8"]
 [ext_resource type="Theme" uid="uid://bcil0qjhw84x2" path="res://Cat Accessories Shop/CAT BFF Charm.tres" id="4_o2joe"]
 [ext_resource type="Theme" uid="uid://djpfshr8nx00b" path="res://Cat Accessories Shop/Interior Shop Button.tres" id="5_dps6j"]
 [ext_resource type="Theme" uid="uid://bml2nkeoauo5a" path="res://Cat Accessories Shop/Cat Top Hat.tres" id="5_ih34v"]
 [ext_resource type="Theme" uid="uid://5s32p8xqpdmy" path="res://Cat Accessories Shop/Cat Tie.tres" id="6_0t7wx"]
+[ext_resource type="Script" path="res://Cat Accessories Shop/Cat BFF CHarm.gd" id="6_64afp"]
 [ext_resource type="Script" path="res://Cat Accessories Shop/Interior Button.gd" id="6_aghhr"]
 [ext_resource type="Theme" uid="uid://bdpx5uqlvsf3y" path="res://Cat Accessories Shop/Cat Bowtie.tres" id="7_1m7s1"]
 [ext_resource type="Theme" uid="uid://clbmn4bm4yjwe" path="res://Cat Accessories Shop/Cat Shop Button.tres" id="7_7pht6"]
 [ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="7_pcwhr"]
 [ext_resource type="Script" path="res://Cat Accessories Shop/Cat Shop Button.gd" id="8_c7twy"]
+[ext_resource type="Script" path="res://Cat Accessories Shop/Cat Top Hat.gd" id="8_ong74"]
 [ext_resource type="Theme" uid="uid://bikd7vlxrefeg" path="res://Cat Accessories Shop/Cat Necklace.tres" id="8_wc2qk"]
 [ext_resource type="Theme" uid="uid://cnlttdcpoxokl" path="res://Cat Accessories Shop/Cat Bell.tres" id="9_2ql0c"]
+[ext_resource type="Script" path="res://Cat Accessories Shop/Cat Tie.gd" id="10_n62be"]
+[ext_resource type="Script" path="res://Cat Accessories Shop/Cat Bowtie.gd" id="12_blm6p"]
+[ext_resource type="Script" path="res://Cat Accessories Shop/Cat Necklace.gd" id="14_hrwhy"]
+[ext_resource type="Script" path="res://Cat Accessories Shop/Cat Bell.gd" id="16_ussvf"]
 
 [node name="Cat Accessories Shop" type="Node"]
 
@@ -42,6 +49,7 @@ offset_top = 40.0
 offset_right = 192.0
 offset_bottom = 232.0
 theme = ExtResource("3_e2xjl")
+script = ExtResource("4_4oddi")
 
 [node name="Cat BFF CHarm" type="Button" parent="TextureRect/Purchase Options"]
 layout_mode = 0
@@ -50,6 +58,7 @@ offset_top = 41.0
 offset_right = 376.0
 offset_bottom = 232.0
 theme = ExtResource("4_o2joe")
+script = ExtResource("6_64afp")
 
 [node name="Cat Top Hat" type="Button" parent="TextureRect/Purchase Options"]
 layout_mode = 0
@@ -58,6 +67,7 @@ offset_top = 40.0
 offset_right = 560.0
 offset_bottom = 232.0
 theme = ExtResource("5_ih34v")
+script = ExtResource("8_ong74")
 
 [node name="Cat Tie" type="Button" parent="TextureRect/Purchase Options"]
 layout_mode = 0
@@ -66,6 +76,7 @@ offset_top = 40.0
 offset_right = 744.0
 offset_bottom = 232.0
 theme = ExtResource("6_0t7wx")
+script = ExtResource("10_n62be")
 
 [node name="Cat Bowtie" type="Button" parent="TextureRect/Purchase Options"]
 layout_mode = 0
@@ -74,6 +85,7 @@ offset_top = 320.0
 offset_right = 192.0
 offset_bottom = 504.0
 theme = ExtResource("7_1m7s1")
+script = ExtResource("12_blm6p")
 
 [node name="Cat Necklace" type="Button" parent="TextureRect/Purchase Options"]
 layout_mode = 0
@@ -82,6 +94,7 @@ offset_top = 320.0
 offset_right = 376.0
 offset_bottom = 504.0
 theme = ExtResource("8_wc2qk")
+script = ExtResource("14_hrwhy")
 
 [node name="Cat Bell" type="Button" parent="TextureRect/Purchase Options"]
 layout_mode = 0
@@ -90,6 +103,7 @@ offset_top = 317.0
 offset_right = 560.0
 offset_bottom = 504.0
 theme = ExtResource("9_2ql0c")
+script = ExtResource("16_ussvf")
 
 [node name="Shop Icons" type="TextureRect" parent="TextureRect"]
 layout_mode = 0
@@ -131,5 +145,12 @@ offset_right = 1104.0
 offset_bottom = 94.0
 theme = ExtResource("7_pcwhr")
 
+[connection signal="pressed" from="TextureRect/Purchase Options/Cat Shirt" to="TextureRect/Purchase Options/Cat Shirt" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Cat BFF CHarm" to="TextureRect/Purchase Options/Cat BFF CHarm" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Cat Top Hat" to="TextureRect/Purchase Options/Cat Top Hat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Cat Tie" to="TextureRect/Purchase Options/Cat Tie" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Cat Bowtie" to="TextureRect/Purchase Options/Cat Bowtie" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Cat Necklace" to="TextureRect/Purchase Options/Cat Necklace" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Cat Bell" to="TextureRect/Purchase Options/Cat Bell" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Shop Icons/Interior Button" to="TextureRect/Shop Icons/Interior Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Shop Icons/Cat Shop Button" to="TextureRect/Shop Icons/Cat Shop Button" method="_on_pressed"]
