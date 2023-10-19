@@ -36,6 +36,7 @@ offset_bottom = 616.0
 texture = ExtResource("2_u8spd")
 
 [node name="Cat Shirt" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
 offset_left = 32.0
 offset_top = 40.0
 offset_right = 192.0
@@ -43,6 +44,7 @@ offset_bottom = 232.0
 theme = ExtResource("3_e2xjl")
 
 [node name="Cat BFF CHarm" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
 offset_left = 216.0
 offset_top = 41.0
 offset_right = 376.0
@@ -50,6 +52,7 @@ offset_bottom = 232.0
 theme = ExtResource("4_o2joe")
 
 [node name="Cat Top Hat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
 offset_left = 400.0
 offset_top = 40.0
 offset_right = 560.0
@@ -57,6 +60,7 @@ offset_bottom = 232.0
 theme = ExtResource("5_ih34v")
 
 [node name="Cat Tie" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
 offset_left = 584.0
 offset_top = 40.0
 offset_right = 744.0
@@ -64,6 +68,7 @@ offset_bottom = 232.0
 theme = ExtResource("6_0t7wx")
 
 [node name="Cat Bowtie" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
 offset_left = 32.0
 offset_top = 320.0
 offset_right = 192.0
@@ -71,6 +76,7 @@ offset_bottom = 504.0
 theme = ExtResource("7_1m7s1")
 
 [node name="Cat Necklace" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
 offset_left = 216.0
 offset_top = 320.0
 offset_right = 376.0
@@ -78,6 +84,7 @@ offset_bottom = 504.0
 theme = ExtResource("8_wc2qk")
 
 [node name="Cat Bell" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
 offset_left = 400.0
 offset_top = 317.0
 offset_right = 560.0
