@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dx6nwy4nhdpo7"]
+[gd_scene load_steps=6 format=3 uid="uid://dx6nwy4nhdpo7"]
 
 [ext_resource type="Texture2D" uid="uid://ouk26ryd5cjf" path="res://Garden Screen/garden.jpeg" id="1_jhvg4"]
+[ext_resource type="Texture2D" uid="uid://b1xx7a34xke41" path="res://Garden Screen/2785102.png" id="2_6mpgy"]
+[ext_resource type="Script" path="res://Garden Screen/Button.gd" id="3_jr841"]
+[ext_resource type="Texture2D" uid="uid://cxjlhqeoj03wr" path="res://Garden Screen/two-brown-wooden-sign-board-arrow-shape-on-pole-stick-simple-doodle-cartoon-drawing-png.png" id="4_i8cj4"]
+[ext_resource type="Script" path="res://Garden Screen/navigateCafe.gd" id="5_hvmm6"]
 
 [node name="Garden Screen" type="Node2D"]
 
@@ -10,26 +14,33 @@ scale = Vector2(1.56793, 1.55797)
 texture = ExtResource("1_jhvg4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 3.0
-offset_top = 8.0
-offset_right = 1154.0
+offset_left = -2.0
+offset_top = 2.0
+offset_right = 1157.0
 offset_bottom = 653.0
+tooltip_text = "Let's plant"
 
-[node name="potted plant" type="Button" parent="TextureRect"]
+[node name="Button" type="Button" parent="TextureRect"]
+editor_description = "Let's plant!"
 layout_mode = 0
-offset_left = 407.0
-offset_top = 371.0
-offset_right = 683.0
-offset_bottom = 629.0
-tooltip_text = "Sends you to planting screen"
-text = "potted plant image"
+offset_left = 490.0
+offset_top = 441.0
+offset_right = 1010.0
+offset_bottom = 961.0
+scale = Vector2(0.335977, 0.288521)
+icon = ExtResource("2_6mpgy")
+flat = true
+script = ExtResource("3_jr841")
 
-[node name="TextEdit" type="TextEdit" parent="TextureRect"]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 0
-offset_left = 150.0
-offset_top = 72.0
-offset_right = 937.0
-offset_bottom = 372.0
-theme_override_font_sizes/font_size = 100
-text = "Garden screen!"
+[node name="navigateCafe" type="Button" parent="TextureRect"]
+offset_left = 77.0
+offset_top = 366.0
+offset_right = 1334.0
+offset_bottom = 2294.0
+scale = Vector2(0.136687, 0.116618)
+icon = ExtResource("4_i8cj4")
+flat = true
+script = ExtResource("5_hvmm6")
+
+[connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/navigateCafe" to="TextureRect/navigateCafe" method="_on_pressed"]

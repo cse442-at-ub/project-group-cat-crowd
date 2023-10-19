@@ -1,16 +1,278 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696223137
-Cafe Upgrades Icon.png::CompressedTexture2D::5846239454484803386::1696219996::1696220040::1::::<><>::
-cafe_screen.tscn::PackedScene::5867140645898026242::1696220951::0::1::::<><>::
-Cat Accessories Icon.png::CompressedTexture2D::469487635180080806::1696219996::1696220040::1::::<><>::
-Cat Shop Icon.png::CompressedTexture2D::7867975595011604397::1696219996::1696220040::1::::<><>::
-cat_shop.tscn::PackedScene::8317158483307941660::1696220951::0::1::::<><>::uid://gxonma8hcl71::::res://Cat Accessories Icon.png<>uid://cpj7yem3mbky1::::res://Cafe Upgrades Icon.png<>uid://dkdkn5ivvfxbx::::res://Cat Shop Icon.png<>uid://bs8wcow2rq42q::::res://Exit Icon.png
-Coins Amount (2).png::CompressedTexture2D::6264717560138631317::1696219996::1696220040::1::::<><>::
-Exit Icon.png::CompressedTexture2D::3719284451053065226::1696219996::1696220040::1::::<><>::
-garden.jpeg::CompressedTexture2D::1131923299179839085::1696223137::1696223137::1::::<><>::
-garden_screen.tscn::PackedScene::8838431079461654944::1696220951::0::1::::<><>::
-home_screen.tscn::PackedScene::3264960691911371487::1696220951::0::1::::<><>::
-icon.svg::CompressedTexture2D::1998394348202043497::1696204527::1696204527::1::::<><>::
-kitchen_screen.tscn::PackedScene::7873365870363915135::1696220951::0::1::::<><>::
-README.md::TextFile::-1::1696219996::0::1::::<><>::
-settings_screen.tscn::PackedScene::1757211129707989759::1696220951::0::1::::<><>::
+::res://::1697751780
+AnimatedFood.gd::GDScript::-1::1697740912::0::1::::<>Sprite2D<>::
+AnimationPlayer.gd::GDScript::-1::1697472312::0::1::::<>AnimatedSprite2D<>::
+Cat1.gd::GDScript::-1::1697740912::0::1::::<>Sprite2D<>::
+Catfood1.gd::GDScript::-1::1697740912::0::1::::<>Sprite2D<>::
+catwalk.png::CompressedTexture2D::5522437251844170731::1697472312::1697472400::1::::<><>::
+export_presets.cfg::TextFile::-1::1697740912::0::1::::<><>::
+kitchen_screen.tscn::PackedScene::7873365870363915135::1697740912::0::1::::<><>::res://LeftDoorButton.gd<>uid://cc08l7m5eoopv
+LeftDoor.gd::GDScript::-1::1697740912::0::1::::<>Control<>::
+LeftDoorButton.gd::GDScript::-1::1697740912::0::1::::<>Button<>::
+lounge.tscn::PackedScene::806999024916614673::1697472312::0::1::::<><>::uid://bps6tdqpest1p
+RightDoor.gd::GDScript::-1::1697740912::0::1::::<>Button<>::
+Tree.gd::GDScript::-1::1697740912::0::1::::<>Sprite2D<>::
+::res://Art/::1697747580
+bubble.png::CompressedTexture2D::4984172433487184032::1697472312::1697472401::1::::<><>::
+cat1.png::CompressedTexture2D::8612551279823966122::1697472312::1697472401::1::::<><>::
+cat1fed.png::CompressedTexture2D::8061394360254007690::1697472312::1697472401::1::::<><>::
+cat2.png::CompressedTexture2D::5632442866862504022::1697472312::1697472401::1::::<><>::
+catfood1.png::CompressedTexture2D::8373633608373035143::1697740912::1697740953::1::::<><>::
+catfood2.png::CompressedTexture2D::7261899568716666565::1697740912::1697740953::1::::<><>::
+kitchen.png::CompressedTexture2D::4966853503661841083::1697740912::1697740922::1::::<><>::
+tree2.png::CompressedTexture2D::2726305669082652923::1697740912::1697740953::1::::<><>::
+tree.png::CompressedTexture2D::6030024782704385112::1697740912::1697740953::1::::<><>::
+::res://Art 2/::1697747918
+::res://BVA2/::1697747580
+ballBounce.png::CompressedTexture2D::8182873340214335867::1697472312::1697472401::1::::<><>::
+ballBounceHard.png::CompressedTexture2D::6244446592590518123::1697472312::1697472401::1::::<><>::
+ballFull.png::CompressedTexture2D::7078206988850254889::1697472312::1697472401::1::::<><>::
+ballRoll.png::CompressedTexture2D::9207019996077647454::1697472312::1697472401::1::::<><>::
+ballShot.png::CompressedTexture2D::7294281007489940300::1697472312::1697472401::1::::<><>::
+beachbkgIso.png::CompressedTexture2D::3777369776957618351::1697472312::1697472401::1::::<><>::
+beachbkgO.png::CompressedTexture2D::914272463550571482::1697472312::1697472401::1::::<><>::
+bubbleOK.png::CompressedTexture2D::6601969076215451458::1697472312::1697472401::1::::<><>::
+net0.png::CompressedTexture2D::3806995563165251433::1697472312::1697472401::1::::<><>::
+playerBlock.png::CompressedTexture2D::3418391660598381430::1697472312::1697472401::1::::<><>::
+playerIdle.png::CompressedTexture2D::6286033973933599580::1697472312::1697472401::1::::<><>::
+playerReception.png::CompressedTexture2D::211567705166183092::1697472312::1697472401::1::::<><>::
+playerRun.png::CompressedTexture2D::3302607432381980239::1697472312::1697472401::1::::<><>::
+playerSlide.png::CompressedTexture2D::3986847732838071950::1697472312::1697472401::1::::<><>::
+playerSmash.png::CompressedTexture2D::2706526381420095614::1697472312::1697472401::1::::<><>::
+pushbutton.png::CompressedTexture2D::7097488100141684333::1697472312::1697472401::1::::<><>::
+shadow1.png::CompressedTexture2D::76761823596452769::1697472312::1697472401::1::::<><>::
+::res://BVA2 2/::1697747931
+::res://Cafe Upgrades Shop/::1697747981
+Accessories Button.gd::GDScript::-1::1697472312::0::1::::<>Button<>::
+Accessory Button.tres::Theme::6257542484588035443::1697740912::0::1::::<><>::uid://drjkathbvj1ij
+Cafe Upgrades Shop.tscn::PackedScene::4468192634290223161::1697740912::0::1::::<><>::uid://7vyub2piyyeo
+Cat Shop Button.gd::GDScript::-1::1697472312::0::1::::<>Button<>::
+Cat Shop Button.tres::Theme::6100597400688078377::1697740912::0::1::::<><>::uid://dv03610qirkrx
+Interior Color 1.tres::Theme::4895986744166289827::1697740912::0::1::::<><>::uid://nk18vmt1u1py
+Interior Color 2.tres::Theme::3259974775020859594::1697740912::0::1::::<><>::uid://cud2f70km3i1c
+Interior Color 3.tres::Theme::492726462914221696::1697740912::0::1::::<><>::uid://c0l4lw0d0d7k2
+Interior Color 4.tres::Theme::5266885894331065264::1697740912::0::1::::<><>::uid://d4ddc3byobnv
+Interior Color 5.tres::Theme::4266470089546486476::1697740912::0::1::::<><>::uid://cand1vd5hsmrc
+Interior Color 6.tres::Theme::5246271811102458628::1697740912::0::1::::<><>::uid://kayflx4wgsmm
+Interior Color 7.tres::Theme::2935607692092307993::1697740912::0::1::::<><>::uid://dgmiivaqcib2j
+Interior Color 8.tres::Theme::7430657006409883709::1697740912::0::1::::<><>::uid://ldk13qsotjib
+Interior Shop Button.tres::Theme::5259810261317456413::1697740912::0::1::::<><>::uid://dhqqyj52fi8c1
+::res://Cafe Upgrades Shop 2/::1697747931
+::res://Cat Accessories Shop/::1697747981
+Accessories Button.gd::GDScript::-1::1697472312::0::1::::<>Button<>::
+Accessory Button.tres::Theme::9149941695644637387::1697740912::0::1::::<><>::uid://drjkathbvj1ij
+Cat Accessories Shop.tscn::PackedScene::7780968152604402780::1697740912::0::1::::<><>::uid://7vyub2piyyeo
+Cat Bell.tres::Theme::5709192204282856335::1697740912::0::1::::<><>::uid://bbgg3tnjshalf
+CAT BFF Charm.tres::Theme::2544026779395318309::1697740912::0::1::::<><>::uid://cau0dt0rdvy3r
+Cat Bowtie.tres::Theme::2629404021281310884::1697740912::0::1::::<><>::uid://dk6ia5blku8cu
+Cat Necklace.tres::Theme::2968815627772311154::1697740912::0::1::::<><>::uid://du5iy524bnctq
+Cat Shirt.tres::Theme::7500929485429659282::1697740912::0::1::::<><>::uid://byptvufd7ble5
+Cat Shop Button.gd::GDScript::-1::1697472312::0::1::::<>Button<>::
+Cat Shop Button.tres::Theme::5547736369699471204::1697740912::0::1::::<><>::uid://dv03610qirkrx
+Cat Tie.tres::Theme::2144573240842728148::1697740912::0::1::::<><>::uid://dywsvnupgosy0
+Cat Top Hat.tres::Theme::3253058068819223700::1697740912::0::1::::<><>::uid://qirnudnqfakr
+Interior Button.gd::GDScript::-1::1697472312::0::1::::<>Button<>::
+Interior Shop Button.tres::Theme::7822263434829412895::1697740912::0::1::::<><>::uid://dhqqyj52fi8c1
+::res://Cat Accessories Shop 2/::1697747931
+::res://Cat Shop/::1697747981
+Accessories Button.gd::GDScript::-1::1697472312::0::1::::<>Button<>::
+Accessory Button.tres::Theme::5508736731182856857::1697740912::0::1::::<><>::uid://drjkathbvj1ij
+Burmese Cat.tres::Theme::1104411395646504729::1697740912::0::1::::<><>::uid://58j14rx41aby
+Cat Shop Button.gd::GDScript::-1::1697472312::0::1::::<>Button<>::
+Cat Shop Button.tres::Theme::6485016318226304220::1697740912::0::1::::<><>::uid://dv03610qirkrx
+Cat Shop.tscn::PackedScene::7686043544055034761::1697472312::0::1::::<><>::uid://7vyub2piyyeo
+Exit Button.tres::Theme::6073732117856599749::1697740912::0::1::::<><>::uid://xyauyssr7fib
+Himalayan Cat.tres::Theme::8168487428368925204::1697740912::0::1::::<><>::uid://ctluy8ajymgha
+icon.svg::CompressedTexture2D::1998394348202043497::1697472312::1697472401::1::::<><>::
+Interior Button.gd::GDScript::-1::1697472312::0::1::::<>Button<>::
+Interior Shop Button.tres::Theme::7992492012143515277::1697740912::0::1::::<><>::uid://dhqqyj52fi8c1
+Persian Cat.tres::Theme::3341038786665922228::1697740912::0::1::::<><>::uid://dtfy6gndoj5cs
+Ragdoll Cat.tres::Theme::7750258972625712630::1697740912::0::1::::<><>::uid://cq32v1gs4vnyw
+README.md::TextFile::-1::1697472312::0::1::::<><>::
+Russian blue Cat.tres::Theme::6472972440057222805::1697740912::0::1::::<><>::uid://b64i3xugxfbso
+Scottish Fold Cat.tres::Theme::4716663410091427825::1697740912::0::1::::<><>::uid://fyshqdrqexki
+Siamese Cat.tres::Theme::1265447773867326904::1697740912::0::1::::<><>::uid://ci86gafjmvshf
+Sphynx Cat.tres::Theme::6633642891588367168::1697740912::0::1::::<><>::uid://b5kp3dn72uwwj
+::res://Cat Shop 2/::1697747931
+::res://Garden Screen/::1697750540
+2785102.png::CompressedTexture2D::4260264987467188580::1697747961::1697748020::1::::<><>::
+Button.gd::GDScript::-1::1697633392::0::1::::<>Button<>::
+garden.jpeg::CompressedTexture2D::1024588407957916191::1697472586::1697472711::1::::<><>::
+garden_screen.tscn::PackedScene::8838431079461654944::1697751761::0::1::::<><>::uid://ouk26ryd5cjf::::res://Garden Screen/garden.jpeg<>uid://b1xx7a34xke41::::res://Garden Screen/2785102.png
+two-brown-wooden-sign-board-arrow-shape-on-pole-stick-simple-doodle-cartoon-drawing-png.png::CompressedTexture2D::6406445405527208965::1697499754::1697751781::1::::<><>::
+::res://House_interior_by_Styl0o/::1697747981
+previewpng.png::CompressedTexture2D::3641082296987721736::1697472312::1697472403::1::::<><>::
+::res://House_interior_by_Styl0o/bathroom/::1697747569
+bathroom.png::CompressedTexture2D::4543723701960514081::1697472312::1697472401::1::::<><>::
+bathroom_spritesheet-bg.png::CompressedTexture2D::5649744595154379425::1697472312::1697472401::1::::<><>::
+bathroom_spritesheet.png::CompressedTexture2D::5450717999913881625::1697472312::1697472401::1::::<><>::
+preview-bathroom.png::CompressedTexture2D::8729028968599425457::1697472312::1697472403::1::::<><>::
+::res://House_interior_by_Styl0o/bathroom/individuals files/::1697747503
+bath-towel.png::CompressedTexture2D::2140949855115579700::1697472312::1697472401::1::::<><>::
+bathtub.png::CompressedTexture2D::4810815105995937424::1697472312::1697472401::1::::<><>::
+dirty-landry.png::CompressedTexture2D::5532969037782499044::1697472312::1697472401::1::::<><>::
+shampoo-soap.png::CompressedTexture2D::1460054001741401618::1697472312::1697472401::1::::<><>::
+shower-carpet.png::CompressedTexture2D::3889396515298399211::1697472312::1697472401::1::::<><>::
+shower-curtain.png::CompressedTexture2D::623647171117166592::1697472312::1697472401::1::::<><>::
+shower-drawer.png::CompressedTexture2D::8701580099828275840::1697472312::1697472401::1::::<><>::
+shower-floor.png::CompressedTexture2D::9187286805896736381::1697472312::1697472401::1::::<><>::
+shower-mirror.png::CompressedTexture2D::2812634233554898462::1697472312::1697472401::1::::<><>::
+shower-wall.png::CompressedTexture2D::493186343161705918::1697472312::1697472401::1::::<><>::
+toilet-paper.png::CompressedTexture2D::7738656106666303848::1697472312::1697472401::1::::<><>::
+toilet.png::CompressedTexture2D::9049359688680997293::1697472312::1697472401::1::::<><>::
+washbasin.png::CompressedTexture2D::3275526635503843940::1697472312::1697472401::1::::<><>::
+::res://House_interior_by_Styl0o/kitchen/::1697747578
+kitchen-spritesheet-bg.png::CompressedTexture2D::7672209437510454578::1697472312::1697472402::1::::<><>::
+kitchen-spritesheet.png::CompressedTexture2D::8667244255673287252::1697472312::1697472402::1::::<><>::
+kitcken-preview.png::CompressedTexture2D::7101840371726963167::1697472312::1697472404::1::::<><>::
+kitcken.png::CompressedTexture2D::8675719469808704728::1697472312::1697472401::1::::<><>::
+::res://House_interior_by_Styl0o/kitchen/individuals files/::1697747519
+boxes.png::CompressedTexture2D::6565723481065096281::1697472312::1697472401::1::::<><>::
+carpet.png::CompressedTexture2D::5437347929682982183::1697472312::1697472401::1::::<><>::
+curtains-red.png::CompressedTexture2D::5723293589905330105::1697472312::1697472401::1::::<><>::
+door.png::CompressedTexture2D::4626748322713693683::1697472312::1697472401::1::::<><>::
+drawer.png::CompressedTexture2D::4479959490823319247::1697472312::1697472401::1::::<><>::
+dustbin.png::CompressedTexture2D::6044780016992661137::1697472312::1697472401::1::::<><>::
+floor-kitchen.png::CompressedTexture2D::4087471536028613674::1697472312::1697472401::1::::<><>::
+fridge.png::CompressedTexture2D::2171341843857031755::1697472312::1697472402::1::::<><>::
+glass.png::CompressedTexture2D::1933113808594491459::1697472312::1697472402::1::::<><>::
+jar-brown.png::CompressedTexture2D::3132120486422058234::1697472312::1697472402::1::::<><>::
+jar-green.png::CompressedTexture2D::3496369361999504090::1697472312::1697472402::1::::<><>::
+jar-red.png::CompressedTexture2D::6029402825175220876::1697472312::1697472402::1::::<><>::
+jar-silver.png::CompressedTexture2D::2227526491635580525::1697472312::1697472402::1::::<><>::
+jar-yellow.png::CompressedTexture2D::966025962198251363::1697472312::1697472402::1::::<><>::
+jars.png::CompressedTexture2D::4231716173443243408::1697472312::1697472402::1::::<><>::
+kitchen-drawer.png::CompressedTexture2D::5135048419491960621::1697472312::1697472402::1::::<><>::
+kitchen-shelf.png::CompressedTexture2D::3593716614421565897::1697472312::1697472402::1::::<><>::
+kitchen-window.png::CompressedTexture2D::172362054250239047::1697472312::1697472402::1::::<><>::
+kitchen-worktop.png::CompressedTexture2D::8381299090213804173::1697472312::1697472402::1::::<><>::
+mirror.png::CompressedTexture2D::6193033305764812709::1697472312::1697472402::1::::<><>::
+orangeJuiceGang.png::CompressedTexture2D::547290702006551234::1697472312::1697472402::1::::<><>::
+oven.png::CompressedTexture2D::5739228163930343335::1697472312::1697472402::1::::<><>::
+sink.png::CompressedTexture2D::8795594608509315727::1697472312::1697472401::1::::<><>::
+stool1.png::CompressedTexture2D::7611352154872383219::1697472312::1697472401::1::::<><>::
+stool.png::CompressedTexture2D::2539750728527648413::1697472312::1697472401::1::::<><>::
+umbrella.png::CompressedTexture2D::9118547693304476922::1697472312::1697472401::1::::<><>::
+utensils.png::CompressedTexture2D::4655587205409335533::1697472312::1697472401::1::::<><>::
+vase_flowers.png::CompressedTexture2D::2885804102105332217::1697472312::1697472401::1::::<><>::
+wall-kitchen.png::CompressedTexture2D::2101763797254884536::1697472312::1697472401::1::::<><>::
+washing-machine.png::CompressedTexture2D::7848060779403438024::1697472312::1697472401::1::::<><>::
+watch.png::CompressedTexture2D::390124254923594250::1697472312::1697472401::1::::<><>::
+::res://House_interior_by_Styl0o/living/::1697747570
+living-preview.png::CompressedTexture2D::6507257229303385031::1697472312::1697472404::1::::<><>::
+living-spritesheet-bg.png::CompressedTexture2D::472541041029012305::1697472312::1697472400::1::::<><>::
+living-spritesheet.png::CompressedTexture2D::2291708055959513754::1697472312::1697472400::1::::<><>::
+living.png::CompressedTexture2D::6082451208794501133::1697472312::1697472400::1::::<><>::
+::res://House_interior_by_Styl0o/living/individuals files/::1697747519
+3Books.png::CompressedTexture2D::7168713671507917422::1697472312::1697472401::1::::<><>::
+5Books.png::CompressedTexture2D::8866477080950856050::1697472312::1697472401::1::::<><>::
+8Books.png::CompressedTexture2D::4897680156264395721::1697472312::1697472401::1::::<><>::
+bed.png::CompressedTexture2D::6042552913260513000::1697472312::1697472401::1::::<><>::
+board-post-it.png::CompressedTexture2D::2289985238884865145::1697472312::1697472401::1::::<><>::
+Book.png::CompressedTexture2D::6436953819474793397::1697472312::1697472401::1::::<><>::
+chair1.png::CompressedTexture2D::3182330365401337191::1697472312::1697472401::1::::<><>::
+chair2.png::CompressedTexture2D::8456148929985962484::1697472312::1697472400::1::::<><>::
+chair3.png::CompressedTexture2D::9212069080095421634::1697472312::1697472400::1::::<><>::
+chimney.png::CompressedTexture2D::6461944896639014069::1697472312::1697472400::1::::<><>::
+coffe-table.png::CompressedTexture2D::1651152546372745735::1697472312::1697472400::1::::<><>::
+computer.png::CompressedTexture2D::3162425350457920154::1697472312::1697472400::1::::<><>::
+curtains-yellow.png::CompressedTexture2D::2564824102331650845::1697472312::1697472400::1::::<><>::
+dresser-double.png::CompressedTexture2D::4795086597582557803::1697472312::1697472400::1::::<><>::
+green-curtains.png::CompressedTexture2D::1828651206588787491::1697472312::1697472400::1::::<><>::
+lamp.png::CompressedTexture2D::6592143419430802482::1697472312::1697472400::1::::<><>::
+living-floor.png::CompressedTexture2D::7649644495409287946::1697472312::1697472400::1::::<><>::
+living-wall.png::CompressedTexture2D::3478328477671144319::1697472312::1697472400::1::::<><>::
+pillarForVase.png::CompressedTexture2D::4717967622349171128::1697472312::1697472400::1::::<><>::
+shelf-books.png::CompressedTexture2D::2708513102585648192::1697472312::1697472400::1::::<><>::
+shelf-empty.png::CompressedTexture2D::2573875847303928912::1697472312::1697472400::1::::<><>::
+sofa.png::CompressedTexture2D::3909359182537765341::1697472312::1697472400::1::::<><>::
+table.png::CompressedTexture2D::9166287050519572147::1697472312::1697472400::1::::<><>::
+vase_flowers.png::CompressedTexture2D::4522364375783725354::1697472312::1697472400::1::::<><>::
+watch.png::CompressedTexture2D::7068460769483945662::1697472312::1697472400::1::::<><>::
+weird-wardrobe.png::CompressedTexture2D::3246779738579868392::1697472312::1697472400::1::::<><>::
+window.png::CompressedTexture2D::8754820773855119497::1697472312::1697472400::1::::<><>::
+::res://House_interior_by_Styl0o 2/::1697747966
+::res://Images and Vectors/::1697747916
+Burmese.png::CompressedTexture2D::2174384209124989306::1697472312::1697472400::1::::<><>::
+Cafe Upgrades Icon.png::CompressedTexture2D::7684628851836541778::1697472312::1697472400::1::::<><>::
+Cat Accessories Icon.png::CompressedTexture2D::8371659971471222521::1697472312::1697472400::1::::<><>::
+Cat Bell.png::CompressedTexture2D::2469411116500786483::1697740912::1697740953::1::::<><>::
+Cat bowtie.png::CompressedTexture2D::7925633511536897852::1697740912::1697740953::1::::<><>::
+Cat Charm.png::CompressedTexture2D::4815653242009302369::1697740912::1697740953::1::::<><>::
+Cat Necklace.png::CompressedTexture2D::8625500470187294454::1697740912::1697740953::1::::<><>::
+Cat Shirt.png::CompressedTexture2D::4103110780221486714::1697740912::1697740953::1::::<><>::
+Cat Shop Background.png::CompressedTexture2D::2290887947883047254::1697472312::1697472400::1::::<><>::
+Cat Shop Icon.png::CompressedTexture2D::8686594051703542345::1697472312::1697472400::1::::<><>::
+Cat Tie.png::CompressedTexture2D::8890341730912956097::1697740912::1697740953::1::::<><>::
+Cat Top HAt.png::CompressedTexture2D::1140592980152444781::1697740912::1697740953::1::::<><>::
+Color 1.png::CompressedTexture2D::934737440272648862::1697740912::1697740953::1::::<><>::
+Color 2.png::CompressedTexture2D::6184461381022064054::1697740912::1697740953::1::::<><>::
+Color 3.png::CompressedTexture2D::6552052244458534071::1697740912::1697740953::1::::<><>::
+Color 4.png::CompressedTexture2D::270621142521128035::1697740912::1697740953::1::::<><>::
+Color 5.png::CompressedTexture2D::4799907968806711156::1697740912::1697740953::1::::<><>::
+Color 6.png::CompressedTexture2D::703355187810880348::1697740912::1697740953::1::::<><>::
+Color 7.png::CompressedTexture2D::7605668771969894659::1697740912::1697740953::1::::<><>::
+Color 8.png::CompressedTexture2D::778925510057705965::1697740912::1697740953::1::::<><>::
+Exit Icon (1).png::CompressedTexture2D::1663925474858979445::1697472312::1697472400::1::::<><>::
+Himalayan.png::CompressedTexture2D::6130396484424546182::1697472312::1697472400::1::::<><>::
+Persian.png::CompressedTexture2D::8504684871787626006::1697472312::1697472400::1::::<><>::
+Ragdoll.png::CompressedTexture2D::5955343678918454194::1697472312::1697472400::1::::<><>::
+Rectangle 11.png::CompressedTexture2D::1494950553488353856::1697472312::1697472400::1::::<><>::
+Rectangle 12.png::CompressedTexture2D::6853476608313544273::1697472312::1697472400::1::::<><>::
+Russian Blue.png::CompressedTexture2D::4622678768747995470::1697472312::1697472400::1::::<><>::
+Scottish Fold.png::CompressedTexture2D::401595536516710456::1697472312::1697472400::1::::<><>::
+Siamese.png::CompressedTexture2D::5404369532063446915::1697472312::1697472400::1::::<><>::
+Sphynx.png::CompressedTexture2D::4513690706638839133::1697472312::1697472400::1::::<><>::
+::res://Images and Vectors 2/::1697747940
+::res://mainCafe/::1697747916
+AnimationPlayer.gd::GDScript::-1::1697472312::0::1::::<>AnimatedSprite2D<>::
+cafeScreen.tscn::PackedScene::3502619850967775685::1697472312::0::1::::<><>::uid://obo18o6t6wi6
+new_animation.tres::Animation::5233640557943735874::1697472312::0::1::::<><>::
+new_rectangle_shape_2d.tres::RectangleShape2D::6451378844428484238::1697472312::0::1::::<><>::
+::res://mainCafe/Free_Kittens/::1697747578
+::res://mainCafe/Free_Kittens/Sleeping-Kittens-black/::1697747578
+black-kitten1.png::CompressedTexture2D::1228833164667816839::1697472312::1697472401::1::::<><>::
+black-kitten2.png::CompressedTexture2D::9159802890529555709::1697472312::1697472401::1::::<><>::
+black-kitten3.png::CompressedTexture2D::7995991901798737430::1697472312::1697472401::1::::<><>::
+black-kitten4.png::CompressedTexture2D::3375091119700999977::1697472312::1697472401::1::::<><>::
+black-kitten5.png::CompressedTexture2D::6709201248310437039::1697472312::1697472401::1::::<><>::
+black-kitten6.png::CompressedTexture2D::8209465615416399683::1697472312::1697472401::1::::<><>::
+black-kitten7.png::CompressedTexture2D::2665986774978984362::1697472312::1697472401::1::::<><>::
+black-kitten8.png::CompressedTexture2D::9098817976682756763::1697472312::1697472401::1::::<><>::
+::res://mainCafe/Free_Kittens/Sleeping-Kittens-blanc/::1697747578
+cute-kitten1.png::CompressedTexture2D::8061046721236468522::1697472312::1697472401::1::::<><>::
+cute-kitten2.png::CompressedTexture2D::7306705143999799673::1697472312::1697472401::1::::<><>::
+cute-kitten3.png::CompressedTexture2D::7927466969313786381::1697472312::1697472401::1::::<><>::
+cute-kitten4.png::CompressedTexture2D::7373821203964692787::1697472312::1697472401::1::::<><>::
+cute-kitten5.png::CompressedTexture2D::2020616236006662034::1697472312::1697472401::1::::<><>::
+cute-kitten6.png::CompressedTexture2D::2423016560985992134::1697472312::1697472401::1::::<><>::
+cute-kitten7.png::CompressedTexture2D::6641510747646553430::1697472312::1697472401::1::::<><>::
+cute-kitten8.png::CompressedTexture2D::2779440162593831995::1697472312::1697472401::1::::<><>::
+::res://mainCafe/Free_Kittens/Sleeping-Kittens-grey/::1697747578
+grey-kitten1.png::CompressedTexture2D::2864867758663298961::1697472312::1697472401::1::::<><>::
+grey-kitten2.png::CompressedTexture2D::3381231404882101303::1697472312::1697472401::1::::<><>::
+grey-kitten3.png::CompressedTexture2D::8865387302859504681::1697472312::1697472401::1::::<><>::
+grey-kitten4.png::CompressedTexture2D::4892146985843224955::1697472312::1697472401::1::::<><>::
+grey-kitten5.png::CompressedTexture2D::2447309772747237132::1697472312::1697472401::1::::<><>::
+grey-kitten6.png::CompressedTexture2D::7150781385858208694::1697472312::1697472400::1::::<><>::
+grey-kitten7.png::CompressedTexture2D::635317078438453497::1697472312::1697472400::1::::<><>::
+grey-kitten8.png::CompressedTexture2D::4243724006741181609::1697472312::1697472400::1::::<><>::
+::res://mainCafe/Free_Kittens/Sleeping-Kittens-outlines/::1697747570
+outlines-kitten1.png::CompressedTexture2D::327314143281658720::1697472312::1697472400::1::::<><>::
+outlines-kitten2.png::CompressedTexture2D::3440792029906870976::1697472312::1697472400::1::::<><>::
+outlines-kitten3.png::CompressedTexture2D::5952743991043825553::1697472312::1697472400::1::::<><>::
+outlines-kitten4.png::CompressedTexture2D::5817176720648822187::1697472312::1697472400::1::::<><>::
+outlines-kitten5.png::CompressedTexture2D::8010903479222603548::1697472312::1697472400::1::::<><>::
+outlines-kitten6.png::CompressedTexture2D::2577309769459884560::1697472312::1697472400::1::::<><>::
+outlines-kitten7.png::CompressedTexture2D::852206486841554763::1697472312::1697472400::1::::<><>::
+outlines-kitten8.png::CompressedTexture2D::1512464320532935324::1697472312::1697472400::1::::<><>::
+::res://mainCafe/Free_Kittens/Sleeping-Kittens-white/::1697747578
+white-kitten1.png::CompressedTexture2D::985606413559720207::1697472312::1697472400::1::::<><>::
+white-kitten2.png::CompressedTexture2D::4382646416490495266::1697472312::1697472400::1::::<><>::
+white-kitten3.png::CompressedTexture2D::1247421091459471685::1697472312::1697472400::1::::<><>::
+white-kitten4.png::CompressedTexture2D::3204651186544429627::1697472312::1697472400::1::::<><>::
+white-kitten5.png::CompressedTexture2D::6441628746958455434::1697472312::1697472400::1::::<><>::
+white-kitten6.png::CompressedTexture2D::4047887273109763683::1697472312::1697472400::1::::<><>::
+white-kitten7.png::CompressedTexture2D::1351056974358617039::1697472312::1697472400::1::::<><>::
+white-kitten8.png::CompressedTexture2D::5176590852961590908::1697472312::1697472401::1::::<><>::
+::res://mainCafe 2/::1697747973
