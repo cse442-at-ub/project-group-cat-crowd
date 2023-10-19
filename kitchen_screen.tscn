@@ -1,3 +1,56 @@
-[gd_scene format=3 uid="uid://dkf6gkryg4m7h"]
+[gd_scene load_steps=9 format=3 uid="uid://dkf6gkryg4m7h"]
+
+[ext_resource type="Texture2D" uid="uid://dbc7ln5nsqm7x" path="res://Art/kitchen.png" id="1_sajjf"]
+[ext_resource type="Texture2D" uid="uid://dux8pxhywgdrm" path="res://Art/cat1.png" id="2_dx61r"]
+[ext_resource type="Script" path="res://Cat1.gd" id="3_jgrvn"]
+[ext_resource type="Texture2D" uid="uid://cdamuedoxyaou" path="res://Art/bubble.png" id="4_j4ucp"]
+[ext_resource type="Texture2D" uid="uid://dm388tl8gpifi" path="res://Art/cat1fed.png" id="5_g6ipd"]
+[ext_resource type="Texture2D" uid="uid://cminrm3sylrwo" path="res://Art/cat2.png" id="6_1phkv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ilcpd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dx61r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g6ipd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5f4xw"]
+radius = 53.6656
 
 [node name="Kitchen Screen" type="Node2D"]
+
+[node name="Kitchen" type="Sprite2D" parent="."]
+position = Vector2(576, 322.25)
+scale = Vector2(1, 1.00696)
+texture = ExtResource("1_sajjf")
+
+[node name="Cat1" type="Sprite2D" parent="."]
+position = Vector2(368, 552)
+texture = ExtResource("2_dx61r")
+script = ExtResource("3_jgrvn")
+
+[node name="Bubble" type="Sprite2D" parent="Cat1"]
+position = Vector2(80, -144)
+texture = ExtResource("4_j4ucp")
+
+[node name="cat_ani" type="AnimatedSprite2D" parent="Cat1"]
+sprite_frames = SubResource("SpriteFrames_ilcpd")
+
+[node name="Area2D" type="Area2D" parent="Cat1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat1/Area2D"]
+position = Vector2(80, -160)
+shape = SubResource("CircleShape2D_5f4xw")
+
+[node name="Cat2" type="Sprite2D" parent="."]
+position = Vector2(752, 560)
+texture = ExtResource("6_1phkv")
+
+[connection signal="input_event" from="Cat1/Area2D" to="Cat1" method="_on_area_2d_input_event"]
