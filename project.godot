@@ -15,6 +15,10 @@ run/main_scene="res://cafeScreen.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://Cat Shop/icon.svg"
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [rendering]
 
 renderer/rendering_method="mobile"
