@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dx6nwy4nhdpo7"]
-
-[ext_resource type="Texture2D" uid="uid://qeku1y7jye5r" path="res://garden.jpeg" id="1_wwna8"]
+[gd_scene format=3 uid="uid://dx6nwy4nhdpo7"]
 
 [node name="Garden Screen" type="Node2D"]
 
@@ -9,7 +7,6 @@ offset_left = 3.0
 offset_top = 8.0
 offset_right = 1154.0
 offset_bottom = 653.0
-texture = ExtResource("1_wwna8")
 
 [node name="potted plant" type="Button" parent="TextureRect"]
 layout_mode = 0
