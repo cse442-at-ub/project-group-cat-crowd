@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Cat Cafe Creator"
-run/main_scene="res://cat_shop.tscn"
+run/main_scene="res://cafeScreen.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Cat Shop/icon.svg"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://x4duyo8adx0q"]
+
+[ext_resource type="Texture2D" uid="uid://2apdqnqhq512" path="res://Garden Screen/Screenshot 2023-10-19 at 22.53.24.png" id="1_hd6m5"]
+
+[node name="planting" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1181.0
+offset_bottom = 655.0
+texture = ExtResource("1_hd6m5")
