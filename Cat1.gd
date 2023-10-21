@@ -1,9 +1,10 @@
 extends Sprite2D
 
 
-func _on_area_2d_input_event(viewport, event, shape_idx):
+func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventScreenTouch:
 		if  event.pressed == true:
-			$cat1_ani.play()
+			$cat_ani.play()
+			$Bubble.hide()
 			await get_tree().create_timer(2.0).timeout
-			$cat1_ani.stop()
+			$cat_ani.stop()

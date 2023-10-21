@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://fs8j3v0rp0ne" path="res://House_interior_by_Styl0o/kitchen/individuals files/watch.png" id="9_705cp"]
 [ext_resource type="Texture2D" uid="uid://id8mw5841gfw" path="res://BVA2/ballBounceHard.png" id="10_xf654"]
 [ext_resource type="Script" path="res://Ball.gd" id="11_e3b8t"]
-[ext_resource type="Script" path="res://Cat1.gd" id="13_cohl0"]
+[ext_resource type="Script" path="res://LoungeCat1.gd" id="13_4caca"]
 [ext_resource type="Texture2D" uid="uid://2o5uda58u4np" path="res://cute-kitten-animation-RUN/cute-kitten-animation-RUN/sheets_500px/black.png" id="13_xymhd"]
 [ext_resource type="Script" path="res://Cat2.gd" id="14_odfjg"]
 [ext_resource type="Texture2D" uid="uid://ub1km0bnysdx" path="res://cute-kitten-animation-MEOW/meow-sheets-500px/orange-marks-sheet.png" id="15_y36q0"]
@@ -371,7 +371,7 @@ shape = SubResource("CircleShape2D_y8paw")
 [node name="Cat1" type="Sprite2D" parent="."]
 position = Vector2(1016, 504)
 scale = Vector2(0.18675, 0.189)
-script = ExtResource("13_cohl0")
+script = ExtResource("13_4caca")
 
 [node name="cat1_ani" type="AnimatedSprite2D" parent="Cat1"]
 position = Vector2(53.5471, -15.873)
