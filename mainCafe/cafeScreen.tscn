@@ -1,54 +1,282 @@
-[gd_scene load_steps=9 format=3 uid="uid://bp5xvwu0xi646"]
+[gd_scene load_steps=36 format=3 uid="uid://i58q7o3xprky"]
 
-[ext_resource type="Texture2D" uid="uid://obo18o6t6wi6" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten1.png" id="1_82wr4"]
-[ext_resource type="Texture2D" uid="uid://b3o8stmsswgdu" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten2.png" id="2_bidi2"]
-[ext_resource type="Texture2D" uid="uid://blwmewgigut4v" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten4.png" id="3_fqbqf"]
-[ext_resource type="Texture2D" uid="uid://r1i3wwhn2od6" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten3.png" id="4_js5mb"]
-[ext_resource type="Texture2D" uid="uid://bxw3d2po1bxkl" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten6.png" id="5_c28wp"]
-[ext_resource type="Script" path="res://AnimationPlayer.gd" id="6_mgk1p"]
-[ext_resource type="Shape2D" uid="uid://cx6djcwsnqd4y" path="res://mainCafe/new_rectangle_shape_2d.tres" id="7_uns6u"]
+[ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
+[ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
+[ext_resource type="Texture2D" uid="uid://bl4p34328ahp" path="res://mainCafe/IMG_1066.jpg" id="2_rx5ql"]
+[ext_resource type="Texture2D" uid="uid://obo18o6t6wi6" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten1.png" id="5_6lsip"]
+[ext_resource type="Texture2D" uid="uid://b3o8stmsswgdu" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten2.png" id="6_up6xk"]
+[ext_resource type="Texture2D" uid="uid://r1i3wwhn2od6" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten3.png" id="7_w2fcu"]
+[ext_resource type="Texture2D" uid="uid://blwmewgigut4v" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten4.png" id="8_aq0mp"]
+[ext_resource type="Texture2D" uid="uid://dkrpfrue2ixlw" path="res://Image 2.png" id="9_k687a"]
+[ext_resource type="Texture2D" uid="uid://cx1mxjc4bfuvy" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten5.png" id="9_xxvfn"]
+[ext_resource type="Texture2D" uid="uid://ia5rgifk0qy" path="res://mainCafe/buttons/IMG_1069.jpg" id="10_k036k"]
+[ext_resource type="Texture2D" uid="uid://tipyf5gstk20" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten7.png" id="10_x320m"]
+[ext_resource type="Texture2D" uid="uid://bxw3d2po1bxkl" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten6.png" id="11_8vp1n"]
+[ext_resource type="Script" path="res://mainCafe/buttonScripts/LoungeButton.gd" id="11_iuqeq"]
+[ext_resource type="Texture2D" uid="uid://deb3j0o5jdmlh" path="res://mainCafe/buttons/IMG_1070.jpg" id="12_ex7ly"]
+[ext_resource type="Texture2D" uid="uid://cf0txvp2qumam" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten8.png" id="12_w3nu3"]
+[ext_resource type="Script" path="res://mainCafe/buttonScripts/kitchen-button.gd" id="13_3yysu"]
+[ext_resource type="Texture2D" uid="uid://bc6myj7qcewrg" path="res://Cat Sprite Sheet.png" id="13_efoaw"]
+[ext_resource type="Texture2D" uid="uid://cx1i8olp4x4oh" path="res://mainCafe/buttons/IMG_1072.jpg" id="13_j1vkb"]
+[ext_resource type="Texture2D" uid="uid://il3fqubtw17s" path="res://mainCafe/buttons/IMG_1071.jpg" id="14_udo3l"]
+[ext_resource type="Script" path="res://mainCafe/buttonScripts/garden-button.gd" id="15_6hgod"]
+[ext_resource type="Script" path="res://mainCafe/buttonScripts/shop-button.gd" id="17_c5dm7"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_8bv5l"]
+[sub_resource type="GDScript" id="GDScript_klpkk"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+
+func _on_button_pressed():
+	get_tree().change_scene(\"res://lounge.tscn\")
+
+
+func _on_area_2d_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hdb81"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_82wr4")
+"texture": ExtResource("5_6lsip")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_bidi2")
+"texture": ExtResource("6_up6xk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_fqbqf")
+"texture": ExtResource("7_w2fcu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_js5mb")
+"texture": ExtResource("8_aq0mp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_c28wp")
+"texture": ExtResource("9_xxvfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x320m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8vp1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w3nu3")
+}],
+"loop": false,
+"name": &"whiteCatAni",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3c207"]
+size = Vector2(613.122, 434.694)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wsh8y"]
+load_path = "res://.godot/imported/black-kitten1.png-accb69368fb1ad0935a5f12060be9711.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1o6nv"]
+load_path = "res://.godot/imported/black-kitten2.png-fa95a141cf69378a81a06a63844a06d4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sgmee"]
+load_path = "res://.godot/imported/black-kitten3.png-063cd0537005c747399b31525e2024c4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_icfqc"]
+load_path = "res://.godot/imported/black-kitten4.png-73e7093d1c7768edbedcb7134d5666ca.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_52hcf"]
+load_path = "res://.godot/imported/black-kitten7.png-81addf26c3fb958345ba3468aaba9087.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ohwdl"]
+load_path = "res://.godot/imported/black-kitten5.png-ce3b1f464d964308c8b87df0ea201a00.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1qxrl"]
+load_path = "res://.godot/imported/black-kitten6.png-83fca8f30db837c518a6a47042f1e2c0.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6gv2r"]
+load_path = "res://.godot/imported/black-kitten8.png-08839f89d8f8afb4ff39ad075d1a1055.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gj26d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_wsh8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_1o6nv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_sgmee")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_icfqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_52hcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ohwdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_1qxrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_6gv2r")
+}],
+"loop": false,
+"name": &"blackCat",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnfsj"]
+size = Vector2(486.242, 333.216)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nd1p6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
 }],
 "loop": true,
-"name": &"sleeping_kitten",
+"name": &"default",
 "speed": 5.0
 }]
 
 [node name="cafeScreen" type="Node2D"]
 position = Vector2(704, 286)
+script = SubResource("GDScript_klpkk")
+
+[node name="catOnTower" type="Sprite2D" parent="."]
+position = Vector2(86, 1040)
+scale = Vector2(0.651609, 0.626333)
+script = ExtResource("1_y6b2j")
+
+[node name="whiteCatAni" type="AnimatedSprite2D" parent="catOnTower"]
+position = Vector2(3.06934, 30.3352)
+sprite_frames = SubResource("SpriteFrames_hdb81")
+animation = &"whiteCatAni"
+
+[node name="Area2D" type="Area2D" parent="catOnTower"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="catOnTower/Area2D"]
+position = Vector2(15.3467, 19.1592)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_3c207")
+
+[node name="catOnChair" type="Sprite2D" parent="."]
+position = Vector2(1915, 817)
+scale = Vector2(0.684307, 0.672918)
+script = ExtResource("1_swnrk")
+
+[node name="blackCatAni" type="AnimatedSprite2D" parent="catOnChair"]
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_gj26d")
+animation = &"blackCat"
+frame_progress = 0.82949
+
+[node name="Area2D" type="Area2D" parent="catOnChair"]
+position = Vector2(1761.77, -197.24)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="catOnChair/Area2D"]
+position = Vector2(-1761.77, 197.24)
+shape = SubResource("RectangleShape2D_lnfsj")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Img1060" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(1437, 906)
+scale = Vector2(1.83019, 1.7687)
+texture = ExtResource("2_rx5ql")
+
+[node name="Image2" type="Sprite2D" parent="."]
+position = Vector2(133, 51.5)
+scale = Vector2(1.11111, 1.02826)
+texture = ExtResource("9_k687a")
+
+[node name="LoungeButton" type="Button" parent="."]
+offset_left = 407.0
+offset_top = -108.0
+offset_right = 982.0
+offset_bottom = 95.0
+scale = Vector2(0.526965, 0.607897)
+action_mode = 0
+icon = ExtResource("10_k036k")
+script = ExtResource("11_iuqeq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(131, 1088)
+scale = Vector2(0.54562, 0.570833)
+sprite_frames = SubResource("SpriteFrames_nd1p6")
+autoplay = "default"
+frame_progress = 0.944868
+
+[node name="KitchenButton" type="Button" parent="."]
+offset_left = 408.0
+offset_top = 91.0
+offset_right = 997.0
+offset_bottom = 301.0
+scale = Vector2(0.526965, 0.607897)
+icon = ExtResource("12_ex7ly")
+script = ExtResource("13_3yysu")
+
+[node name="GardenButton" type="Button" parent="."]
+offset_left = 980.0
+offset_top = 79.0
+offset_right = 1546.0
+offset_bottom = 286.0
+scale = Vector2(0.526965, 0.607897)
+icon = ExtResource("13_j1vkb")
+script = ExtResource("15_6hgod")
+
+[node name="ShopButton" type="Button" parent="."]
+offset_left = 967.0
+offset_top = -105.0
+offset_right = 1520.0
+offset_bottom = 89.0
+scale = Vector2(0.526965, 0.607897)
+icon = ExtResource("14_udo3l")
+script = ExtResource("17_c5dm7")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-396, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(282, 46)
-shape = ExtResource("7_uns6u")
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1313, 1474)
+scale = Vector2(6.11914, 7.61428)
+texture = ExtResource("13_efoaw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(288, 68)
-sprite_frames = SubResource("SpriteFrames_8bv5l")
-animation = &"sleeping_kitten"
-autoplay = "sleeping_kitten"
-script = ExtResource("6_mgk1p")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/AnimatedSprite2D"]
-playback_process_mode = 2
-
-[connection signal="visibility_changed" from="CharacterBody2D/AnimatedSprite2D" to="CharacterBody2D/AnimatedSprite2D" method="_on_visibility_changed"]
+[connection signal="input_event" from="catOnTower/Area2D" to="catOnTower" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="catOnChair/Area2D" to="catOnChair" method="_on_area_2d_input_event"]
+[connection signal="pressed" from="LoungeButton" to="LoungeButton" method="_on_pressed"]
+[connection signal="pressed" from="KitchenButton" to="KitchenButton" method="_on_pressed"]
+[connection signal="pressed" from="GardenButton" to="GardenButton" method="_on_pressed"]
+[connection signal="pressed" from="ShopButton" to="ShopButton" method="_on_pressed"]
