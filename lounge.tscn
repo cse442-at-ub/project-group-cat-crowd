@@ -1,7 +1,7 @@
-[gd_scene load_steps=62 format=3 uid="uid://lq6fkm38osu8"]
+[gd_scene load_steps=60 format=3 uid="uid://lq6fkm38osu8"]
 
+[ext_resource type="Script" path="res://Navigation.gd" id="1_jkrfa"]
 [ext_resource type="Texture2D" uid="uid://bps6tdqpest1p" path="res://House_interior_by_Styl0o/living/individuals files/living-wall.png" id="1_r0qct"]
-[ext_resource type="Script" path="res://NavigationButton.gd" id="1_wyu4n"]
 [ext_resource type="Texture2D" uid="uid://dg8sr6ps3l1ec" path="res://House_interior_by_Styl0o/living/individuals files/living-floor.png" id="2_dv8yf"]
 [ext_resource type="Texture2D" uid="uid://beua2yh654x1i" path="res://House_interior_by_Styl0o/living/individuals files/shelf-books.png" id="3_j52k1"]
 [ext_resource type="Texture2D" uid="uid://bvxytsg8cvvxt" path="res://House_interior_by_Styl0o/living/individuals files/sofa.png" id="4_rnnu1"]
@@ -12,14 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://fs8j3v0rp0ne" path="res://House_interior_by_Styl0o/kitchen/individuals files/watch.png" id="9_705cp"]
 [ext_resource type="Texture2D" uid="uid://id8mw5841gfw" path="res://BVA2/ballBounceHard.png" id="10_xf654"]
 [ext_resource type="Script" path="res://Ball.gd" id="11_e3b8t"]
-[ext_resource type="Texture2D" uid="uid://cg3njp2w556wp" path="res://cute-kitten-animation-idle/cute-kitten-animation-idle/single_png_1000px/black1.png" id="12_8fksd"]
-[ext_resource type="Texture2D" uid="uid://dfk6yp2gr073u" path="res://cute-kitten-animation-MEOW/meow-single-1000px/orange-marks1.png" id="13_3jxtq"]
 [ext_resource type="Script" path="res://Cat1.gd" id="13_cohl0"]
 [ext_resource type="Texture2D" uid="uid://2o5uda58u4np" path="res://cute-kitten-animation-RUN/cute-kitten-animation-RUN/sheets_500px/black.png" id="13_xymhd"]
 [ext_resource type="Script" path="res://Cat2.gd" id="14_odfjg"]
 [ext_resource type="Texture2D" uid="uid://ub1km0bnysdx" path="res://cute-kitten-animation-MEOW/meow-sheets-500px/orange-marks-sheet.png" id="15_y36q0"]
 [ext_resource type="Texture2D" uid="uid://djghm8buy67p6" path="res://sleeping-kittens1.1/sleeping-kittens-new/grey-marks4.png" id="16_gjmck"]
-[ext_resource type="Texture2D" uid="uid://b82jswk2lyhc" path="res://cute-kitten-animation-RUN/cute-kitten-animation-RUN/single_png_750px/outline1.png" id="20_onfuq"]
+[ext_resource type="Texture2D" uid="uid://decsjf1uug2g7" path="res://PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle 2.png" id="19_2fo0b"]
 [ext_resource type="Texture2D" uid="uid://dv03610qirkrx" path="res://Images and Vectors/Cat Shop Icon.png" id="22_m7qtp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3up5"]
@@ -294,7 +292,7 @@ animations = [{
 radius = 362.029
 
 [node name="Lounge" type="Node2D"]
-script = ExtResource("1_wyu4n")
+script = ExtResource("1_jkrfa")
 
 [node name="Living-wall" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -354,7 +352,6 @@ texture = ExtResource("9_705cp")
 texture_filter = 1
 position = Vector2(286, 496)
 scale = Vector2(5.83333, 6.65)
-texture = ExtResource("10_xf654")
 hframes = 23
 script = ExtResource("11_e3b8t")
 
@@ -374,7 +371,6 @@ shape = SubResource("CircleShape2D_y8paw")
 [node name="Cat1" type="Sprite2D" parent="."]
 position = Vector2(1016, 504)
 scale = Vector2(0.18675, 0.189)
-texture = ExtResource("12_8fksd")
 script = ExtResource("13_cohl0")
 
 [node name="cat1_ani" type="AnimatedSprite2D" parent="Cat1"]
@@ -392,7 +388,6 @@ shape = SubResource("CircleShape2D_1ny2q")
 [node name="Cat 2" type="Sprite2D" parent="."]
 position = Vector2(424, 494)
 scale = Vector2(0.188, 0.195)
-texture = ExtResource("13_3jxtq")
 script = ExtResource("14_odfjg")
 
 [node name="cat2_ani" type="AnimatedSprite2D" parent="Cat 2"]
@@ -411,22 +406,21 @@ position = Vector2(661, 90)
 scale = Vector2(0.160645, 0.125081)
 texture = ExtResource("16_gjmck")
 
-[node name="NavigationButton" type="TouchScreenButton" parent="."]
-texture_filter = 1
-position = Vector2(5, -5)
-scale = Vector2(0.102667, 0.110667)
-texture_normal = ExtResource("20_onfuq")
-texture_pressed = ExtResource("20_onfuq")
+[node name="NavToCafe" type="TouchScreenButton" parent="."]
+position = Vector2(1150, 6)
+rotation = -4.71239
+scale = Vector2(0.166667, 0.160417)
+texture_normal = ExtResource("19_2fo0b")
+texture_pressed = ExtResource("19_2fo0b")
 
-[node name="ShopButton" type="TouchScreenButton" parent="."]
-texture_filter = 1
-position = Vector2(75.0001, 8)
-scale = Vector2(0.528169, 0.520325)
+[node name="NavToShop" type="TouchScreenButton" parent="."]
+position = Vector2(1006, 7)
+scale = Vector2(0.556338, 0.560976)
 texture_normal = ExtResource("22_m7qtp")
 texture_pressed = ExtResource("22_m7qtp")
 
 [connection signal="input_event" from="Ball/Area2D" to="Ball" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Cat1/Area2D" to="Cat1" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Cat 2/Area2D" to="Cat 2" method="_on_area_2d_input_event"]
-[connection signal="pressed" from="NavigationButton" to="." method="_on_navigation_button_pressed"]
-[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="NavToCafe" to="." method="_on_nav_to_cafe_pressed"]
+[connection signal="pressed" from="NavToShop" to="." method="_on_nav_to_shop_pressed"]
