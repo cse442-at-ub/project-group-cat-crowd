@@ -1,0 +1,171 @@
+[gd_scene load_steps=27 format=3 uid="uid://dhrgaqpee34jd"]
+
+[ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="1_8glfn"]
+[ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="2_i0rng"]
+[ext_resource type="Theme" uid="uid://sa80fnbv3skm" path="res://Cat Shop/Siamese Cat.tres" id="3_ggo0h"]
+[ext_resource type="Script" path="res://Cat Shop/Siamese Cat.gd" id="4_5a71t"]
+[ext_resource type="Theme" uid="uid://bnuookkt4f60o" path="res://Cat Shop/Persian Cat.tres" id="4_74fdx"]
+[ext_resource type="Theme" uid="uid://dom42apubrk17" path="res://Cat Shop/Himalayan Cat.tres" id="5_ucsc4"]
+[ext_resource type="Script" path="res://Cat Shop/Persian Cat.gd" id="6_8tx0g"]
+[ext_resource type="Theme" uid="uid://py8q2pew4kdd" path="res://Cat Shop/Burmese Cat.tres" id="6_ia8it"]
+[ext_resource type="Theme" uid="uid://diojvrxsy1xjy" path="res://Cat Shop/Ragdoll Cat.tres" id="7_vyn6v"]
+[ext_resource type="Script" path="res://Cat Shop/Himalayan Cat.gd" id="8_83ibn"]
+[ext_resource type="Theme" uid="uid://cyhs57nmnp3mf" path="res://Cat Shop/Russian blue Cat.tres" id="8_meide"]
+[ext_resource type="Theme" uid="uid://b8g100m834n8t" path="res://Cat Shop/Scottish Fold Cat.tres" id="9_543tf"]
+[ext_resource type="Theme" uid="uid://c1rnennsgv3rg" path="res://Cat Shop/Sphynx Cat.tres" id="10_3pad6"]
+[ext_resource type="Script" path="res://Cat Shop/Burmese Cat.gd" id="10_vtpme"]
+[ext_resource type="Texture2D" uid="uid://vkfu8qp3tvqu" path="res://Images and Vectors/Rectangle 11.png" id="11_pmukk"]
+[ext_resource type="Script" path="res://Cat Shop/Ragdoll Cat.gd" id="12_757is"]
+[ext_resource type="Theme" uid="uid://ckqqdbbam5xcj" path="res://Cat Shop/Accessory Button.tres" id="12_cs45q"]
+[ext_resource type="Script" path="res://Cat Shop/Accessories Button.gd" id="13_0jgky"]
+[ext_resource type="Theme" uid="uid://dl4vf8eubroq4" path="res://Cat Shop/Interior Shop Button.tres" id="13_obx3e"]
+[ext_resource type="Script" path="res://Cat Shop/Russian Blue Cat.gd" id="14_6evmi"]
+[ext_resource type="Theme" uid="uid://cynnjhuyrsvv5" path="res://Cat Shop/Cat Shop Button.tres" id="14_s0st5"]
+[ext_resource type="Script" path="res://Cat Shop/Interior Button.gd" id="15_16xfa"]
+[ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="15_uk0ma"]
+[ext_resource type="Script" path="res://Cat Shop/Scottish Fold Cat.gd" id="16_21vgx"]
+[ext_resource type="Script" path="res://Cat Shop/Sphynx Cat.gd" id="18_qfsfu"]
+[ext_resource type="Script" path="res://Cat Shop/Exit Button.gd" id="26_kbe07"]
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8glfn")
+
+[node name="Purchase Options" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 24.0
+offset_right = 1112.0
+offset_bottom = 616.0
+texture = ExtResource("2_i0rng")
+
+[node name="Siamese Cat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 192.0
+offset_bottom = 232.0
+theme = ExtResource("3_ggo0h")
+script = ExtResource("4_5a71t")
+
+[node name="Persian Cat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 32.0
+offset_right = 376.0
+offset_bottom = 232.0
+theme = ExtResource("4_74fdx")
+script = ExtResource("6_8tx0g")
+
+[node name="Himalayan Cat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 40.0
+offset_right = 560.0
+offset_bottom = 232.0
+theme = ExtResource("5_ucsc4")
+script = ExtResource("8_83ibn")
+
+[node name="Burmese Cat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 40.0
+offset_right = 744.0
+offset_bottom = 232.0
+theme = ExtResource("6_ia8it")
+script = ExtResource("10_vtpme")
+
+[node name="Ragdoll Cat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 320.0
+offset_right = 192.0
+offset_bottom = 504.0
+theme = ExtResource("7_vyn6v")
+script = ExtResource("12_757is")
+
+[node name="Russian Blue Cat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 320.0
+offset_right = 376.0
+offset_bottom = 504.0
+theme = ExtResource("8_meide")
+script = ExtResource("14_6evmi")
+
+[node name="Scottish Fold Cat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 296.0
+offset_right = 560.0
+offset_bottom = 504.0
+theme = ExtResource("9_543tf")
+script = ExtResource("16_21vgx")
+
+[node name="Sphynx Cat" type="Button" parent="TextureRect/Purchase Options"]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 320.0
+offset_right = 744.0
+offset_bottom = 504.0
+theme = ExtResource("10_3pad6")
+script = ExtResource("18_qfsfu")
+
+[node name="Shop Icons" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 256.0
+offset_bottom = 616.0
+texture = ExtResource("11_pmukk")
+
+[node name="Accessories Button" type="Button" parent="TextureRect/Shop Icons"]
+layout_mode = 0
+offset_top = 392.0
+offset_right = 240.0
+offset_bottom = 576.0
+theme = ExtResource("12_cs45q")
+script = ExtResource("13_0jgky")
+
+[node name="Interior Button" type="Button" parent="TextureRect/Shop Icons"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 208.0
+offset_right = 216.0
+offset_bottom = 383.0
+theme = ExtResource("13_obx3e")
+script = ExtResource("15_16xfa")
+
+[node name="Cat Shop Button" type="Button" parent="TextureRect/Shop Icons"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 224.0
+offset_bottom = 195.0
+theme = ExtResource("14_s0st5")
+
+[node name="Exit Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 30.0
+offset_right = 1104.0
+offset_bottom = 94.0
+theme = ExtResource("15_uk0ma")
+script = ExtResource("26_kbe07")
+
+[connection signal="pressed" from="TextureRect/Purchase Options/Siamese Cat" to="TextureRect/Purchase Options/Siamese Cat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Persian Cat" to="TextureRect/Purchase Options/Persian Cat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Himalayan Cat" to="TextureRect/Purchase Options/Himalayan Cat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Burmese Cat" to="TextureRect/Purchase Options/Burmese Cat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Ragdoll Cat" to="TextureRect/Purchase Options/Ragdoll Cat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Russian Blue Cat" to="TextureRect/Purchase Options/Russian Blue Cat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Scottish Fold Cat" to="TextureRect/Purchase Options/Scottish Fold Cat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Purchase Options/Sphynx Cat" to="TextureRect/Purchase Options/Sphynx Cat" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Shop Icons/Accessories Button" to="TextureRect/Shop Icons/Accessories Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Shop Icons/Interior Button" to="TextureRect/Shop Icons/Interior Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Exit Button" to="TextureRect/Exit Button" method="_on_pressed"]

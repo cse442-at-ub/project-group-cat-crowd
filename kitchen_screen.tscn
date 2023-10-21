@@ -1,3 +1,178 @@
-[gd_scene format=3 uid="uid://dkf6gkryg4m7h"]
+[gd_scene load_steps=22 format=3 uid="uid://dkf6gkryg4m7h"]
+
+[ext_resource type="Script" path="res://LeftDoorButton.gd" id="1_6suom"]
+[ext_resource type="Texture2D" uid="uid://cc08l7m5eoopv" path="res://Art/kitchen.png" id="1_sajjf"]
+[ext_resource type="Texture2D" uid="uid://dux8pxhywgdrm" path="res://Art/cat1.png" id="2_dx61r"]
+[ext_resource type="Script" path="res://RightDoor.gd" id="2_n2cej"]
+[ext_resource type="Script" path="res://Cat1.gd" id="3_jgrvn"]
+[ext_resource type="Texture2D" uid="uid://cdamuedoxyaou" path="res://Art/bubble.png" id="4_j4ucp"]
+[ext_resource type="Texture2D" uid="uid://dm388tl8gpifi" path="res://Art/cat1fed.png" id="5_g6ipd"]
+[ext_resource type="Texture2D" uid="uid://cminrm3sylrwo" path="res://Art/cat2.png" id="6_1phkv"]
+[ext_resource type="Texture2D" uid="uid://cr58vlaorwlmu" path="res://Art/tree.png" id="7_p70mq"]
+[ext_resource type="Texture2D" uid="uid://be3v4duirb2o2" path="res://Art/tree2.png" id="8_5rexy"]
+[ext_resource type="Texture2D" uid="uid://drkir0tw0bdv0" path="res://Art/catfood1.png" id="9_p1i43"]
+[ext_resource type="Script" path="res://Catfood1.gd" id="10_wnste"]
+[ext_resource type="Texture2D" uid="uid://dbpyophb3qfej" path="res://Art/catfood2.png" id="10_xhkxx"]
+[ext_resource type="Script" path="res://Tree.gd" id="11_g5fuv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ilcpd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dx61r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g6ipd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5f4xw"]
+radius = 53.6656
+
+[sub_resource type="GDScript" id="GDScript_6oyyq"]
+script/source = "extends Sprite2D
+
+
+
+
+func _on_area_2d_input_event(_viewport, _event, _shape_idx):
+	pass # Replace with function body.
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6yqt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_p1i43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xhkxx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0yf60"]
+radius = 94.3013
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_04axv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_p70mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5rexy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xvel7"]
+radius = 53.9999
+height = 353.139
 
 [node name="Kitchen Screen" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 43.0
+offset_top = 129.0
+offset_right = 152.0
+offset_bottom = 585.0
+action_mode = 0
+script = ExtResource("1_6suom")
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1000.0
+offset_top = 85.0
+offset_right = 1118.0
+offset_bottom = 575.0
+script = ExtResource("2_n2cej")
+
+[node name="Kitchen" type="Sprite2D" parent="."]
+position = Vector2(576, 322.25)
+scale = Vector2(1, 1.00696)
+texture = ExtResource("1_sajjf")
+
+[node name="Cat1" type="Sprite2D" parent="."]
+position = Vector2(368, 552)
+texture = ExtResource("2_dx61r")
+script = ExtResource("3_jgrvn")
+
+[node name="Bubble" type="Sprite2D" parent="Cat1"]
+position = Vector2(80, -144)
+texture = ExtResource("4_j4ucp")
+
+[node name="cat_ani" type="AnimatedSprite2D" parent="Cat1"]
+sprite_frames = SubResource("SpriteFrames_ilcpd")
+
+[node name="Area2D" type="Area2D" parent="Cat1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat1/Area2D"]
+position = Vector2(80, -160)
+shape = SubResource("CircleShape2D_5f4xw")
+
+[node name="Cat2" type="Sprite2D" parent="."]
+position = Vector2(815.375, 341.5)
+scale = Vector2(0.88369, 0.825)
+texture = ExtResource("6_1phkv")
+script = SubResource("GDScript_6oyyq")
+
+[node name="Catfood" type="Sprite2D" parent="."]
+position = Vector2(604, 529)
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("9_p1i43")
+script = ExtResource("10_wnste")
+
+[node name="AnimatedFood" type="AnimatedSprite2D" parent="Catfood"]
+position = Vector2(0.000244141, 0)
+scale = Vector2(1.01493, 1.01493)
+sprite_frames = SubResource("SpriteFrames_e6yqt")
+frame_progress = 0.667026
+
+[node name="AreaFood" type="Area2D" parent="Catfood"]
+position = Vector2(0.000244141, 0)
+scale = Vector2(1.01493, 1.01493)
+
+[node name="CollisionFood" type="CollisionShape2D" parent="Catfood/AreaFood"]
+position = Vector2(-0.00012207, 38.2354)
+shape = SubResource("CircleShape2D_0yf60")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(928, 259.5)
+scale = Vector2(0.492378, 0.850144)
+texture = ExtResource("7_p70mq")
+script = ExtResource("11_g5fuv")
+
+[node name="AnimatedTree" type="AnimatedSprite2D" parent="Tree"]
+position = Vector2(2.03113, -0.588135)
+scale = Vector2(1.01548, 1.00593)
+sprite_frames = SubResource("SpriteFrames_04axv")
+frame_progress = 0.268026
+
+[node name="AreaTree" type="Area2D" parent="Tree"]
+position = Vector2(2.03113, -0.588135)
+scale = Vector2(1.01548, 1.00593)
+
+[node name="CollisionTree" type="CollisionShape2D" parent="Tree/AreaTree"]
+position = Vector2(9.99988, 9.35468)
+shape = SubResource("CapsuleShape2D_xvel7")
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]
+[connection signal="input_event" from="Cat1/Area2D" to="Cat1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Cat1/Area2D" to="Cat2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Catfood/AreaFood" to="Catfood" method="_on_area_food_input_event"]
+[connection signal="input_event" from="Catfood/AreaFood" to="Catfood/AnimatedFood" method="_on_area_food_input_event"]
+[connection signal="input_event" from="Tree/AreaTree" to="Tree" method="_on_area_tree_input_event"]
