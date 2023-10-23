@@ -11,9 +11,19 @@ config_version=5
 [application]
 
 config/name="Cat Cafe Creator"
-run/main_scene="res://cafeScreen.tscn"
+run/main_scene="res://mainCafe/cafeScreen.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://Cat Shop/icon.svg"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"
+
+[filesystem]
+
+import/blender/enabled.android=true
+import/fbx/enabled.android=true
 
 [input_devices]
 
@@ -22,3 +32,6 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+shader_compiler/shader_cache/strip_debug.release=false
