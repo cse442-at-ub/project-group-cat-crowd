@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b4woqk0bdplph"]
+[gd_scene load_steps=29 format=3 uid="uid://b4woqk0bdplph"]
 
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="1_gaqpu"]
 [ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="2_65er1"]
@@ -26,6 +26,8 @@
 [ext_resource type="Script" path="res://Cafe Upgrades Shop/Color 7.gd" id="16_yajtn"]
 [ext_resource type="Script" path="res://Cafe Upgrades Shop/Color 8.gd" id="18_7qeln"]
 [ext_resource type="Script" path="res://Cafe Upgrades Shop/Exit Button.gd" id="26_kyvmn"]
+[ext_resource type="Texture2D" uid="uid://d1bcgwe84x7lp" path="res://Images and Vectors/Coins Amount (1).png" id="27_0qhim"]
+[ext_resource type="Script" path="res://Cat Shop/CurrencyLabel.gd" id="28_fth7d"]
 
 [node name="Cafe Upgrades Shop" type="Node"]
 
@@ -157,6 +159,25 @@ offset_right = 1104.0
 offset_bottom = 94.0
 theme = ExtResource("7_ydqov")
 script = ExtResource("26_kyvmn")
+
+[node name="Cat Coin Background" type="TextureRect" parent="TextureRect"]
+offset_left = 520.0
+offset_top = 536.0
+offset_right = 771.0
+offset_bottom = 602.0
+texture = ExtResource("27_0qhim")
+
+[node name="Cat Coin Amount" type="Label" parent="TextureRect/Cat Coin Background"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 9.0
+offset_right = 224.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("28_fth7d")
 
 [connection signal="pressed" from="TextureRect/Purchase Options/Color 1" to="TextureRect/Purchase Options/Color 1" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Purchase Options/Color 2" to="TextureRect/Purchase Options/Color 2" method="_on_pressed"]
