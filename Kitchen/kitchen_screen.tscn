@@ -1,19 +1,20 @@
-[gd_scene load_steps=22 format=3 uid="uid://dkf6gkryg4m7h"]
+[gd_scene load_steps=24 format=3 uid="uid://dkf6gkryg4m7h"]
 
-[ext_resource type="Script" path="res://LeftDoorButton.gd" id="1_6suom"]
+[ext_resource type="Script" path="res://Kitchen/LeftDoorButton.gd" id="1_6suom"]
 [ext_resource type="Texture2D" uid="uid://cc08l7m5eoopv" path="res://Art/kitchen.png" id="1_sajjf"]
 [ext_resource type="Texture2D" uid="uid://dux8pxhywgdrm" path="res://Art/cat1.png" id="2_dx61r"]
-[ext_resource type="Script" path="res://RightDoor.gd" id="2_n2cej"]
-[ext_resource type="Script" path="res://Cat1.gd" id="3_jgrvn"]
+[ext_resource type="Script" path="res://Kitchen/RightDoor.gd" id="2_n2cej"]
+[ext_resource type="Script" path="res://Kitchen/Cat1.gd" id="3_jgrvn"]
 [ext_resource type="Texture2D" uid="uid://cdamuedoxyaou" path="res://Art/bubble.png" id="4_j4ucp"]
 [ext_resource type="Texture2D" uid="uid://dm388tl8gpifi" path="res://Art/cat1fed.png" id="5_g6ipd"]
 [ext_resource type="Texture2D" uid="uid://cminrm3sylrwo" path="res://Art/cat2.png" id="6_1phkv"]
 [ext_resource type="Texture2D" uid="uid://cr58vlaorwlmu" path="res://Art/tree.png" id="7_p70mq"]
 [ext_resource type="Texture2D" uid="uid://be3v4duirb2o2" path="res://Art/tree2.png" id="8_5rexy"]
 [ext_resource type="Texture2D" uid="uid://drkir0tw0bdv0" path="res://Art/catfood1.png" id="9_p1i43"]
-[ext_resource type="Script" path="res://Catfood1.gd" id="10_wnste"]
+[ext_resource type="Script" path="res://Kitchen/Catfood1.gd" id="10_wnste"]
 [ext_resource type="Texture2D" uid="uid://dbpyophb3qfej" path="res://Art/catfood2.png" id="10_xhkxx"]
-[ext_resource type="Script" path="res://Tree.gd" id="11_g5fuv"]
+[ext_resource type="Script" path="res://Kitchen/Tree.gd" id="11_g5fuv"]
+[ext_resource type="Script" path="res://Kitchen/StoveButton.gd" id="15_367vw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ilcpd"]
 animations = [{
@@ -76,6 +77,8 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xvel7"]
 radius = 53.9999
 height = 353.139
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wppr8"]
 
 [node name="Kitchen Screen" type="Node2D"]
 
@@ -169,6 +172,13 @@ scale = Vector2(1.01548, 1.00593)
 position = Vector2(9.99988, 9.35468)
 shape = SubResource("CapsuleShape2D_xvel7")
 
+[node name="StoveButton" type="TouchScreenButton" parent="."]
+position = Vector2(607, 242)
+scale = Vector2(-7, -12)
+shape = SubResource("RectangleShape2D_wppr8")
+shape_visible = false
+script = ExtResource("15_367vw")
+
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]
 [connection signal="input_event" from="Cat1/Area2D" to="Cat1" method="_on_area_2d_input_event"]
@@ -176,3 +186,4 @@ shape = SubResource("CapsuleShape2D_xvel7")
 [connection signal="input_event" from="Catfood/AreaFood" to="Catfood" method="_on_area_food_input_event"]
 [connection signal="input_event" from="Catfood/AreaFood" to="Catfood/AnimatedFood" method="_on_area_food_input_event"]
 [connection signal="input_event" from="Tree/AreaTree" to="Tree" method="_on_area_tree_input_event"]
+[connection signal="pressed" from="StoveButton" to="StoveButton" method="_on_pressed"]
