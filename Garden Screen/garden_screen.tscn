@@ -56,19 +56,19 @@ scale = Vector2(1.56793, 1.55797)
 texture = ExtResource("1_jhvg4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -2.0
-offset_top = 2.0
-offset_right = 1157.0
-offset_bottom = 653.0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 1163.0
+offset_bottom = 652.0
 tooltip_text = "Let's plant"
 
 [node name="Button" type="Button" parent="TextureRect"]
 editor_description = "Let's plant!"
 layout_mode = 0
-offset_left = 577.0
-offset_top = 501.0
-offset_right = 1097.0
-offset_bottom = 1021.0
+offset_left = 575.0
+offset_top = 510.0
+offset_right = 1095.0
+offset_bottom = 1030.0
 scale = Vector2(0.335977, 0.288521)
 icon = ExtResource("2_6mpgy")
 flat = true

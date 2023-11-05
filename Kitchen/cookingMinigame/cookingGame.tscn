@@ -55,6 +55,7 @@ color = Color(0.870588, 0.654902, 0.439216, 1)
 script = ExtResource("3_5acuq")
 
 [node name="CornButton" type="Button" parent="IngredientMenu"]
+layout_mode = 0
 offset_left = 253.0
 offset_right = 335.0
 offset_bottom = 72.0

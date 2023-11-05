@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc17er6qggxv0"]
+
+[ext_resource type="Texture2D" uid="uid://bsbgthinw5w4f" path="res://backgorund_plantshop.jpg" id="1_33fg3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lj2cc"]
+
+[node name="plant_shop" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1158.0
+offset_bottom = 663.0
+texture = ExtResource("1_33fg3")
+expand_mode = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(245, 197)
+scale = Vector2(11, 11)
+shape = SubResource("CircleShape2D_lj2cc")
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(244, 463)
+scale = Vector2(11, 11)
+shape = SubResource("CircleShape2D_lj2cc")
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(577, 472)
+scale = Vector2(11, 11)
+shape = SubResource("CircleShape2D_lj2cc")
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(574, 193)
+scale = Vector2(11, 11)
+shape = SubResource("CircleShape2D_lj2cc")
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(916, 192)
+scale = Vector2(11, 11)
+shape = SubResource("CircleShape2D_lj2cc")
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(913, 479)
+scale = Vector2(11, 11)
+shape = SubResource("CircleShape2D_lj2cc")
