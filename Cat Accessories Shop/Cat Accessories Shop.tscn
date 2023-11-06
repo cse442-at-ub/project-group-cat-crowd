@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://di4fn5n7xwnjw"]
+[gd_scene load_steps=28 format=3 uid="uid://di4fn5n7xwnjw"]
 
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="1_stsu1"]
 [ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="2_u8spd"]
@@ -24,6 +24,9 @@
 [ext_resource type="Script" path="res://Cat Accessories Shop/Cat Necklace.gd" id="14_hrwhy"]
 [ext_resource type="Script" path="res://Cat Accessories Shop/Cat Bell.gd" id="16_ussvf"]
 [ext_resource type="Script" path="res://Cat Accessories Shop/Exit Button.gd" id="24_olrtn"]
+[ext_resource type="Texture2D" uid="uid://d1bcgwe84x7lp" path="res://Images and Vectors/Coins Amount (1).png" id="25_mv4cc"]
+[ext_resource type="Script" path="res://Cat Shop/CurrencyLabel.gd" id="26_4dsqg"]
+[ext_resource type="Texture2D" uid="uid://x61x1m47s0iu" path="res://Images and Vectors/TextBox1.png" id="27_vmm2i"]
 
 [node name="Cat Accessories Shop" type="Node"]
 
@@ -146,6 +149,44 @@ offset_right = 1104.0
 offset_bottom = 94.0
 theme = ExtResource("7_pcwhr")
 script = ExtResource("24_olrtn")
+
+[node name="Cat Coin Background" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 536.0
+offset_right = 771.0
+offset_bottom = 602.0
+texture = ExtResource("25_mv4cc")
+
+[node name="Cat Coin Amount" type="Label" parent="TextureRect/Cat Coin Background"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 9.0
+offset_right = 224.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("26_4dsqg")
+
+[node name="CurrencyPopup" type="NinePatchRect" parent="TextureRect"]
+visible = false
+offset_left = 464.0
+offset_top = 232.0
+offset_right = 833.0
+offset_bottom = 578.0
+texture = ExtResource("27_vmm2i")
+
+[node name="Label" type="Label" parent="TextureRect/CurrencyPopup"]
+layout_mode = 2
+offset_left = 29.0
+offset_top = 218.0
+offset_right = 338.0
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+text = "Not enough cat coins right meow!"
 
 [connection signal="pressed" from="TextureRect/Purchase Options/Cat Shirt" to="TextureRect/Purchase Options/Cat Shirt" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/Purchase Options/Cat BFF CHarm" to="TextureRect/Purchase Options/Cat BFF CHarm" method="_on_pressed"]
