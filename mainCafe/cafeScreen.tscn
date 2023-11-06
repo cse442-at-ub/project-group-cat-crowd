@@ -1,5 +1,6 @@
-[gd_scene load_steps=36 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=39 format=3 uid="uid://i58q7o3xprky"]
 
+[ext_resource type="Script" path="res://mainCafe/selectedCat.gd" id="1_7sav0"]
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
 [ext_resource type="Texture2D" uid="uid://bl4p34328ahp" path="res://mainCafe/IMG_1066.jpg" id="2_rx5ql"]
@@ -19,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://cf0txvp2qumam" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-white/white-kitten8.png" id="12_w3nu3"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/kitchen-button.gd" id="13_3yysu"]
 [ext_resource type="Texture2D" uid="uid://dl6k23ce2wycs" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten3.png" id="13_ccbph"]
-[ext_resource type="Texture2D" uid="uid://bc6myj7qcewrg" path="res://Cat Sprite Sheet.png" id="13_efoaw"]
 [ext_resource type="Texture2D" uid="uid://cx1i8olp4x4oh" path="res://mainCafe/buttons/IMG_1072.jpg" id="13_j1vkb"]
 [ext_resource type="Texture2D" uid="uid://boc6i03cimn34" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten4.png" id="14_fri4p"]
 [ext_resource type="Texture2D" uid="uid://il3fqubtw17s" path="res://mainCafe/buttons/IMG_1071.jpg" id="14_udo3l"]
@@ -29,9 +29,13 @@
 [ext_resource type="Texture2D" uid="uid://bd8oobb57lb3w" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten7.png" id="17_7r105"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/shop-button.gd" id="17_c5dm7"]
 [ext_resource type="Texture2D" uid="uid://d2vsg5l10an0f" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten8.png" id="18_xjd7e"]
+[ext_resource type="Texture2D" uid="uid://cke7q1hgljxv0" path="res://mainCafe/buttons/equipIcon.png" id="29_efvnj"]
+[ext_resource type="Script" path="res://mainCafe/buttonScripts/catEquip.gd" id="30_uo8ed"]
 
 [sub_resource type="GDScript" id="GDScript_klpkk"]
 script/source = "extends Node
+
+
 
 func _on_button_pressed():
 	get_tree().change_scene(\"res://lounge.tscn\")
@@ -39,7 +43,16 @@ func _on_button_pressed():
 
 func _on_area_2d_input_event(_viewport, _event, _shape_idx):
 	pass # Replace with function body.
+
+
+
+
+
+
+	
 "
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdtj5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hdb81"]
 animations = [{
@@ -147,6 +160,12 @@ animations = [{
 position = Vector2(704, 286)
 script = SubResource("GDScript_klpkk")
 
+[node name="selectedCat" type="AnimatedSprite2D" parent="."]
+position = Vector2(1081, 1042)
+scale = Vector2(5667.66, 11.8117)
+sprite_frames = SubResource("SpriteFrames_jdtj5")
+script = ExtResource("1_7sav0")
+
 [node name="catOnTower" type="Sprite2D" parent="."]
 position = Vector2(86, 1040)
 scale = Vector2(0.651609, 0.626333)
@@ -182,10 +201,11 @@ position = Vector2(-1761.77, 197.24)
 shape = SubResource("RectangleShape2D_lnfsj")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_enabled = true
 
 [node name="Img1060" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(581.193, 327.577)
-scale = Vector2(0.740684, 0.626699)
+position = Vector2(1468, 916)
+scale = Vector2(2.01281, 1.73526)
 texture = ExtResource("2_rx5ql")
 
 [node name="Image2" type="Sprite2D" parent="."]
@@ -243,18 +263,25 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(1313, 1474)
-scale = Vector2(6.11914, 7.61428)
-texture = ExtResource("13_efoaw")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(751, 624)
 zoom = Vector2(0.365, 0.365)
 
+[node name="catEquip" type="Button" parent="."]
+offset_left = 722.0
+offset_top = -109.0
+offset_right = 1206.0
+offset_bottom = 289.0
+scale = Vector2(0.692398, 0.718273)
+icon = ExtResource("29_efvnj")
+flat = true
+script = ExtResource("30_uo8ed")
+
+[connection signal="ready" from="selectedCat" to="selectedCat" method="_on_ready"]
 [connection signal="input_event" from="catOnTower/Area2D" to="catOnTower" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="catOnChair/Area2D" to="catOnChair" method="_on_area_2d_input_event"]
 [connection signal="pressed" from="LoungeButton" to="LoungeButton" method="_on_pressed"]
 [connection signal="pressed" from="KitchenButton" to="KitchenButton" method="_on_pressed"]
 [connection signal="pressed" from="GardenButton" to="GardenButton" method="_on_pressed"]
 [connection signal="pressed" from="ShopButton" to="ShopButton" method="_on_pressed"]
+[connection signal="pressed" from="catEquip" to="catEquip" method="_on_pressed"]
