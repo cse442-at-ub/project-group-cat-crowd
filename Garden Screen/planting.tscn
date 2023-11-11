@@ -7,10 +7,16 @@
 [node name="planting" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
+<<<<<<< Updated upstream
 offset_left = -4.0
 offset_top = -101.0
 offset_right = 1177.0
 offset_bottom = 554.0
+=======
+offset_left = 2.0
+offset_right = 1153.0
+offset_bottom = 651.0
+>>>>>>> Stashed changes
 texture = ExtResource("1_hd6m5")
 
 [node name="Button" type="Button" parent="TextureRect"]

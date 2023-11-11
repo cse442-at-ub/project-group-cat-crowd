@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://ch6b68jmlr4ur"]
+=======
+[gd_scene format=3 uid="uid://cc6chw637podc"]
+>>>>>>> Stashed changes
 
 [node name="Node2D" type="Node2D"]
