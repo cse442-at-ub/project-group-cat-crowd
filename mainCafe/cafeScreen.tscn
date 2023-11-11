@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=37 format=3 uid="uid://i58q7o3xprky"]
 
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
@@ -29,13 +29,13 @@
 [ext_resource type="Texture2D" uid="uid://bd8oobb57lb3w" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten7.png" id="17_7r105"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/shop-button.gd" id="17_c5dm7"]
 [ext_resource type="Texture2D" uid="uid://d2vsg5l10an0f" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten8.png" id="18_xjd7e"]
+[ext_resource type="Script" path="res://mainCafe/ColorMenu.gd" id="30_u3t6v"]
 
 [sub_resource type="GDScript" id="GDScript_klpkk"]
 script/source = "extends Node
 
 func _on_button_pressed():
 	get_tree().change_scene(\"res://lounge.tscn\")
-
 
 func _on_area_2d_input_event(_viewport, _event, _shape_idx):
 	pass # Replace with function body.
@@ -251,6 +251,17 @@ texture = ExtResource("13_efoaw")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(751, 624)
 zoom = Vector2(0.365, 0.365)
+
+[node name="MenuButton" type="MenuButton" parent="."]
+offset_left = 1273.0
+offset_top = -76.0
+offset_right = 1490.0
+offset_bottom = -20.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 27
+text = "Interior Colors"
+script = ExtResource("30_u3t6v")
 
 [connection signal="input_event" from="catOnTower/Area2D" to="catOnTower" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="catOnChair/Area2D" to="catOnChair" method="_on_area_2d_input_event"]
