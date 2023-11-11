@@ -18,6 +18,7 @@ config/icon="res://Cat Shop/icon.svg"
 [autoload]
 
 Global="*res://Global.gd"
+PlantGame="*res://plant_game.gd"
 
 [input_devices]
 

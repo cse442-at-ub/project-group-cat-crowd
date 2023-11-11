@@ -102,7 +102,7 @@ scale = Vector2(3.34424, 2.60395)
 texture = ExtResource("10_clqlt")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(288, 261)
+position = Vector2(288, 228)
 scale = Vector2(0.222656, 0.226563)
 texture_normal = ExtResource("13_tgoil")
 script = ExtResource("14_suoo1")
