@@ -1,5 +1,6 @@
 [gd_scene load_steps=59 format=3 uid="uid://lq6fkm38osu8"]
 
+[ext_resource type="Script" path="res://Navigation.gd" id="1_jkrfa"]
 [ext_resource type="Texture2D" uid="uid://bps6tdqpest1p" path="res://House_interior_by_Styl0o/living/individuals files/living-wall.png" id="1_r0qct"]
 [ext_resource type="Texture2D" uid="uid://dg8sr6ps3l1ec" path="res://House_interior_by_Styl0o/living/individuals files/living-floor.png" id="2_dv8yf"]
 [ext_resource type="Texture2D" uid="uid://beua2yh654x1i" path="res://House_interior_by_Styl0o/living/individuals files/shelf-books.png" id="3_j52k1"]
@@ -11,13 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://fs8j3v0rp0ne" path="res://House_interior_by_Styl0o/kitchen/individuals files/watch.png" id="9_705cp"]
 [ext_resource type="Texture2D" uid="uid://id8mw5841gfw" path="res://BVA2/ballBounceHard.png" id="10_xf654"]
 [ext_resource type="Script" path="res://Ball.gd" id="11_e3b8t"]
-[ext_resource type="Texture2D" uid="uid://cg3njp2w556wp" path="res://cute-kitten-animation-idle/cute-kitten-animation-idle/single_png_1000px/black1.png" id="12_8fksd"]
-[ext_resource type="Texture2D" uid="uid://dfk6yp2gr073u" path="res://cute-kitten-animation-MEOW/meow-single-1000px/orange-marks1.png" id="13_3jxtq"]
 [ext_resource type="Script" path="res://Cat1.gd" id="13_cohl0"]
-[ext_resource type="Texture2D" uid="uid://2o5uda58u4np" path="res://cute-kitten-animation-RUN/cute-kitten-animation-RUN/sheets_500px/black.png" id="13_xymhd"]
 [ext_resource type="Script" path="res://Cat2.gd" id="14_odfjg"]
-[ext_resource type="Texture2D" uid="uid://ub1km0bnysdx" path="res://cute-kitten-animation-MEOW/meow-sheets-500px/orange-marks-sheet.png" id="15_y36q0"]
+[ext_resource type="Texture2D" uid="uid://2o5uda58u4np" path="res://run/cute-kitten-animation-RUN/sheets_500px/black.png" id="14_p572e"]
 [ext_resource type="Texture2D" uid="uid://djghm8buy67p6" path="res://sleeping-kittens1.1/sleeping-kittens-new/grey-marks4.png" id="16_gjmck"]
+[ext_resource type="Texture2D" uid="uid://ub1km0bnysdx" path="res://meow/meow-sheets-500px/orange-marks-sheet.png" id="16_i8txb"]
+[ext_resource type="Texture2D" uid="uid://decsjf1uug2g7" path="res://PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle 2.png" id="19_2fo0b"]
+[ext_resource type="Texture2D" uid="uid://dv03610qirkrx" path="res://Images and Vectors/Cat Shop Icon.png" id="22_m7qtp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3up5"]
 atlas = ExtResource("10_xf654")
@@ -191,57 +192,50 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8paw"]
 radius = 6.14767
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6vw1m"]
-atlas = ExtResource("13_xymhd")
-region = Rect2(500, 0, 500, 500)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wygr2"]
-atlas = ExtResource("13_xymhd")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcacw"]
+atlas = ExtResource("14_p572e")
 region = Rect2(0, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x87y4"]
-atlas = ExtResource("13_xymhd")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8s2yu"]
+atlas = ExtResource("14_p572e")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y3ni"]
+atlas = ExtResource("14_p572e")
 region = Rect2(1000, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nbuww"]
-atlas = ExtResource("13_xymhd")
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3n5e"]
+atlas = ExtResource("14_p572e")
 region = Rect2(1500, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w5c8c"]
-atlas = ExtResource("13_xymhd")
+[sub_resource type="AtlasTexture" id="AtlasTexture_368ks"]
+atlas = ExtResource("14_p572e")
 region = Rect2(2000, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h05b3"]
-atlas = ExtResource("13_xymhd")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwsa8"]
+atlas = ExtResource("14_p572e")
 region = Rect2(2500, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l54ib"]
-atlas = ExtResource("13_xymhd")
-region = Rect2(2000, 0, 500, 500)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ne5lk"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_h0qm6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6vw1m")
+"texture": SubResource("AtlasTexture_xcacw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wygr2")
+"texture": SubResource("AtlasTexture_8s2yu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x87y4")
+"texture": SubResource("AtlasTexture_5y3ni")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nbuww")
+"texture": SubResource("AtlasTexture_j3n5e")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w5c8c")
+"texture": SubResource("AtlasTexture_368ks")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h05b3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l54ib")
+"texture": SubResource("AtlasTexture_hwsa8")
 }],
 "loop": true,
 "name": &"default",
@@ -249,38 +243,38 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ny2q"]
-radius = 406.197
+radius = 309.916
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8coog"]
-atlas = ExtResource("15_y36q0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kn7ta"]
+atlas = ExtResource("16_i8txb")
 region = Rect2(0, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_swd0d"]
-atlas = ExtResource("15_y36q0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbtxi"]
+atlas = ExtResource("16_i8txb")
 region = Rect2(500, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dw7qs"]
-atlas = ExtResource("15_y36q0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcygy"]
+atlas = ExtResource("16_i8txb")
 region = Rect2(1000, 0, 500, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ivsjy"]
-atlas = ExtResource("15_y36q0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnot5"]
+atlas = ExtResource("16_i8txb")
 region = Rect2(1500, 0, 500, 500)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7p57t"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_7qeo6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8coog")
+"texture": SubResource("AtlasTexture_kn7ta")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_swd0d")
+"texture": SubResource("AtlasTexture_jbtxi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dw7qs")
+"texture": SubResource("AtlasTexture_dcygy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ivsjy")
+"texture": SubResource("AtlasTexture_tnot5")
 }],
 "loop": true,
 "name": &"default",
@@ -291,11 +285,12 @@ animations = [{
 radius = 362.029
 
 [node name="Lounge" type="Node2D"]
+script = ExtResource("1_jkrfa")
 
 [node name="Living-wall" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(576.5, 264.5)
-scale = Vector2(2.39375, 4.48305)
+position = Vector2(576.5, 268)
+scale = Vector2(2.39375, 4.54237)
 texture = ExtResource("1_r0qct")
 
 [node name="Living-floor" type="Sprite2D" parent="."]
@@ -322,12 +317,6 @@ position = Vector2(663, 208)
 scale = Vector2(4.11842, 4.13372)
 texture = ExtResource("5_xvvlb")
 
-[node name="Computer" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(111, 187)
-scale = Vector2(2.82609, 2.41667)
-texture = ExtResource("6_8oyvi")
-
 [node name="Door" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1032.13, 344)
@@ -350,7 +339,6 @@ texture = ExtResource("9_705cp")
 texture_filter = 1
 position = Vector2(286, 496)
 scale = Vector2(5.83333, 6.65)
-texture = ExtResource("10_xf654")
 hframes = 23
 script = ExtResource("11_e3b8t")
 
@@ -368,38 +356,35 @@ position = Vector2(0.342857, 4.51128)
 shape = SubResource("CircleShape2D_y8paw")
 
 [node name="Cat1" type="Sprite2D" parent="."]
-position = Vector2(1016, 504)
-scale = Vector2(0.18675, 0.189)
-texture = ExtResource("12_8fksd")
+position = Vector2(1032.5, 512.5)
+scale = Vector2(0.318667, 0.286667)
 script = ExtResource("13_cohl0")
 
 [node name="cat1_ani" type="AnimatedSprite2D" parent="Cat1"]
-position = Vector2(53.5471, -15.873)
-scale = Vector2(2.06526, 2.12302)
-sprite_frames = SubResource("SpriteFrames_ne5lk")
-frame = 4
-frame_progress = 0.454884
+position = Vector2(-26.6735, 8.72086)
+scale = Vector2(1.74157, 1.64133)
+sprite_frames = SubResource("SpriteFrames_h0qm6")
 
 [node name="Area2D" type="Area2D" parent="Cat1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cat1/Area2D"]
+position = Vector2(-26.6736, 5.23254)
 shape = SubResource("CircleShape2D_1ny2q")
 
 [node name="Cat 2" type="Sprite2D" parent="."]
-position = Vector2(424, 494)
-scale = Vector2(0.188, 0.195)
-texture = ExtResource("13_3jxtq")
+position = Vector2(440, 492)
+scale = Vector2(0.265, 0.2305)
 script = ExtResource("14_odfjg")
 
 [node name="cat2_ani" type="AnimatedSprite2D" parent="Cat 2"]
-position = Vector2(0.00012207, 0)
+position = Vector2(3.77393, -8.67676)
 scale = Vector2(2.00532, 1.9782)
-sprite_frames = SubResource("SpriteFrames_7p57t")
+sprite_frames = SubResource("SpriteFrames_7qeo6")
 
 [node name="Area2D" type="Area2D" parent="Cat 2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cat 2/Area2D"]
-position = Vector2(-21.2766, 15.3845)
+position = Vector2(-15.0943, 0)
 shape = SubResource("CircleShape2D_g1p7x")
 
 [node name="Cat 3" type="Sprite2D" parent="."]
@@ -407,6 +392,29 @@ position = Vector2(661, 90)
 scale = Vector2(0.160645, 0.125081)
 texture = ExtResource("16_gjmck")
 
+[node name="NavToCafe" type="TouchScreenButton" parent="."]
+position = Vector2(1150, 6)
+rotation = -4.71239
+scale = Vector2(0.166667, 0.160417)
+texture_normal = ExtResource("19_2fo0b")
+texture_pressed = ExtResource("19_2fo0b")
+
+[node name="NavToShop" type="TouchScreenButton" parent="."]
+position = Vector2(1006, 7)
+scale = Vector2(0.556338, 0.560976)
+texture_normal = ExtResource("22_m7qtp")
+texture_pressed = ExtResource("22_m7qtp")
+
+[node name="Minigame" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(27, 146)
+scale = Vector2(3.30435, 2.33333)
+texture_normal = ExtResource("6_8oyvi")
+texture_pressed = ExtResource("6_8oyvi")
+
 [connection signal="input_event" from="Ball/Area2D" to="Ball" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Cat1/Area2D" to="Cat1" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Cat 2/Area2D" to="Cat 2" method="_on_area_2d_input_event"]
+[connection signal="pressed" from="NavToCafe" to="." method="_on_nav_to_cafe_pressed"]
+[connection signal="pressed" from="NavToShop" to="." method="_on_nav_to_shop_pressed"]
+[connection signal="pressed" from="Minigame" to="." method="_on_minigame_pressed"]
