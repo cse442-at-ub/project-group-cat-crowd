@@ -1,31 +1,121 @@
-[gd_scene load_steps=4 format=3 uid="uid://x4duyo8adx0q"]
+[gd_scene load_steps=12 format=3 uid="uid://ciodxvn6dobob"]
 
 [ext_resource type="Texture2D" uid="uid://2apdqnqhq512" path="res://Garden Screen/Screenshot 2023-10-19 at 22.53.24.png" id="1_hd6m5"]
 [ext_resource type="Theme" uid="uid://cd2tmr8lxa3th" path="res://Garden Screen/plantingScenebackbutton.tres" id="2_2cwid"]
 [ext_resource type="Script" path="res://Garden Screen/PlantingBackButton.gd" id="3_cx8im"]
+[ext_resource type="Script" path="res://Garden Screen/TouchScreenButton.gd" id="4_br3ep"]
+[ext_resource type="Script" path="res://Garden Screen/TouchScreenButton2.gd" id="5_j15xg"]
+[ext_resource type="Script" path="res://Garden Screen/TouchScreenButton4.gd" id="6_r6gdo"]
+[ext_resource type="Script" path="res://Garden Screen/TouchScreenButton3.gd" id="7_g1qt2"]
+[ext_resource type="Script" path="res://Garden Screen/TouchScreenButton5.gd" id="8_d8nyo"]
+[ext_resource type="Texture2D" uid="uid://d2nms4rer8m7g" path="res://Garden Screen/default_plant.png" id="9_2hm1n"]
+
+[sub_resource type="GDScript" id="GDScript_13v30"]
+resource_name = "vegetable_toggle"
+script/source = "extends Node2D
+
+
+func _ready():
+	if PlantGame.tomato:
+		$tomato_plant.visible
+	if PlantGame.onion:
+		$onion_plant.visible
+	if PlantGame.cucumber:
+		$cucumber_plant.visible
+	if PlantGame.potato:
+		$potato_plant.visible
+	if PlantGame.carrot:
+		$carrot_plant.visible
+
+		
+		
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nhl5p"]
 
 [node name="planting" type="Node2D"]
+position = Vector2(-190, -4)
+script = SubResource("GDScript_13v30")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-<<<<<<< Updated upstream
-offset_left = -4.0
-offset_top = -101.0
-offset_right = 1177.0
-offset_bottom = 554.0
-=======
-offset_left = 2.0
-offset_right = 1153.0
-offset_bottom = 651.0
->>>>>>> Stashed changes
+offset_left = -32.0
+offset_top = -4.0
+offset_right = 1367.0
+offset_bottom = 770.0
 texture = ExtResource("1_hd6m5")
 
 [node name="Button" type="Button" parent="TextureRect"]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 247.0
-offset_right = 83.0
-offset_bottom = 435.0
+offset_left = 247.0
+offset_top = 252.0
+offset_right = 316.0
+offset_bottom = 440.0
 theme = ExtResource("2_2cwid")
 script = ExtResource("3_cx8im")
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(357, 535)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_nhl5p")
+script = ExtResource("4_br3ep")
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(560, 540)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_nhl5p")
+script = ExtResource("5_j15xg")
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(1158, 534)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_nhl5p")
+script = ExtResource("6_r6gdo")
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(761, 539)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_nhl5p")
+script = ExtResource("7_g1qt2")
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(959, 530)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_nhl5p")
+script = ExtResource("8_d8nyo")
+
+[node name="tomato_plant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(624.875, 408.75)
+scale = Vector2(0.188931, 0.144667)
+texture = ExtResource("9_2hm1n")
+
+[node name="onion_plant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(459.875, 408.75)
+scale = Vector2(0.188931, 0.144667)
+texture = ExtResource("9_2hm1n")
+
+[node name="cucumber_plant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(295.875, 408.75)
+scale = Vector2(0.188931, 0.144667)
+texture = ExtResource("9_2hm1n")
+
+[node name="potato_plant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(786.875, 408.75)
+scale = Vector2(0.188931, 0.144667)
+texture = ExtResource("9_2hm1n")
+
+[node name="carrot_plant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(950.875, 408.75)
+scale = Vector2(0.188931, 0.144667)
+texture = ExtResource("9_2hm1n")
+
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/TouchScreenButton" to="TextureRect/TouchScreenButton" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/TouchScreenButton2" to="TextureRect/TouchScreenButton2" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/TouchScreenButton4" to="TextureRect/TouchScreenButton4" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/TouchScreenButton3" to="TextureRect/TouchScreenButton3" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/TouchScreenButton5" to="TextureRect/TouchScreenButton5" method="_on_pressed"]
