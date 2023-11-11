@@ -19,6 +19,7 @@ config/icon="res://Cat Shop/icon.svg"
 
 Global="*res://Global.gd"
 GlobalVeggies="*res://Kitchen/cookingMinigame/vegetables.gd"
+PlantGame="*res://plant_game.gd"
 
 [input_devices]
 
