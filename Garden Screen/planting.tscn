@@ -1,76 +1,116 @@
-[gd_scene load_steps=12 format=3 uid="uid://x4duyo8adx0q"]
+[gd_scene load_steps=15 format=3 uid="uid://x4duyo8adx0q"]
 
 [ext_resource type="Texture2D" uid="uid://2apdqnqhq512" path="res://Garden Screen/Screenshot 2023-10-19 at 22.53.24.png" id="1_hd6m5"]
 [ext_resource type="Script" path="res://Garden Screen/planting.gd" id="1_mgd8o"]
-[ext_resource type="Theme" uid="uid://cd2tmr8lxa3th" path="res://Garden Screen/plantingScenebackbutton.tres" id="2_2cwid"]
-[ext_resource type="Script" path="res://Garden Screen/PlantingBackButton.gd" id="3_cx8im"]
 [ext_resource type="Script" path="res://Garden Screen/TouchScreenButton.gd" id="4_br3ep"]
 [ext_resource type="Script" path="res://Garden Screen/TouchScreenButton2.gd" id="5_j15xg"]
 [ext_resource type="Script" path="res://Garden Screen/TouchScreenButton4.gd" id="6_r6gdo"]
 [ext_resource type="Script" path="res://Garden Screen/TouchScreenButton3.gd" id="7_g1qt2"]
 [ext_resource type="Script" path="res://Garden Screen/TouchScreenButton5.gd" id="8_d8nyo"]
 [ext_resource type="Texture2D" uid="uid://bpdw5dnykxl1k" path="res://Garden Screen/default_plant.png" id="10_clqlt"]
+[ext_resource type="Texture2D" uid="uid://ili2egmjyusi" path="res://Garden Screen/dirt_pile.png" id="11_dnit7"]
+[ext_resource type="Script" path="res://Garden Screen/carrot.gd" id="12_5l54p"]
+[ext_resource type="Texture2D" uid="uid://bkj7vs8034psr" path="res://Garden Screen/back_button.png" id="13_tgoil"]
+[ext_resource type="Script" path="res://Garden Screen/backButton.gd" id="14_suoo1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhl5p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_th8pt"]
+radius = 766.03
 
 [node name="planting" type="Node2D"]
 script = ExtResource("1_mgd8o")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 2.0
+offset_left = -276.0
 offset_top = -7.0
-offset_right = 1153.0
-offset_bottom = 651.0
+offset_right = 1154.0
+offset_bottom = 727.0
 texture = ExtResource("1_hd6m5")
 
-[node name="Button" type="Button" parent="TextureRect"]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 247.0
-offset_right = 83.0
-offset_bottom = 435.0
-theme = ExtResource("2_2cwid")
-script = ExtResource("3_cx8im")
-
 [node name="tomato" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(295, 458)
-scale = Vector2(3, 3)
+position = Vector2(367, 510)
+scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_nhl5p")
 script = ExtResource("4_br3ep")
 
 [node name="tomato_plant" type="Sprite2D" parent="TextureRect/tomato"]
 visible = false
-position = Vector2(0.333328, -11.3333)
+position = Vector2(-0.166687, -13.6666)
 scale = Vector2(0.0487701, 0.0487701)
 texture = ExtResource("10_clqlt")
 
 [node name="onion" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(462, 460)
-scale = Vector2(3, 3)
+position = Vector2(570, 515)
+scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_nhl5p")
 script = ExtResource("5_j15xg")
 
+[node name="onion_plant" type="Sprite2D" parent="TextureRect/onion"]
+visible = false
+position = Vector2(-1.33325, -14.1665)
+scale = Vector2(0.0487701, 0.0487701)
+texture = ExtResource("10_clqlt")
+
 [node name="cucumber" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(787, 459)
-scale = Vector2(3, 3)
+position = Vector2(983, 514)
+scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_nhl5p")
 script = ExtResource("6_r6gdo")
 
+[node name="cucumber_plant" type="Sprite2D" parent="TextureRect/cucumber"]
+visible = false
+position = Vector2(-36.3325, -14.5)
+scale = Vector2(0.0487701, 0.0487701)
+texture = ExtResource("10_clqlt")
+
 [node name="corn" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(627, 457)
-scale = Vector2(3, 3)
+position = Vector2(774, 517)
+scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_nhl5p")
 script = ExtResource("7_g1qt2")
 
+[node name="corn_plant" type="Sprite2D" parent="TextureRect/corn"]
+visible = false
+position = Vector2(33.8333, -15.1666)
+scale = Vector2(0.0487701, 0.0487701)
+texture = ExtResource("10_clqlt")
+
 [node name="potato" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(951, 457)
-scale = Vector2(3, 3)
+position = Vector2(1185, 511)
+scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_nhl5p")
 script = ExtResource("8_d8nyo")
 
-[connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
+[node name="potato_plant" type="Sprite2D" parent="TextureRect/potato"]
+visible = false
+position = Vector2(-0.333496, -13.6666)
+scale = Vector2(0.0487701, 0.0487701)
+texture = ExtResource("10_clqlt")
+
+[node name="carrot" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(1263, 466)
+scale = Vector2(0.0874999, 0.112376)
+texture_normal = ExtResource("11_dnit7")
+shape = SubResource("CircleShape2D_th8pt")
+script = ExtResource("12_5l54p")
+
+[node name="carrot_plant" type="Sprite2D" parent="TextureRect/carrot"]
+visible = false
+position = Vector2(937.145, -355.949)
+scale = Vector2(3.34424, 2.60395)
+texture = ExtResource("10_clqlt")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2(288, 261)
+scale = Vector2(0.222656, 0.226563)
+texture_normal = ExtResource("13_tgoil")
+script = ExtResource("14_suoo1")
+
 [connection signal="pressed" from="TextureRect/tomato" to="TextureRect/tomato" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/onion" to="TextureRect/onion" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/cucumber" to="TextureRect/cucumber" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/corn" to="TextureRect/corn" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/potato" to="TextureRect/potato" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/carrot" to="TextureRect/carrot" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/TouchScreenButton" to="TextureRect/TouchScreenButton" method="_on_pressed"]

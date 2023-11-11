@@ -1,11 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnxq1qxtsm7t0"]
+[gd_scene load_steps=15 format=3 uid="uid://dnxq1qxtsm7t0"]
 
-[ext_resource type="Texture2D" path="res://Garden Screen/tomato.png" id="2_qm0wd"]
-[ext_resource type="Texture2D" path="res://Garden Screen/corn.png" id="3_yuu2c"]
-[ext_resource type="Texture2D" path="res://Garden Screen/onion.png" id="4_ww8ko"]
-[ext_resource type="Texture2D" path="res://Garden Screen/cucumber.png" id="5_oa8cf"]
-[ext_resource type="Texture2D" path="res://Garden Screen/potato.png" id="6_pr21w"]
-[ext_resource type="Texture2D" path="res://Garden Screen/carrot.png" id="7_e2cd1"]
+[ext_resource type="Texture2D" uid="uid://b74lxcte37mym" path="res://Garden Screen/shop_background.jpg" id="1_pebxl"]
+[ext_resource type="Texture2D" uid="uid://4udxbf46twwo" path="res://Garden Screen/tomato.png" id="2_qm0wd"]
+[ext_resource type="Script" path="res://Garden Screen/corn_button.gd" id="3_bwp5m"]
+[ext_resource type="Texture2D" uid="uid://kaeyvvas6i8l" path="res://Garden Screen/corn.png" id="3_yuu2c"]
+[ext_resource type="Texture2D" uid="uid://cq77v3c8alptp" path="res://Garden Screen/onion.png" id="4_ww8ko"]
+[ext_resource type="Script" path="res://Garden Screen/onion_button.gd" id="5_iyb6i"]
+[ext_resource type="Texture2D" uid="uid://dgciknqusc1o4" path="res://Garden Screen/cucumber.png" id="5_oa8cf"]
+[ext_resource type="Texture2D" uid="uid://bficdp0pya0yq" path="res://Garden Screen/potato.png" id="6_pr21w"]
+[ext_resource type="Texture2D" uid="uid://byou243toy80x" path="res://Garden Screen/carrot.png" id="7_e2cd1"]
+[ext_resource type="Script" path="res://Garden Screen/cucumber_button.gd" id="7_obp05"]
+[ext_resource type="Script" path="res://Garden Screen/potato_button.gd" id="9_ajpyv"]
+[ext_resource type="Script" path="res://Garden Screen/carrot_button.gd" id="11_b0h10"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lj2cc"]
 radius = 450.22
@@ -29,6 +35,7 @@ offset_left = 1.0
 offset_top = -1.0
 offset_right = 1158.0
 offset_bottom = 663.0
+texture = ExtResource("1_pebxl")
 expand_mode = 1
 
 [node name="tomato-button" type="TouchScreenButton" parent="TextureRect"]
@@ -43,29 +50,39 @@ position = Vector2(124, 354)
 scale = Vector2(0.211765, 0.189063)
 texture_normal = ExtResource("3_yuu2c")
 shape = SubResource("CircleShape2D_lj2cc")
+script = ExtResource("3_bwp5m")
 
 [node name="onion_button" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(457, 359)
 scale = Vector2(0.224799, 0.206463)
 texture_normal = ExtResource("4_ww8ko")
 shape = SubResource("CircleShape2D_lj2cc")
+script = ExtResource("5_iyb6i")
 
 [node name="cucumber_button" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(458, 76)
 scale = Vector2(0.226831, 0.209179)
 texture_normal = ExtResource("5_oa8cf")
 shape = SubResource("CircleShape2D_lj2cc")
+script = ExtResource("7_obp05")
 
 [node name="potato_button" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(771, 68)
 scale = Vector2(0.236014, 0.215081)
 texture_normal = ExtResource("6_pr21w")
 shape = SubResource("CircleShape2D_lj2cc")
+script = ExtResource("9_ajpyv")
 
 [node name="carrot_button" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(766, 346)
 scale = Vector2(0.317768, 0.291918)
 texture_normal = ExtResource("7_e2cd1")
 shape = SubResource("CircleShape2D_lj2cc")
+script = ExtResource("11_b0h10")
 
 [connection signal="pressed" from="TextureRect/tomato-button" to="TextureRect/tomato-button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/corn_button" to="TextureRect/corn_button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/onion_button" to="TextureRect/onion_button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/cucumber_button" to="TextureRect/cucumber_button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/potato_button" to="TextureRect/potato_button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/carrot_button" to="TextureRect/carrot_button" method="_on_pressed"]
