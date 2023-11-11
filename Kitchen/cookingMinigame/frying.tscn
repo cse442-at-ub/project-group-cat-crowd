@@ -1,0 +1,275 @@
+[gd_scene load_steps=17 format=3 uid="uid://c0000wapofvub"]
+
+[ext_resource type="Script" path="res://Kitchen/cookingMinigame/frying.gd" id="1_77y12"]
+[ext_resource type="Texture2D" uid="uid://dx2pkieotkmqd" path="res://Kitchen/cookingMinigame/z15kn4ob.bmp" id="1_efokg"]
+[ext_resource type="Texture2D" uid="uid://blr4w8m8e6osk" path="res://Kitchen/cookingMinigame/niasnxff.bmp" id="2_6v4k2"]
+
+[sub_resource type="Shader" id="Shader_v13x2"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.1.2.stable's CanvasItemMaterial.
+
+shader_type canvas_item;
+render_mode blend_mix;
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0g2t1"]
+shader = SubResource("Shader_v13x2")
+
+[sub_resource type="Curve" id="Curve_uofgh"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_ev5e0"]
+offsets = PackedFloat32Array(0.0141844, 0.546099, 1)
+colors = PackedColorArray(1, 0.129412, 0, 1, 1, 0.654902, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4iyy6"]
+size = Vector2(6.53428, 5.82223)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ptfyr"]
+radius = 1.84819
+height = 6.86469
+
+[sub_resource type="Animation" id="Animation_dtcty"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(907, 63)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bar/barArea/bar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.924091, -0.132012)]
+}
+
+[sub_resource type="Animation" id="Animation_o0ia6"]
+resource_name = "move"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(312, 62), Vector2(907, 62), Vector2(312, 62)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bar/barArea/bar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.924091, -0.132012), Vector2(79.472, -0.132), Vector2(0.924091, -0.132012)]
+}
+
+[sub_resource type="Animation" id="Animation_ylbau"]
+resource_name = "move-loop"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(312, 62), Vector2(907, 62), Vector2(312, 62)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bar/barArea/bar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.924091, -0.132012), Vector2(79.472, -0.132), Vector2(0.924091, -0.132012)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gckf4"]
+_data = {
+"RESET": SubResource("Animation_dtcty"),
+"move": SubResource("Animation_o0ia6"),
+"move-loop": SubResource("Animation_ylbau")
+}
+
+[sub_resource type="Animation" id="Animation_l7l3a"]
+resource_name = "flip"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(323, 219), Vector2(323, 190.135), Vector2(323, 190.135), Vector2(323, 219)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.274017, -0.274017, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_mpuim"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(323, 219)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ug0yo"]
+_data = {
+"RESET": SubResource("Animation_mpuim"),
+"flip": SubResource("Animation_l7l3a")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_77y12")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 494.0
+
+[node name="Z15Kn4Ob" type="Sprite2D" parent="."]
+position = Vector2(571, 574)
+scale = Vector2(1.99828, 2.608)
+texture = ExtResource("1_efokg")
+
+[node name="GPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("ShaderMaterial_0g2t1")
+position = Vector2(347, 445)
+scale = Vector2(0.820924, 0.527048)
+amount = 58
+lifetime_randomness = 0.19
+fixed_fps = 30
+draw_order = 1
+emission_shape = 1
+emission_sphere_radius = 111.53
+spread = 52.11
+gravity = Vector2(0, -300.175)
+initial_velocity_min = 10.53
+initial_velocity_max = 115.79
+angular_velocity_min = 30.0
+angular_velocity_max = 30.0
+scale_amount_min = 0.0
+scale_amount_max = 84.21
+scale_amount_curve = SubResource("Curve_uofgh")
+color_ramp = SubResource("Gradient_ev5e0")
+hue_variation_min = -0.02
+hue_variation_max = 0.03
+anim_speed_max = 16.0
+
+[node name="bar" type="Line2D" parent="."]
+position = Vector2(305, 85)
+scale = Vector2(7.575, 7.575)
+points = PackedVector2Array(0.16, 0, 80.175, 0)
+width = 5.78
+default_color = Color(0.0745098, 0.654902, 0, 0.556863)
+
+[node name="Line2D" type="Line2D" parent="bar"]
+position = Vector2(36.9637, -1.71617)
+rotation = -0.00937892
+scale = Vector2(0.449077, 0.533375)
+points = PackedVector2Array(-0.788246, -0.229338, 6.32853, 5.96302)
+default_color = Color(0, 0, 0.592157, 1)
+
+[node name="hitArea" type="Area2D" parent="bar"]
+position = Vector2(0, -9.53674e-07)
+
+[node name="hit" type="CollisionShape2D" parent="bar/hitArea"]
+position = Vector2(38.1518, -0.264022)
+rotation = 0.785398
+scale = Vector2(0.79, 0.79)
+shape = SubResource("RectangleShape2D_4iyy6")
+debug_color = Color(0, 0.6, 0.701961, 1)
+
+[node name="barArea" type="Area2D" parent="bar"]
+
+[node name="bar" type="CollisionShape2D" parent="bar/barArea"]
+position = Vector2(0.924091, -0.132012)
+scale = Vector2(0.862706, 1)
+shape = SubResource("CapsuleShape2D_ptfyr")
+
+[node name="hitBox" type="Line2D" parent="."]
+position = Vector2(907, 63)
+points = PackedVector2Array(0, 0, 0, 46.605)
+default_color = Color(0, 0, 0, 1)
+
+[node name="moveBar" type="AnimationPlayer" parent="hitBox"]
+libraries = {
+"": SubResource("AnimationLibrary_gckf4")
+}
+
+[node name="Niasnxff" type="Sprite2D" parent="."]
+position = Vector2(323, 219)
+texture = ExtResource("2_6v4k2")
+
+[node name="flip" type="AnimationPlayer" parent="Niasnxff"]
+libraries = {
+"": SubResource("AnimationLibrary_ug0yo")
+}
+
+[connection signal="body_entered" from="bar/hitArea" to="." method="_on_hit_area_body_entered"]
+[connection signal="body_entered" from="bar/hitArea" to="bar/hitArea" method="_on_body_entered"]
+[connection signal="body_exited" from="bar/hitArea" to="." method="_on_hit_area_body_exited"]
+[connection signal="body_exited" from="bar/hitArea" to="bar/hitArea" method="_on_body_exited"]
+[connection signal="body_entered" from="bar/barArea" to="bar/hitArea" method="_on_bar_area_body_entered"]
+[connection signal="body_exited" from="bar/barArea" to="bar/hitArea" method="_on_bar_area_body_exited"]

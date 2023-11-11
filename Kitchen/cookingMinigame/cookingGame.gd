@@ -46,3 +46,5 @@ func _on_onion_button_pressed():
 	$Onion.visible = not $Onion.visible
 	pass # Replace with function body.
 
+func recipies():
+	pass

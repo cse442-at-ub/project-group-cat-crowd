@@ -223,3 +223,15 @@ offset_right = 396.0
 offset_bottom = 161.0
 theme_override_font_sizes/font_size = 100
 text = "Cut!"
+
+[node name="Great!" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 720.0
+offset_top = -13.0
+offset_right = 1163.0
+offset_bottom = 196.0
+theme_override_font_sizes/normal_font_size = 140
+theme_override_font_sizes/mono_font_size = 101
+bbcode_enabled = true
+text = "[wave amp=100][rainbow]Great!"
+tab_size = 6
