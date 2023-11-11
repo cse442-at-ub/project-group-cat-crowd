@@ -1,61 +1,34 @@
-[gd_scene load_steps=10 format=3 uid="uid://36b2qputwcjh"]
+[gd_scene load_steps=9 format=3 uid="uid://dnxq1qxtsm7t0"]
 
-[ext_resource type="Texture2D" path="res://backgorund_plantshop.jpg" id="1_33fg3"]
-[ext_resource type="Texture2D" uid="uid://4udxbf46twwo" path="res://Garden Screen/tomato.png" id="2_qm0wd"]
-[ext_resource type="Texture2D" uid="uid://kaeyvvas6i8l" path="res://Garden Screen/corn.png" id="3_yuu2c"]
-[ext_resource type="Texture2D" uid="uid://cq77v3c8alptp" path="res://Garden Screen/onion.png" id="4_ww8ko"]
-[ext_resource type="Texture2D" uid="uid://dgciknqusc1o4" path="res://Garden Screen/cucumber.png" id="5_oa8cf"]
-[ext_resource type="Texture2D" uid="uid://bficdp0pya0yq" path="res://Garden Screen/potato.png" id="6_pr21w"]
-[ext_resource type="Texture2D" uid="uid://byou243toy80x" path="res://Garden Screen/carrot.png" id="7_e2cd1"]
+[ext_resource type="Texture2D" path="res://Garden Screen/tomato.png" id="2_qm0wd"]
+[ext_resource type="Texture2D" path="res://Garden Screen/corn.png" id="3_yuu2c"]
+[ext_resource type="Texture2D" path="res://Garden Screen/onion.png" id="4_ww8ko"]
+[ext_resource type="Texture2D" path="res://Garden Screen/cucumber.png" id="5_oa8cf"]
+[ext_resource type="Texture2D" path="res://Garden Screen/potato.png" id="6_pr21w"]
+[ext_resource type="Texture2D" path="res://Garden Screen/carrot.png" id="7_e2cd1"]
 
-[sub_resource type="GDScript" id="GDScript_8eca4"]
-resource_name = "veggies_interact"
-script/source = "extends Node2D
+[sub_resource type="CircleShape2D" id="CircleShape2D_lj2cc"]
+radius = 450.22
+
+[sub_resource type="GDScript" id="GDScript_lo2g8"]
+resource_name = "tomato_button"
+script/source = "extends TouchScreenButton
 
 
 
-func _on_tomatobutton_pressed():
+
+func _on_pressed():
 	PlantGame.tomato = true
-	get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
-
-
-func _on_onion_button_pressed():
-	PlantGame.onion = true
-	get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
-
-
-func _on_cucumber_button_pressed():
-	PlantGame.cucumber = true
-	get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
-
-
-func _on_potato_button_pressed():
-	PlantGame.potato = true
-	get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
-
-
-func _on_carrot_button_pressed():
-	PlantGame.carrot = true
-	get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
-
-
-func _on_corn_button_pressed():
-	PlantGame.corn = true
 	get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
 "
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lj2cc"]
-radius = 577.76
-
 [node name="plant_shop" type="Node2D"]
-script = SubResource("GDScript_8eca4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 1.0
 offset_top = -1.0
 offset_right = 1158.0
 offset_bottom = 663.0
-texture = ExtResource("1_33fg3")
 expand_mode = 1
 
 [node name="tomato-button" type="TouchScreenButton" parent="TextureRect"]
@@ -63,7 +36,7 @@ position = Vector2(121, 74)
 scale = Vector2(0.225144, 0.203859)
 texture_normal = ExtResource("2_qm0wd")
 shape = SubResource("CircleShape2D_lj2cc")
-passby_press = true
+script = SubResource("GDScript_lo2g8")
 
 [node name="corn_button" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(124, 354)
@@ -95,9 +68,4 @@ scale = Vector2(0.317768, 0.291918)
 texture_normal = ExtResource("7_e2cd1")
 shape = SubResource("CircleShape2D_lj2cc")
 
-[connection signal="pressed" from="TextureRect/tomato-button" to="." method="_on_tomatobutton_pressed"]
-[connection signal="pressed" from="TextureRect/corn_button" to="." method="_on_corn_button_pressed"]
-[connection signal="pressed" from="TextureRect/onion_button" to="." method="_on_onion_button_pressed"]
-[connection signal="pressed" from="TextureRect/cucumber_button" to="." method="_on_cucumber_button_pressed"]
-[connection signal="pressed" from="TextureRect/potato_button" to="." method="_on_potato_button_pressed"]
-[connection signal="pressed" from="TextureRect/carrot_button" to="." method="_on_carrot_button_pressed"]
+[connection signal="pressed" from="TextureRect/tomato-button" to="TextureRect/tomato-button" method="_on_pressed"]
