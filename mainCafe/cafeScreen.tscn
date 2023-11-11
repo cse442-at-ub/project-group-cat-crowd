@@ -1,6 +1,5 @@
-[gd_scene load_steps=39 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=45 format=3 uid="uid://i58q7o3xprky"]
 
-[ext_resource type="Script" path="res://mainCafe/selectedCat.gd" id="1_7sav0"]
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
 [ext_resource type="Texture2D" uid="uid://bl4p34328ahp" path="res://mainCafe/IMG_1066.jpg" id="2_rx5ql"]
@@ -31,11 +30,30 @@
 [ext_resource type="Texture2D" uid="uid://d2vsg5l10an0f" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten8.png" id="18_xjd7e"]
 [ext_resource type="Texture2D" uid="uid://cke7q1hgljxv0" path="res://mainCafe/buttons/equipIcon.png" id="29_efvnj"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/catEquip.gd" id="30_uo8ed"]
+[ext_resource type="Script" path="res://mainCafe/CanvasLayer.gd" id="32_0tiko"]
+[ext_resource type="Texture2D" uid="uid://c0lv505fwgrte" path="res://mainCafe/IMG_1128.jpg" id="32_px6ur"]
+[ext_resource type="FontFile" uid="uid://dvqwvwbvstckb" path="res://mainCafe/Chalkboard-Regular.ttf" id="33_efr7g"]
+[ext_resource type="Texture2D" uid="uid://cpsgb3nbypiud" path="res://mainCafe/greencheckimg.png" id="34_4yrvg"]
+[ext_resource type="Texture2D" uid="uid://b7le7msig8byl" path="res://mainCafe/kisspng-check-mark-checkbox-clip-art-yes-5ac17c66130666.2548912615226297340779-removebg-preview.png" id="34_e1scr"]
 
 [sub_resource type="GDScript" id="GDScript_klpkk"]
 script/source = "extends Node
 
 
+
+
+func _ready():
+	pass
+	#var scene = preload(\"equippingSystem\").instantiate()
+	#var scenescript = scene.get_node(\"exitSys\")
+	#scenescript.get_frame.connect(Callable(self,\"on_get_frame\"))
+
+
+	
+func on_get_frame(frame):
+	print(\"scene\")
+	$selectedCat2.texture = frame
+	
 
 func _on_button_pressed():
 	get_tree().change_scene(\"res://lounge.tscn\")
@@ -43,6 +61,8 @@ func _on_button_pressed():
 
 func _on_area_2d_input_event(_viewport, _event, _shape_idx):
 	pass # Replace with function body.
+	
+	
 
 
 
@@ -50,9 +70,14 @@ func _on_area_2d_input_event(_viewport, _event, _shape_idx):
 
 
 	
-"
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_jdtj5"]
+
+
+
+
+
+
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hdb81"]
 animations = [{
@@ -156,15 +181,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c5jtv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7knro"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nukme"]
+
 [node name="cafeScreen" type="Node2D"]
 position = Vector2(704, 286)
 script = SubResource("GDScript_klpkk")
-
-[node name="selectedCat" type="AnimatedSprite2D" parent="."]
-position = Vector2(1081, 1042)
-scale = Vector2(5667.66, 11.8117)
-sprite_frames = SubResource("SpriteFrames_jdtj5")
-script = ExtResource("1_7sav0")
 
 [node name="catOnTower" type="Sprite2D" parent="."]
 position = Vector2(86, 1040)
@@ -277,7 +302,56 @@ icon = ExtResource("29_efvnj")
 flat = true
 script = ExtResource("30_uo8ed")
 
-[connection signal="ready" from="selectedCat" to="selectedCat" method="_on_ready"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+script = ExtResource("32_0tiko")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.688
+anchor_bottom = 1.678
+offset_left = 1300.0
+offset_top = 1299.0
+offset_right = 2139.42
+offset_bottom = 1097.66
+scale = Vector2(0.59186, 0.54961)
+texture = ExtResource("32_px6ur")
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_left = 1375.33
+offset_top = 94.6125
+offset_right = 1635.33
+offset_bottom = 354.613
+scale = Vector2(0.461876, 0.502911)
+mouse_filter = 1
+texture_normal = ExtResource("34_e1scr")
+texture_hover = ExtResource("34_4yrvg")
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_left = 481.533
+offset_top = 585.87
+offset_right = 1463.53
+offset_bottom = 767.87
+scale = Vector2(0.932859, 1.15751)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0.203922, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_colors/clear_button_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("33_efr7g")
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxEmpty_c5jtv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7knro")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_nukme")
+placeholder_text = "enter name"
+max_length = 20
+clear_button_enabled = true
+
+[node name="selectedCat2" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="input_event" from="catOnTower/Area2D" to="catOnTower" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="catOnChair/Area2D" to="catOnChair" method="_on_area_2d_input_event"]
 [connection signal="pressed" from="LoungeButton" to="LoungeButton" method="_on_pressed"]
@@ -285,3 +359,4 @@ script = ExtResource("30_uo8ed")
 [connection signal="pressed" from="GardenButton" to="GardenButton" method="_on_pressed"]
 [connection signal="pressed" from="ShopButton" to="ShopButton" method="_on_pressed"]
 [connection signal="pressed" from="catEquip" to="catEquip" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureRect/TextureButton" to="CanvasLayer" method="_on_texture_button_pressed"]
