@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqn8hvhuttrit"]
+[gd_scene load_steps=14 format=3 uid="uid://bqn8hvhuttrit"]
 
+[ext_resource type="Script" path="res://Kitchen/cookingMinigame/cookingGame.gd" id="1_r3p4k"]
 [ext_resource type="Texture2D" uid="uid://ctnllgja4o5jj" path="res://Kitchen/cookingMinigame/Board.png" id="1_r88wp"]
 [ext_resource type="Texture2D" uid="uid://c85gtarw23gvs" path="res://Kitchen/cookingMinigame/tomato.png" id="2_061ni"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/ingredients.gd" id="3_5acuq"]
@@ -9,17 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://b8n508syf2hcy" path="res://Kitchen/cookingMinigame/onion.png" id="5_ql4bt"]
 [ext_resource type="Texture2D" uid="uid://dyn83vc2cmvvi" path="res://Kitchen/cookingMinigame/Knife.png" id="6_hgi70"]
 [ext_resource type="Texture2D" uid="uid://xyauyssr7fib" path="res://Images and Vectors/Exit Icon (1).png" id="9_xqn2u"]
+[ext_resource type="Texture2D" uid="uid://dohjhw6s1cvnm" path="res://Kitchen/cookingMinigame/playButton.bmp" id="11_nw5q4"]
+[ext_resource type="Script" path="res://Kitchen/cookingMinigame/startGame.gd" id="12_w5c01"]
 
-[node name="cookingGame" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pbx4"]
+radius = 268.39
+
+[node name="cookingGame" type="Node2D"]
+script = ExtResource("1_r3p4k")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 650.0
 
@@ -35,7 +35,6 @@ scale = Vector2(0.635, 0.860544)
 texture = ExtResource("6_hgi70")
 
 [node name="MenuButton" type="Button" parent="."]
-layout_mode = 0
 offset_left = 106.0
 offset_top = 536.0
 offset_right = 241.0
@@ -44,9 +43,35 @@ action_mode = 0
 text = "Ingredients"
 script = ExtResource("3_64215")
 
+[node name="Corn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(657, 321)
+rotation = -1.38878
+scale = Vector2(0.243887, 0.29625)
+texture = ExtResource("4_rxon7")
+
+[node name="tomato" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(412, 340)
+scale = Vector2(0.191935, 0.180716)
+texture = ExtResource("2_061ni")
+
+[node name="Cucumber" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(500, 368)
+rotation = -0.614875
+scale = Vector2(0.243216, 0.189375)
+texture = ExtResource("3_y310p")
+
+[node name="Onion" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(595, 419)
+rotation = 0.617571
+scale = Vector2(0.228458, 0.224375)
+texture = ExtResource("5_ql4bt")
+
 [node name="IngredientMenu" type="ColorRect" parent="."]
 visible = false
-layout_mode = 0
 offset_left = 54.0
 offset_top = 25.0
 offset_right = 472.0
@@ -55,18 +80,12 @@ color = Color(0.870588, 0.654902, 0.439216, 1)
 script = ExtResource("3_5acuq")
 
 [node name="CornButton" type="Button" parent="IngredientMenu"]
+layout_mode = 0
 offset_left = 253.0
 offset_right = 335.0
 offset_bottom = 72.0
 action_mode = 0
 text = "Corn"
-
-[node name="Corn" type="Sprite2D" parent="IngredientMenu/CornButton"]
-visible = false
-position = Vector2(350, 296)
-rotation = -1.38878
-scale = Vector2(0.243887, 0.29625)
-texture = ExtResource("4_rxon7")
 
 [node name="TomButton" type="Button" parent="IngredientMenu"]
 layout_mode = 0
@@ -75,26 +94,13 @@ offset_bottom = 72.0
 action_mode = 0
 text = "Tomato"
 
-[node name="tomato" type="Sprite2D" parent="IngredientMenu/TomButton"]
-visible = false
-position = Vector2(358, 315)
-scale = Vector2(0.191935, 0.180716)
-texture = ExtResource("2_061ni")
-
-[node name="ZuccButton" type="Button" parent="IngredientMenu"]
+[node name="CucButton" type="Button" parent="IngredientMenu"]
 layout_mode = 0
 offset_left = 83.0
 offset_right = 167.0
 offset_bottom = 72.0
 action_mode = 0
 text = "Zuccini"
-
-[node name="Zuccini" type="Sprite2D" parent="IngredientMenu/ZuccButton"]
-visible = false
-position = Vector2(363, 343)
-rotation = -0.614875
-scale = Vector2(0.243216, 0.189375)
-texture = ExtResource("3_y310p")
 
 [node name="OnionButton" type="Button" parent="IngredientMenu"]
 layout_mode = 0
@@ -104,13 +110,6 @@ offset_right = 251.0
 offset_bottom = 72.0
 action_mode = 0
 text = "Onion"
-
-[node name="Onion" type="Sprite2D" parent="IngredientMenu/OnionButton"]
-visible = false
-position = Vector2(373, 393)
-rotation = 0.617571
-scale = Vector2(0.228458, 0.224375)
-texture = ExtResource("5_ql4bt")
 
 [node name="ExitButton" type="Button" parent="IngredientMenu"]
 layout_mode = 0
@@ -122,11 +121,32 @@ action_mode = 0
 icon = ExtResource("9_xqn2u")
 icon_alignment = 1
 
+[node name="PlayButton" type="TouchScreenButton" parent="."]
+position = Vector2(484, 48)
+scale = Vector2(0.244141, 0.250977)
+texture_normal = ExtResource("11_nw5q4")
+shape = SubResource("CircleShape2D_6pbx4")
+script = ExtResource("12_w5c01")
+
+[node name="Label" type="Label" parent="PlayButton"]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 73.728
+offset_top = 545.868
+offset_right = 431.728
+offset_bottom = 713.868
+theme_override_font_sizes/font_size = 120
+text = "START"
+
 [connection signal="pressed" from="MenuButton" to="MenuButton" method="_on_pressed"]
+[connection signal="pressed" from="IngredientMenu/CornButton" to="." method="_on_corn_button_pressed"]
 [connection signal="pressed" from="IngredientMenu/CornButton" to="IngredientMenu" method="_on_corn_button_pressed"]
 [connection signal="pressed" from="IngredientMenu/CornButton" to="IngredientMenu/CornButton" method="_on_pressed"]
+[connection signal="pressed" from="IngredientMenu/TomButton" to="." method="_on_tom_button_pressed"]
 [connection signal="pressed" from="IngredientMenu/TomButton" to="IngredientMenu" method="_on_tom_button_pressed"]
 [connection signal="pressed" from="IngredientMenu/TomButton" to="IngredientMenu/CornButton" method="_on_tom_button_pressed"]
-[connection signal="pressed" from="IngredientMenu/ZuccButton" to="IngredientMenu" method="_on_zucc_button_pressed"]
+[connection signal="pressed" from="IngredientMenu/CucButton" to="." method="_on_cuc_button_pressed"]
+[connection signal="pressed" from="IngredientMenu/CucButton" to="IngredientMenu" method="_on_zucc_button_pressed"]
+[connection signal="pressed" from="IngredientMenu/OnionButton" to="." method="_on_onion_button_pressed"]
 [connection signal="pressed" from="IngredientMenu/OnionButton" to="IngredientMenu" method="_on_onion_button_pressed"]
 [connection signal="pressed" from="IngredientMenu/ExitButton" to="IngredientMenu" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
