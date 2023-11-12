@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://qjv0jvg3cphk"]
+[gd_scene load_steps=19 format=3 uid="uid://qjv0jvg3cphk"]
 
 [ext_resource type="Texture2D" uid="uid://ctnllgja4o5jj" path="res://Kitchen/cookingMinigame/Board.png" id="1_dfelb"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/Cutting.gd" id="1_e3isu"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dhjq7kp7e7f6w" path="res://Kitchen/cookingMinigame/pumpkin.png" id="4_e78c5"]
 [ext_resource type="Texture2D" uid="uid://c85gtarw23gvs" path="res://Kitchen/cookingMinigame/tomato.png" id="5_d1wyv"]
 [ext_resource type="Texture2D" uid="uid://bpeucxlyeoc60" path="res://Kitchen/cookingMinigame/corn.png" id="6_c1t5x"]
+[ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="7_s2toc"]
+[ext_resource type="Script" path="res://Cat Shop/Exit Button.gd" id="8_2peep"]
 
 [sub_resource type="Animation" id="Animation_15gnt"]
 length = 0.001
@@ -235,3 +237,13 @@ theme_override_font_sizes/mono_font_size = 101
 bbcode_enabled = true
 text = "[wave amp=100][rainbow]Great!"
 tab_size = 6
+
+[node name="Exit Button" type="Button" parent="."]
+offset_left = 1040.0
+offset_top = 30.0
+offset_right = 1104.0
+offset_bottom = 94.0
+theme = ExtResource("7_s2toc")
+script = ExtResource("8_2peep")
+
+[connection signal="pressed" from="Exit Button" to="Exit Button" method="_on_pressed"]

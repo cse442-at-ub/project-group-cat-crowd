@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqn8hvhuttrit"]
+[gd_scene load_steps=16 format=3 uid="uid://bqn8hvhuttrit"]
 
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/cookingGame.gd" id="1_r3p4k"]
 [ext_resource type="Texture2D" uid="uid://ctnllgja4o5jj" path="res://Kitchen/cookingMinigame/Board.png" id="1_r88wp"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://xyauyssr7fib" path="res://Images and Vectors/Exit Icon (1).png" id="9_xqn2u"]
 [ext_resource type="Texture2D" uid="uid://dohjhw6s1cvnm" path="res://Kitchen/cookingMinigame/playButton.bmp" id="11_nw5q4"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/startGame.gd" id="12_w5c01"]
+[ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="13_tw4mc"]
+[ext_resource type="Script" path="res://Cat Shop/Exit Button.gd" id="14_a7o8u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6pbx4"]
 radius = 268.39
@@ -137,6 +139,14 @@ offset_bottom = 713.868
 theme_override_font_sizes/font_size = 120
 text = "START"
 
+[node name="Exit Button" type="Button" parent="."]
+offset_left = 1077.0
+offset_top = 22.0
+offset_right = 1124.0
+offset_bottom = 69.0
+theme = ExtResource("13_tw4mc")
+script = ExtResource("14_a7o8u")
+
 [connection signal="pressed" from="MenuButton" to="MenuButton" method="_on_pressed"]
 [connection signal="pressed" from="IngredientMenu/CornButton" to="." method="_on_corn_button_pressed"]
 [connection signal="pressed" from="IngredientMenu/CornButton" to="IngredientMenu" method="_on_corn_button_pressed"]
@@ -150,3 +160,4 @@ text = "START"
 [connection signal="pressed" from="IngredientMenu/OnionButton" to="IngredientMenu" method="_on_onion_button_pressed"]
 [connection signal="pressed" from="IngredientMenu/ExitButton" to="IngredientMenu" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
+[connection signal="pressed" from="Exit Button" to="Exit Button" method="_on_pressed"]
