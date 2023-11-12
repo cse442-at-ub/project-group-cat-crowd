@@ -15,6 +15,12 @@ run/main_scene="res://cafeScreen.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://Cat Shop/icon.svg"
 
+[autoload]
+
+Global="*res://Global.gd"
+GlobalVeggies="*res://Kitchen/cookingMinigame/vegetables.gd"
+PlantGame="*res://plant_game.gd"
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
