@@ -1,13 +1,13 @@
 extends Button
 
 func _ready():
-	$".".disabled = Global.shop_items["Necklace"]
+	$".".disabled = Global.accessory_purchased["Necklace"]
 
 func _on_pressed():
 	if Global.cat_coins >= 2250:
 		Global.cat_coins = Global.cat_coins - 2250
-		Global.shop_items["Necklace"] = true
-		$".".disabled = Global.shop_items["Necklace"]
+		Global.accessory_purchased["Necklace"] = true
+		$".".disabled = Global.accessory_purchased["Necklace"]
 	else:
 		$"../../CurrencyPopup".visible = true
 		await get_tree().create_timer(3.0).timeout
