@@ -8,6 +8,9 @@ extends Node2D
 
 @onready var OnionIng = $Onion
 
+func _ready():
+	print(GlobalVeggies.corn)
+
 func _process(delta):
 	pass
 
@@ -34,5 +37,3 @@ func _on_onion_button_pressed():
 		$Onion.visible = not $Onion.visible
 	pass # Replace with function body.
 
-func recipies():
-	pass

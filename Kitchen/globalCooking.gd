@@ -1,23 +1,32 @@
 extends Node
 
-var potatoSoup = [GlobalVeggies.potato, GlobalVeggies.onion]
-var carrotSoup = [GlobalVeggies.carrot, GlobalVeggies.onion]
-var onionSoup = [GlobalVeggies.onion]
-var cornChowder = [GlobalVeggies.corn, GlobalVeggies.potato, GlobalVeggies.carrot]
-var tomatoSoup = [GlobalVeggies.tomato]
+@onready var veggie = get_node("/root/GlobalVeggies")
 
-var potatoSalad = [GlobalVeggies.potato, GlobalVeggies.cucumber]
-var cucumberSalad = [GlobalVeggies.cucumber]
-var regSalad = [GlobalVeggies.tomato, GlobalVeggies.cucumber, GlobalVeggies.onion]
+##var corn = GlobalVeggies.corn
+##var onion = GlobalVeggies.onion
+##var cucumber = GlobalVeggies.cucumber
+##var tomato = GlobalVeggies.tomato
+##var potato = GlobalVeggies.potato
+##var carrot = GlobalVeggies.carrot"""
 
-var mashedPotatoes = [GlobalVeggies.potato]
-var fries = [GlobalVeggies.potato]
-var veggieMix = [GlobalVeggies.carrot, GlobalVeggies.cucumber, GlobalVeggies.onion]
+var potatoSoup = {"potato": potato, "onion": onion}
+var carrotSoup = {"carrot": carrot, "onion": onion}
+var onionSoup = {"onion": onion}
+var cornChowder = {"corn": corn, "potato": potato, "carrot": carrot}
+var tomatoSoup = {"tomato": tomato}
 
-var pasta = [GlobalVeggies.tomato, GlobalVeggies.onion]
-var steak = [GlobalVeggies.onion, GlobalVeggies.potato]
-var tacos = [GlobalVeggies.tomato, GlobalVeggies.onion, GlobalVeggies.corn]
-var cucSandwich = [GlobalVeggies.cucumber]
+var potatoSalad = {"potato": potato, "cucumber": cucumber}
+var cucumberSalad = {"cucumber": cucumber}
+var regSalad = {"tomato": tomato, "cucumber": cucumber, "onion": onion}
+
+var mashedPotatoes = {"potato":potato}
+var fries = {"potato":potato}
+var veggieMix = {"carrot": carrot, "cucumber": cucumber, "onion": onion}
+
+var pasta = {"tomato": tomato, "onion": onion}
+var steak = {"potato": potato, "onion": onion}
+var tacos = {"tomato": tomato, "onion": onion, "corn": corn}
+var cucSandwich = {"cucumber": cucumber}
 
 var recipies = [potatoSoup, carrotSoup, onionSoup, cornChowder, tomatoSoup, 
 				potatoSalad, cucumberSalad, regSalad, mashedPotatoes, fries, veggieMix, 
