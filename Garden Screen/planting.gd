@@ -1,10 +1,13 @@
 extends Node2D
 
+@onready var cucumber_timer = get_node("")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	if PlantGame.tomato:
 		$TextureRect/tomato/tomato_plant.show()
+		
 	if PlantGame.onion:
 		$TextureRect/onion/onion_plant.show()
 	if PlantGame.cucumber:
@@ -15,6 +18,8 @@ func _ready():
 		$TextureRect/potato/potato_plant.show()
 	if PlantGame.carrot:
 		$TextureRect/carrot/carrot_plant.show()
+	
+	
 	
 
 
@@ -29,3 +34,7 @@ func _on_carrot_pressed():
 
 func _on_touch_screen_button_pressed():
 	pass # Replace with function body.
+
+func _on_tomato_finish ():
+	
+	pass
