@@ -10,3 +10,8 @@ var color_purchased = {"Color 1": false, "Color 2": false, "Color 3": false, "Co
 var cat_selected = ""
 var accessory_selected = ""
 var cat_coins = 17500
+
+
+var catsAvailable = {0: false, 1: false, 2: false, 3: false, 4: false,
+5: false, 6: false, 7: false}
+var selectedCatFrame = 8
