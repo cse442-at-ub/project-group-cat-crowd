@@ -25,7 +25,18 @@ script/source = "extends TouchScreenButton
 
 func _on_pressed():
 	PlantGame.tomato = true
+	if Global.cat_coins >= 10:
+		Global.cat_coins = Global.cat_coins - 10
+		PlantGame.plant_purchased[\"Tomato\"] = true
+		GlobalVeggies.tomato += 1
+		print(GlobalVeggies.tomato)
+		print(Global.cat_coins)
+	else:
+		$\"../../CurrencyPopup\".visible = true
+		await get_tree().create_timer(3.0).timeout
+		$\"../../CurrencyPopup\".visible = false
 	get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
+
 "
 
 [node name="plant_shop" type="Node2D"]
@@ -74,7 +85,7 @@ shape = SubResource("CircleShape2D_lj2cc")
 script = ExtResource("9_ajpyv")
 
 [node name="carrot_button" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(766, 346)
+position = Vector2(766, 350)
 scale = Vector2(0.317768, 0.291918)
 texture_normal = ExtResource("7_e2cd1")
 shape = SubResource("CircleShape2D_lj2cc")

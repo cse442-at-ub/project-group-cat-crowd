@@ -19,12 +19,9 @@ config/icon="res://Cat Shop/icon.svg"
 
 Global="*res://Global.gd"
 PlantGame="*res://plant_game.gd"
+GlobalCooking="*res://Kitchen/globalCooking.gd"
+PlantTimer="*res://Garden Screen/PlantTimer.tscn"
 GlobalVeggies="*res://vegetables.gd"
-
-[display]
-
-window/stretch/mode="canvas_items"
-window/stretch/aspect="ignore"
 
 [input_devices]
 
