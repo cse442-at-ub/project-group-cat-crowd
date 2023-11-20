@@ -2,10 +2,10 @@ extends Node
 
 #basic vegetable count from garden and kitchen
 var corn = 0
-var onion = 0
+var onion = 1
 var cucumber = 0
 var tomato = 0
-var potato = 0
+var potato = 1
 var carrot = 0
 
 #dictionaries for the veggies used in each recipe
