@@ -1,4 +1,4 @@
-extends TouchScreenButton
+extends Button
 
 
 

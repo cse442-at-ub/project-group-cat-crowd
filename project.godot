@@ -18,8 +18,13 @@ config/icon="res://Cat Shop/icon.svg"
 [autoload]
 
 Global="*res://Global.gd"
-GlobalVeggies="*res://Kitchen/cookingMinigame/vegetables.gd"
 PlantGame="*res://plant_game.gd"
+GlobalVeggies="*res://vegetables.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
 
 [input_devices]
 
@@ -28,3 +33,4 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

@@ -47,8 +47,8 @@ func _ready():
 		$Cut.show()
 	if GlobalVeggies.corn and cutCount == 0:
 		cutCount += 1
-		$Corn/AnimationPlayer.play(corn)
-		cutVeggies.append("corn")
+		$Corn/AnimationPlayer.play("corn")
+		cutVeggies.append(corn)
 		currVeggie = "corn"
 		$verticalLine.show()
 		$Cut.show()
@@ -126,7 +126,7 @@ func nextVeggie():
 		$Corn/AnimationPlayer.play("cornLeave")
 		await get_tree().create_timer(1.0).timeout
 		$"Great!".hide()
-	if cutCount < veggieCount:
+	if cutCount < veggieCount and veggieCount != 0:
 		if GlobalVeggies.tomato and cutVeggies.find(tom) == -1:
 			cutCount += 1
 			$Tomato/AnimationPlayer.play("tomato")
