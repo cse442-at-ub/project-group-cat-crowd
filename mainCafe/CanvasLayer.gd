@@ -3,6 +3,7 @@ extends CanvasLayer
 
 
 @onready var line_edit = get_node("TextureRect/LineEdit")
+#@onready var animated_sprite = $selectedFromSystem
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	line_edit.grab_focus()
