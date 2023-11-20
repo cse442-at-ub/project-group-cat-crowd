@@ -22,7 +22,7 @@ func _on_item_pressed(id):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for item in Global.shop_items.keys():
+	for item in Global.color_purchased.keys():
 		if Global.color_purchased[item] == true :
 			counter = counter + 1
 			$".".get_popup().add_item(item, counter)

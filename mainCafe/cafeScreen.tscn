@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=47 format=3 uid="uid://i58q7o3xprky"]
 
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
@@ -35,6 +35,7 @@
 [ext_resource type="FontFile" uid="uid://dvqwvwbvstckb" path="res://mainCafe/Chalkboard-Regular.ttf" id="33_efr7g"]
 [ext_resource type="Texture2D" uid="uid://cpsgb3nbypiud" path="res://mainCafe/greencheckimg.png" id="34_4yrvg"]
 [ext_resource type="Texture2D" uid="uid://b7le7msig8byl" path="res://mainCafe/kisspng-check-mark-checkbox-clip-art-yes-5ac17c66130666.2548912615226297340779-removebg-preview.png" id="34_e1scr"]
+[ext_resource type="Script" path="res://mainCafe/AccessoryMenu.gd" id="36_3ofdk"]
 [ext_resource type="Script" path="res://mainCafe/ColorButton.gd" id="36_4doux"]
 
 [sub_resource type="GDScript" id="GDScript_klpkk"]
@@ -352,6 +353,17 @@ clear_button_enabled = true
 [node name="selectedCat2" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="MenuButton2" type="MenuButton" parent="."]
+offset_left = 1283.0
+offset_top = 111.0
+offset_right = 1507.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 31
+text = "Cat Accessories"
+script = ExtResource("36_3ofdk")
 
 [node name="MenuButton" type="MenuButton" parent="."]
 offset_left = 1274.0
