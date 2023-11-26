@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/RecipeMenu.gd" id="13_6543q"]
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="13_sanxo"]
 [ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="13_tw4mc"]
-[ext_resource type="Script" path="res://Cat Shop/Exit Button.gd" id="14_a7o8u"]
+[ext_resource type="Script" path="res://Kitchen/cookingMinigame/KitchenGameExit.gd" id="14_18cyx"]
 [ext_resource type="Texture2D" uid="uid://vkfu8qp3tvqu" path="res://Images and Vectors/Rectangle 11.png" id="14_jay70"]
 [ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="15_5sqca"]
 [ext_resource type="Texture2D" uid="uid://cyd4itwc2iu81" path="res://Kitchen/cookingMinigame/Recipies/soup.png" id="15_8kw3n"]
@@ -100,20 +100,13 @@ script = ExtResource("12_w5c01")
 
 [node name="Label" type="Label" parent="PlayButton"]
 self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 73.728
 offset_top = 545.868
 offset_right = 431.728
 offset_bottom = 713.868
 theme_override_font_sizes/font_size = 120
 text = "START"
-
-[node name="Exit Button" type="Button" parent="."]
-offset_left = 1077.0
-offset_top = 22.0
-offset_right = 1124.0
-offset_bottom = 69.0
-theme = ExtResource("13_tw4mc")
-script = ExtResource("14_a7o8u")
 
 [node name="RecipeMenu" type="ColorRect" parent="."]
 z_as_relative = false
@@ -342,9 +335,16 @@ in the garden!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Exit Button" type="Button" parent="."]
+offset_left = 1099.0
+offset_top = 4.0
+offset_right = 1146.0
+offset_bottom = 51.0
+theme = ExtResource("13_tw4mc")
+script = ExtResource("14_18cyx")
+
 [connection signal="pressed" from="MenuButton" to="MenuButton" method="_on_pressed"]
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
-[connection signal="pressed" from="Exit Button" to="Exit Button" method="_on_pressed"]
 [connection signal="pressed" from="RecipeMenu/MenuBackground/SelectionGroup/Soup" to="RecipeMenu" method="_on_soup_pressed"]
 [connection signal="pressed" from="RecipeMenu/MenuBackground/SelectionGroup/Salad" to="RecipeMenu" method="_on_salad_pressed"]
 [connection signal="pressed" from="RecipeMenu/MenuBackground/SelectionGroup/Entree" to="RecipeMenu" method="_on_entree_pressed"]
@@ -363,3 +363,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="RecipeMenu/MenuBackground/EntreeRecipies/Steak" to="." method="_on_steak_pressed"]
 [connection signal="pressed" from="RecipeMenu/MenuBackground/EntreeRecipies/Tacos" to="." method="_on_tacos_pressed"]
 [connection signal="pressed" from="RecipeMenu/MenuBackground/EntreeRecipies/CucumberSandwich" to="." method="_on_cucumber_sandwich_pressed"]
+[connection signal="pressed" from="Exit Button" to="Exit Button" method="_on_pressed"]

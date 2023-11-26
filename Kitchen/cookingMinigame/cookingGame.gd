@@ -6,7 +6,7 @@ var recipeCurr = {}
 
 var canCook = true
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 func hasIng():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=59 format=3 uid="uid://i58q7o3xprky"]
 
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
@@ -46,6 +46,8 @@
 [ext_resource type="Texture2D" uid="uid://bjj4g3gixwbgy" path="res://mainCafe/CatsBigSize/SphynxCat 1 2.png" id="40_u8fav"]
 [ext_resource type="Script" path="res://mainCafe/selectedFromSystem.gd" id="41_d4m5h"]
 [ext_resource type="Texture2D" uid="uid://dcmw35iph8dsl" path="res://mainCafe/transparentFrame.png" id="41_pb8f4"]
+[ext_resource type="Texture2D" uid="uid://sukbj4q2gn5h" path="res://mainCafe/Free_Kittens/textbox.png" id="46_y4k0e"]
+[ext_resource type="Script" path="res://mainCafe/CatAccessoriesMenu.gd" id="47_04aqu"]
 
 [sub_resource type="GDScript" id="GDScript_klpkk"]
 script/source = "extends Node
@@ -61,7 +63,7 @@ func _ready():
 
 
 	
-func on_get_frame(frame):
+func on_get_frame(_frame):
 	print(\"scene\")
 	#$selectedCat2.texture = frame
 
@@ -286,10 +288,10 @@ scale = Vector2(1.11111, 1.02826)
 texture = ExtResource("9_k687a")
 
 [node name="LoungeButton" type="Button" parent="."]
-offset_left = 407.0
-offset_top = -108.0
-offset_right = 982.0
-offset_bottom = 95.0
+offset_left = 410.0
+offset_top = -105.0
+offset_right = 985.0
+offset_bottom = 98.0
 scale = Vector2(0.526965, 0.607897)
 action_mode = 0
 icon = ExtResource("10_k036k")
@@ -304,29 +306,29 @@ autoplay = "default"
 frame_progress = 0.944868
 
 [node name="KitchenButton" type="Button" parent="."]
-offset_left = 408.0
-offset_top = 91.0
-offset_right = 997.0
-offset_bottom = 301.0
+offset_left = 410.0
+offset_top = 80.0
+offset_right = 999.0
+offset_bottom = 290.0
 scale = Vector2(0.526965, 0.607897)
 icon = ExtResource("12_ex7ly")
 script = ExtResource("13_3yysu")
 metadata/_edit_use_anchors_ = true
 
 [node name="GardenButton" type="Button" parent="."]
-offset_left = 980.0
-offset_top = 79.0
-offset_right = 1546.0
-offset_bottom = 286.0
+offset_left = 970.0
+offset_top = 80.0
+offset_right = 1536.0
+offset_bottom = 287.0
 scale = Vector2(0.526965, 0.607897)
 icon = ExtResource("13_j1vkb")
 script = ExtResource("15_6hgod")
 metadata/_edit_use_anchors_ = true
 
 [node name="ShopButton" type="Button" parent="."]
-offset_left = 967.0
+offset_left = 970.0
 offset_top = -105.0
-offset_right = 1520.0
+offset_right = 1523.0
 offset_bottom = 89.0
 scale = Vector2(0.526965, 0.607897)
 icon = ExtResource("14_udo3l")
@@ -340,10 +342,10 @@ position = Vector2(751, 624)
 zoom = Vector2(0.365, 0.365)
 
 [node name="catEquip" type="Button" parent="."]
-offset_left = 722.0
-offset_top = -109.0
-offset_right = 1206.0
-offset_bottom = 289.0
+offset_left = 725.0
+offset_top = -54.0
+offset_right = 1076.0
+offset_bottom = 238.0
 scale = Vector2(0.692398, 0.718273)
 icon = ExtResource("29_efvnj")
 flat = true
@@ -408,13 +410,44 @@ clear_button_enabled = true
 offset_right = 40.0
 offset_bottom = 58.0
 
-[node name="MenuButton" type="MenuButton" parent="."]
-offset_left = 1274.0
-offset_top = -69.0
-offset_right = 1498.0
-offset_bottom = -17.0
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+offset_left = 275.0
+offset_top = 310.0
+offset_right = 843.0
+offset_bottom = 458.0
+texture = ExtResource("46_y4k0e")
+
+[node name="Cat Accessories" type="MenuButton" parent="NinePatchRect2"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 52.0
+offset_right = 399.0
+offset_bottom = 104.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.384314, 0.384314, 0.384314, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "Cat Accessories"
+script = ExtResource("47_04aqu")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 840.0
+offset_top = 310.0
+offset_right = 1408.0
+offset_bottom = 458.0
+texture = ExtResource("46_y4k0e")
+
+[node name="InteriorColors" type="MenuButton" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 52.0
+offset_right = 399.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.384314, 0.384314, 0.384314, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "Interior Colors"
 script = ExtResource("36_4doux")

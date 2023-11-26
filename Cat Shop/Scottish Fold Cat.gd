@@ -7,7 +7,6 @@ func _on_pressed():
 	if Global.cat_coins >= 2500:
 		Global.cat_coins = Global.cat_coins - 2500
 		Global.cat_purchased["Scottish"] = true
-		Global.catsAvailable[5] = true
 		$".".disabled = Global.cat_purchased["Scottish"]
 	else:
 		$"../../CurrencyPopup".visible = true
