@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var list = []
 var recipeNum
 var recipeCurr = {}
@@ -12,6 +13,7 @@ func _process(_delta):
 func hasIng():
 	recipeCurr = GlobalVeggies.recipies[recipeNum]
 	for x in list:
+		print(recipeCurr[x])
 		if recipeCurr[x] == 0:
 			canCook = false
 			$ErrorBox/NotEnough.show()
@@ -251,7 +253,7 @@ func _on_tacos_pressed():
 	list.append("tomato")
 	list.append("onion")
 	list.append("corn")
-	recipeNum = 10
+	recipeNum = 13
 	hasIng()
 	if canCook:
 		$ColorRect/Onion.show()
@@ -270,7 +272,7 @@ func _on_tacos_pressed():
 
 func _on_cucumber_sandwich_pressed():
 	list.append("cucumber")
-	recipeNum = 10
+	recipeNum = 14
 	hasIng()
 	if canCook:
 		$ColorRect/Onion.hide()

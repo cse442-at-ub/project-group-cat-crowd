@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://id8mw5841gfw" path="res://BVA2/ballBounceHard.png" id="10_xf654"]
 [ext_resource type="Script" path="res://Ball.gd" id="11_e3b8t"]
 [ext_resource type="Script" path="res://LoungeCat1.gd" id="13_4caca"]
-[ext_resource type="Texture2D" uid="uid://2o5uda58u4np" path="res://cute-kitten-animation-RUN/cute-kitten-animation-RUN/sheets_500px/black.png" id="13_xymhd"]
+[ext_resource type="Texture2D" uid="uid://2o5uda58u4np" path="res://run/cute-kitten-animation-RUN/sheets_500px/black.png" id="13_xymhd"]
 [ext_resource type="Script" path="res://Cat2.gd" id="14_odfjg"]
-[ext_resource type="Texture2D" uid="uid://ub1km0bnysdx" path="res://cute-kitten-animation-MEOW/meow-sheets-500px/orange-marks-sheet.png" id="15_y36q0"]
+[ext_resource type="Texture2D" uid="uid://ub1km0bnysdx" path="res://meow/meow-sheets-500px/orange-marks-sheet.png" id="15_y36q0"]
 [ext_resource type="Texture2D" uid="uid://djghm8buy67p6" path="res://sleeping-kittens1.1/sleeping-kittens-new/grey-marks4.png" id="16_gjmck"]
 [ext_resource type="Texture2D" uid="uid://decsjf1uug2g7" path="res://PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle 2.png" id="19_2fo0b"]
 [ext_resource type="Texture2D" uid="uid://dv03610qirkrx" path="res://Images and Vectors/Cat Shop Icon.png" id="22_m7qtp"]
@@ -324,12 +324,6 @@ position = Vector2(663, 208)
 scale = Vector2(4.11842, 4.13372)
 texture = ExtResource("5_xvvlb")
 
-[node name="Computer" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(111, 187)
-scale = Vector2(2.82609, 2.41667)
-texture = ExtResource("6_8oyvi")
-
 [node name="Door" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1032.13, 344)
@@ -419,8 +413,15 @@ scale = Vector2(0.556338, 0.560976)
 texture_normal = ExtResource("22_m7qtp")
 texture_pressed = ExtResource("22_m7qtp")
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(32, 133)
+scale = Vector2(3.63043, 2.69444)
+texture_normal = ExtResource("6_8oyvi")
+texture_pressed = ExtResource("6_8oyvi")
+
 [connection signal="input_event" from="Ball/Area2D" to="Ball" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Cat1/Area2D" to="Cat1" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Cat 2/Area2D" to="Cat 2" method="_on_area_2d_input_event"]
 [connection signal="pressed" from="NavToCafe" to="." method="_on_nav_to_cafe_pressed"]
 [connection signal="pressed" from="NavToShop" to="." method="_on_nav_to_shop_pressed"]
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
