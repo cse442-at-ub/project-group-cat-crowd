@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=60 format=3 uid="uid://i58q7o3xprky"]
 
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://bd8oobb57lb3w" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten7.png" id="17_7r105"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/shop-button.gd" id="17_c5dm7"]
 [ext_resource type="Texture2D" uid="uid://d2vsg5l10an0f" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten8.png" id="18_xjd7e"]
+[ext_resource type="Texture2D" uid="uid://fshbg31yaqr7" path="res://mainCafe/output-onlinejpgtools (1).png" id="20_rfnyq"]
 [ext_resource type="Texture2D" uid="uid://cke7q1hgljxv0" path="res://mainCafe/buttons/equipIcon.png" id="29_efvnj"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/catEquip.gd" id="30_uo8ed"]
 [ext_resource type="Script" path="res://mainCafe/CanvasLayer.gd" id="32_0tiko"]
@@ -281,6 +282,11 @@ follow_viewport_enabled = true
 position = Vector2(1468, 916)
 scale = Vector2(2.01281, 1.73526)
 texture = ExtResource("2_rx5ql")
+
+[node name="Overlay" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(1468, 916)
+scale = Vector2(2.01281, 1.73526)
+texture = ExtResource("20_rfnyq")
 
 [node name="Image2" type="Sprite2D" parent="."]
 position = Vector2(133, 51.5)
