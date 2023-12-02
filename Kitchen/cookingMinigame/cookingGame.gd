@@ -4,17 +4,29 @@ extends Node2D
 var list = []
 var recipeNum
 var recipeCurr = {}
-
+var currIng = 0
 var canCook = true
 
+	
 func _process(_delta):
 	pass
 
 func hasIng():
-	recipeCurr = GlobalVeggies.recipies[recipeNum]
 	for x in list:
-		print(recipeCurr[x])
-		if recipeCurr[x] == 0:
+		match x:
+			"potato":
+				currIng = GlobalVeggies.potato
+			"onion":
+				currIng = GlobalVeggies.onion
+			"carrot":
+				currIng = GlobalVeggies.carrot
+			"corn":
+				currIng = GlobalVeggies.corn
+			"tomato":
+				currIng = GlobalVeggies.tomato
+			"cucumber":
+				currIng = GlobalVeggies.cucumber
+		if currIng == 0:
 			canCook = false
 			$ErrorBox/NotEnough.show()
 			$ErrorBox.show()
@@ -34,6 +46,7 @@ func _on_potato_soup_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.potatoSoup
 	list.erase("potato") 
 	list.erase("onion")
 	canCook = true
@@ -51,6 +64,7 @@ func _on_carrot_soup_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.carrotSoup
 	list.erase("carrot")
 	list.erase("onion")
 	canCook = true
@@ -68,6 +82,7 @@ func _on_onion_soup_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.onionSoup
 	list.erase("onion")
 	canCook = true
 
@@ -86,6 +101,7 @@ func _on_corn_chowder_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.cornChowder
 	list.erase("corn")
 	list.erase("potato")
 	list.erase("carrot")
@@ -104,6 +120,7 @@ func _on_tomato_soup_pressed():
 		$ColorRect/Tomato.show()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.tomatoSoup
 	list.erase("tomato")
 	canCook = true
 
@@ -121,6 +138,7 @@ func _on_potato_salad_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.show()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.potatoSalad
 	list.erase("potato")
 	list.erase("cucumber")
 	canCook = true
@@ -138,6 +156,7 @@ func _on_cucumber_salad_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.show()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.cucumberSalad
 	list.erase("cucumber")
 	canCook = true
 
@@ -156,6 +175,7 @@ func _on_house_salad_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.show()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.regSalad
 	list.erase("cucumber")
 	list.erase("onion")
 	list.erase("carrot")
@@ -174,6 +194,7 @@ func _on_fries_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.fries
 	list.erase("potato")
 	canCook = true
 
@@ -190,6 +211,7 @@ func _on_mashed_potatoes_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.mashedPotatoes
 	list.erase("potato")
 	canCook = true
 
@@ -208,6 +230,7 @@ func _on_steamed_veggies_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.show()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.veggieMix
 	list.erase("cucumber")
 	list.erase("onion")
 	list.erase("carrot")
@@ -227,6 +250,7 @@ func _on_pasta_pressed():
 		$ColorRect/Tomato.show()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.pasta
 	list.erase("tomato")
 	canCook = true
 
@@ -244,6 +268,7 @@ func _on_steak_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.steak
 	list.erase("potato")
 	list.erase("onion")
 	canCook = true
@@ -263,6 +288,7 @@ func _on_tacos_pressed():
 		$ColorRect/Tomato.show()
 		$ColorRect/Cucumber.hide()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.tacos
 	list.erase("tomato")
 	list.erase("onion")
 	list.erase("corn")
@@ -282,5 +308,6 @@ func _on_cucumber_sandwich_pressed():
 		$ColorRect/Tomato.hide()
 		$ColorRect/Cucumber.show()
 		$RecipeMenu.hide()
+		GlobalVeggies.currRecipe = GlobalVeggies.cucSandwich
 	list.erase("cucumber")
 	canCook = true

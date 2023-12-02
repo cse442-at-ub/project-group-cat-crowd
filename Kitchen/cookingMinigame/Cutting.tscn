@@ -1,11 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://qjv0jvg3cphk"]
+[gd_scene load_steps=19 format=3 uid="uid://qjv0jvg3cphk"]
 
 [ext_resource type="Texture2D" uid="uid://ctnllgja4o5jj" path="res://Kitchen/cookingMinigame/Board.png" id="1_dfelb"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/Cutting.gd" id="1_e3isu"]
 [ext_resource type="Texture2D" uid="uid://b8n508syf2hcy" path="res://Kitchen/cookingMinigame/onion.png" id="3_5ttvl"]
-[ext_resource type="Texture2D" uid="uid://dhjq7kp7e7f6w" path="res://Kitchen/cookingMinigame/pumpkin.png" id="4_e78c5"]
 [ext_resource type="Texture2D" uid="uid://c85gtarw23gvs" path="res://Kitchen/cookingMinigame/tomato.png" id="5_d1wyv"]
+[ext_resource type="Texture2D" uid="uid://cpmbx6abf1p3l" path="res://Kitchen/cookingMinigame/cucumber.png" id="6_43fep"]
 [ext_resource type="Texture2D" uid="uid://bpeucxlyeoc60" path="res://Kitchen/cookingMinigame/corn.png" id="6_c1t5x"]
+[ext_resource type="Texture2D" uid="uid://dsjl5krtp54a3" path="res://Kitchen/cookingMinigame/potato.png" id="7_ft4mj"]
+[ext_resource type="Texture2D" uid="uid://bluvejcciudfp" path="res://Kitchen/cookingMinigame/carrot.png" id="8_1ewye"]
 
 [sub_resource type="Animation" id="Animation_15gnt"]
 length = 0.001
@@ -50,36 +52,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(639, 314), Vector2(-318, 314)]
-}
-
-[sub_resource type="Animation" id="Animation_oowxu"]
-resource_name = "cucLeave"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(638, 243), Vector2(-378, 243)]
-}
-
-[sub_resource type="Animation" id="Animation_honim"]
-resource_name = "cucumber"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(639, -252), Vector2(639, 302), Vector2(638, 243), Vector2(638, 302)]
 }
 
 [sub_resource type="Animation" id="Animation_xssfc"]
@@ -142,13 +114,43 @@ tracks/0/keys = {
 "values": [Vector2(639, -252), Vector2(639, 350), Vector2(639, 300), Vector2(639, 350)]
 }
 
+[sub_resource type="Animation" id="Animation_honim"]
+resource_name = "cucumber"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(639, -252), Vector2(639, 302), Vector2(638, 243), Vector2(638, 302)]
+}
+
+[sub_resource type="Animation" id="Animation_oowxu"]
+resource_name = "cucLeave"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(638, 243), Vector2(-378, 243)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bsstb"]
 _data = {
 "RESET": SubResource("Animation_15gnt"),
 "corn": SubResource("Animation_lf3n0"),
 "cornLeave": SubResource("Animation_66spi"),
-"cucLeave": SubResource("Animation_oowxu"),
-"cucumber": SubResource("Animation_honim"),
+"enter": SubResource("Animation_honim"),
+"leave": SubResource("Animation_oowxu"),
 "onion": SubResource("Animation_xssfc"),
 "onionLeave": SubResource("Animation_4h4ud"),
 "tomLeave": SubResource("Animation_k53m0"),
@@ -173,16 +175,6 @@ libraries = {
 "": SubResource("AnimationLibrary_bsstb")
 }
 
-[node name="Cucumber" type="Sprite2D" parent="."]
-position = Vector2(639, -252)
-scale = Vector2(0.540706, 0.540706)
-texture = ExtResource("4_e78c5")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Cucumber"]
-libraries = {
-"": SubResource("AnimationLibrary_bsstb")
-}
-
 [node name="Tomato" type="Sprite2D" parent="."]
 position = Vector2(639, -252)
 scale = Vector2(0.599307, 0.599307)
@@ -199,6 +191,33 @@ scale = Vector2(0.626126, 0.626126)
 texture = ExtResource("6_c1t5x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Corn"]
+libraries = {
+"": SubResource("AnimationLibrary_bsstb")
+}
+
+[node name="Cucumber" type="Sprite2D" parent="."]
+position = Vector2(639, -252)
+texture = ExtResource("6_43fep")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cucumber"]
+libraries = {
+"": SubResource("AnimationLibrary_bsstb")
+}
+
+[node name="Potato" type="Sprite2D" parent="."]
+position = Vector2(639, -252)
+texture = ExtResource("7_ft4mj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Potato"]
+libraries = {
+"": SubResource("AnimationLibrary_bsstb")
+}
+
+[node name="Carrot" type="Sprite2D" parent="."]
+position = Vector2(639, -252)
+texture = ExtResource("8_1ewye")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Carrot"]
 libraries = {
 "": SubResource("AnimationLibrary_bsstb")
 }
