@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bqn8hvhuttrit"]
+[gd_scene load_steps=24 format=3 uid="uid://bqn8hvhuttrit"]
 
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/cookingGame.gd" id="1_r3p4k"]
 [ext_resource type="Texture2D" uid="uid://ctnllgja4o5jj" path="res://Kitchen/cookingMinigame/Board.png" id="1_r88wp"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://cpmbx6abf1p3l" path="res://Kitchen/cookingMinigame/cucumber.png" id="7_ocbrn"]
 [ext_resource type="Texture2D" uid="uid://dohjhw6s1cvnm" path="res://Kitchen/cookingMinigame/playButton.bmp" id="11_nw5q4"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/startGame.gd" id="12_w5c01"]
-[ext_resource type="Script" path="res://Kitchen/cookingMinigame/RecipeMenu.gd" id="13_6543q"]
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="13_sanxo"]
 [ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="13_tw4mc"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/KitchenGameExit.gd" id="14_18cyx"]
@@ -22,6 +21,28 @@
 [ext_resource type="Texture2D" uid="uid://3f8ajdwn1ek2" path="res://Kitchen/cookingMinigame/Recipies/salad.png" id="16_407ai"]
 [ext_resource type="Texture2D" uid="uid://cokxey1v5ar2x" path="res://Kitchen/cookingMinigame/Recipies/Pasta.png" id="17_cesyl"]
 [ext_resource type="Texture2D" uid="uid://x61x1m47s0iu" path="res://Images and Vectors/TextBox1.png" id="20_fcsqt"]
+[ext_resource type="Script" path="res://Kitchen/cookingMinigame/ExitMenu.gd" id="21_yq1up"]
+
+[sub_resource type="GDScript" id="GDScript_q5lcg"]
+script/source = "extends ColorRect
+
+
+func _on_soup_pressed():
+	$MenuBackground/SoupRecipies.show()
+	$MenuBackground/SaladRecipies.hide()
+	$MenuBackground/EntreeRecipies.hide()
+	
+
+func _on_salad_pressed():
+	$MenuBackground/SaladRecipies.show()
+	$MenuBackground/SoupRecipies.hide()
+	$MenuBackground/EntreeRecipies.hide()
+
+func _on_entree_pressed():
+	$MenuBackground/EntreeRecipies.show()
+	$MenuBackground/SoupRecipies.hide()
+	$MenuBackground/SaladRecipies.hide()
+"
 
 [node name="cookingGame" type="Node2D"]
 script = ExtResource("1_r3p4k")
@@ -29,6 +50,15 @@ script = ExtResource("1_r3p4k")
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1153.0
 offset_bottom = 650.0
+
+[node name="Exit Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1099.0
+offset_top = 4.0
+offset_right = 1146.0
+offset_bottom = 51.0
+theme = ExtResource("13_tw4mc")
+script = ExtResource("14_18cyx")
 
 [node name="CuttingBoard" type="Sprite2D" parent="ColorRect"]
 position = Vector2(609, 391)
@@ -115,7 +145,7 @@ offset_left = -5.0
 offset_top = -2.0
 offset_right = 1155.0
 offset_bottom = 656.0
-script = ExtResource("13_6543q")
+script = SubResource("GDScript_q5lcg")
 
 [node name="MenuBackground" type="Sprite2D" parent="RecipeMenu"]
 position = Vector2(579.5, 331)
@@ -302,6 +332,15 @@ Sandwich
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="Exit Button" type="Button" parent="RecipeMenu"]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 6.0
+offset_right = 1151.0
+offset_bottom = 53.0
+theme = ExtResource("13_tw4mc")
+script = ExtResource("21_yq1up")
+
 [node name="ErrorBox" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
@@ -336,14 +375,7 @@ in the garden!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Exit Button" type="Button" parent="."]
-offset_left = 1099.0
-offset_top = 4.0
-offset_right = 1146.0
-offset_bottom = 51.0
-theme = ExtResource("13_tw4mc")
-script = ExtResource("14_18cyx")
-
+[connection signal="pressed" from="ColorRect/Exit Button" to="ColorRect/Exit Button" method="_on_pressed"]
 [connection signal="pressed" from="MenuButton" to="MenuButton" method="_on_pressed"]
 [connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]
 [connection signal="pressed" from="RecipeMenu/MenuBackground/SelectionGroup/Soup" to="RecipeMenu" method="_on_soup_pressed"]
@@ -364,4 +396,4 @@ script = ExtResource("14_18cyx")
 [connection signal="pressed" from="RecipeMenu/MenuBackground/EntreeRecipies/Steak" to="." method="_on_steak_pressed"]
 [connection signal="pressed" from="RecipeMenu/MenuBackground/EntreeRecipies/Tacos" to="." method="_on_tacos_pressed"]
 [connection signal="pressed" from="RecipeMenu/MenuBackground/EntreeRecipies/CucumberSandwich" to="." method="_on_cucumber_sandwich_pressed"]
-[connection signal="pressed" from="Exit Button" to="Exit Button" method="_on_pressed"]
+[connection signal="pressed" from="RecipeMenu/Exit Button" to="RecipeMenu/Exit Button" method="_on_pressed"]
