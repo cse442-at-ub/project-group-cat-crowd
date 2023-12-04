@@ -3,6 +3,7 @@ extends Button
 func _ready():
 	$catOptions.visible = false
 
+
 func _on_pressed():
 	# Get the AnimatedSprite2D node
 	var animated_sprite = $catOptions
