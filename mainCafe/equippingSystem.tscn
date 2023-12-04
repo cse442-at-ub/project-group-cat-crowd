@@ -79,7 +79,7 @@ script = ExtResource("2_oh3t4")
 
 [node name="catOptions" type="AnimatedSprite2D" parent="rightArrow"]
 position = Vector2(-674.356, 131.589)
-scale = Vector2(4.13862, 4.29436)
+scale = Vector2(3.859, 4)
 sprite_frames = SubResource("SpriteFrames_hxjqf")
 animation = &"catSelection"
 
