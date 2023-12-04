@@ -93,43 +93,43 @@ script = ExtResource("6_r6gdo")
 
 [node name="cucumber_plant" type="Sprite2D" parent="TextureRect/cucumber"]
 visible = false
-position = Vector2(-33.7514, -9.41663)
+position = Vector2(0.5, -7.33331)
 scale = Vector2(0.0844759, 0.089286)
 texture = ExtResource("4_ked6b")
 
 [node name="cucumber_plant2" type="Sprite2D" parent="TextureRect/cucumber"]
 visible = false
-position = Vector2(-34.6667, -10.5608)
+position = Vector2(-0.147827, -9.89404)
 scale = Vector2(0.0759369, 0.0692337)
 texture = ExtResource("5_5pfnw")
 
 [node name="cucumber_plant3" type="Sprite2D" parent="TextureRect/cucumber"]
 visible = false
-position = Vector2(-36.0929, -13.101)
+position = Vector2(-1.57397, -12.4342)
 scale = Vector2(0.0736827, 0.0639447)
 texture = ExtResource("6_j16en")
 
 [node name="corn" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(774, 517)
+position = Vector2(775, 514)
 scale = Vector2(6, 6)
 shape = SubResource("CircleShape2D_nhl5p")
 script = ExtResource("7_g1qt2")
 
 [node name="corn_plant" type="Sprite2D" parent="TextureRect/corn"]
 visible = false
-position = Vector2(35.082, -9.82251)
+position = Vector2(1.1012, -6.6557)
 scale = Vector2(0.0844761, 0.0925066)
 texture = ExtResource("4_ked6b")
 
 [node name="corn_plant2" type="Sprite2D" parent="TextureRect/corn"]
 visible = false
-position = Vector2(34.1665, -11.0608)
+position = Vector2(0.185669, -7.89404)
 scale = Vector2(0.0759369, 0.0692337)
 texture = ExtResource("5_5pfnw")
 
 [node name="corn_plant3" type="Sprite2D" parent="TextureRect/corn"]
 visible = false
-position = Vector2(33.5736, -13.601)
+position = Vector2(-0.407227, -10.4342)
 scale = Vector2(0.0736827, 0.0639447)
 texture = ExtResource("6_j16en")
 
@@ -158,7 +158,7 @@ scale = Vector2(0.0736827, 0.0639447)
 texture = ExtResource("6_j16en")
 
 [node name="carrot" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(1263, 466)
+position = Vector2(1270, 468)
 scale = Vector2(0.0874999, 0.112376)
 texture_normal = ExtResource("11_dnit7")
 shape = SubResource("CircleShape2D_th8pt")

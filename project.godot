@@ -20,8 +20,8 @@ config/icon="res://Cat Shop/icon.svg"
 Global="*res://Global.gd"
 PlantGame="*res://plant_game.gd"
 GlobalCooking="*res://Kitchen/globalCooking.gd"
-PlantTimer="*res://Garden Screen/PlantTimer.tscn"
 GlobalVeggies="*res://vegetables.gd"
+GardenTimer="*res://garden_timer.gd"
 
 [input_devices]
 
