@@ -10,7 +10,7 @@
 follow_viewport_enabled = true
 
 [node name="Ab506e12-c60e-4080-9c21-670a1f1fdc7b1201A" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(769, 497)
+position = Vector2(772, 487)
 texture = ExtResource("1_5cp20")
 
 [node name="Control" type="Control" parent="."]

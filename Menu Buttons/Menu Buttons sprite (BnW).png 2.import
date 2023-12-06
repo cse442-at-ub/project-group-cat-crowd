@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cerrujcmji525"
-path="res://.godot/imported/kitten-all-colors.jpg-2850c9893576a64edc2a7b4b139a0b08.ctex"
+uid="uid://bs1imral3shw0"
+path="res://.godot/imported/Menu Buttons sprite (BnW).png-74206636f779db66b8a385dc08485a19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://idle/cute-kitten-animation-idle/kitten-all-colors.jpg"
-dest_files=["res://.godot/imported/kitten-all-colors.jpg-2850c9893576a64edc2a7b4b139a0b08.ctex"]
+source_file="res://Menu Buttons/Menu Buttons sprite (BnW).png"
+dest_files=["res://.godot/imported/Menu Buttons sprite (BnW).png-74206636f779db66b8a385dc08485a19.ctex"]
 
 [params]
 
