@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dlhhodw26cafg"
+path="res://.godot/imported/Chalkboard-Regular 2.ttf-d505469c63e37d890d216d5779ee1190.fontdata"
+
+[deps]
+
+source_file="res://mainCafe/Chalkboard-Regular 2.ttf"
+dest_files=["res://.godot/imported/Chalkboard-Regular 2.ttf-d505469c63e37d890d216d5779ee1190.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
