@@ -54,6 +54,36 @@ tracks/0/keys = {
 "values": [Vector2(639, 314), Vector2(-318, 314)]
 }
 
+[sub_resource type="Animation" id="Animation_honim"]
+resource_name = "cucumber"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(639, -252), Vector2(639, 302), Vector2(638, 243), Vector2(638, 302)]
+}
+
+[sub_resource type="Animation" id="Animation_oowxu"]
+resource_name = "cucLeave"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(638, 243), Vector2(-378, 243)]
+}
+
 [sub_resource type="Animation" id="Animation_xssfc"]
 resource_name = "onion"
 tracks/0/type = "value"
@@ -112,36 +142,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(639, -252), Vector2(639, 350), Vector2(639, 300), Vector2(639, 350)]
-}
-
-[sub_resource type="Animation" id="Animation_honim"]
-resource_name = "cucumber"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(639, -252), Vector2(639, 302), Vector2(638, 243), Vector2(638, 302)]
-}
-
-[sub_resource type="Animation" id="Animation_oowxu"]
-resource_name = "cucLeave"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(638, 243), Vector2(-378, 243)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bsstb"]

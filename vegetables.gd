@@ -33,3 +33,5 @@ var recipies = [potatoSoup, carrotSoup, onionSoup, cornChowder, tomatoSoup,
 				pasta, steak, tacos, cucSandwich]
 
 var currRecipe = {}
+
+var score = 0
