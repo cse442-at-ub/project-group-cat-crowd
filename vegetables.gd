@@ -34,4 +34,4 @@ var recipies = [potatoSoup, carrotSoup, onionSoup, cornChowder, tomatoSoup,
 
 var currRecipe = {}
 
-var score = 0
+var score = 5000
