@@ -52,11 +52,11 @@ func cutVeggie():
 		if xCount == 3:
 			xCount += 1
 			if yCount > 0:
-				GlobalVeggies.score -= 100 * (yCount)
+				GlobalVeggies.score -= 350 * (yCount)
 			yCount = 0
 		if yCount == 3:
 			if xCount > 4:
-				GlobalVeggies.score -= 100 * (xCount-4)
+				GlobalVeggies.score -= 350 * (xCount-4)
 			$"Great!".show()
 			yCount = 0
 			xCount = 0

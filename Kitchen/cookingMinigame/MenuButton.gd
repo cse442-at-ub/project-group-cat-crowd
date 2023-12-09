@@ -8,5 +8,3 @@ func _on_pressed():
 	else:
 			$"../ErrorBox/NoIngredients".show()
 			$"../ErrorBox".show()
-			await get_tree().create_timer(1.5).timeout
-			$"../ErrorBox".hide()

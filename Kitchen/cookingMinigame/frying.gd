@@ -60,7 +60,7 @@ func scoreboard():
 		coins += 100
 		$EndScreen/Star5.show()
 	$EndScreen/coins.text = "+ " + str(coins) + " cat coins"
-
+	Global.cat_coins += coins
 
 
 func _on_continue_pressed():
