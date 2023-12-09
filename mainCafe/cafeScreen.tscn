@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=67 format=3 uid="uid://i58q7o3xprky"]
 
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
@@ -47,8 +47,15 @@
 [ext_resource type="Texture2D" uid="uid://bjj4g3gixwbgy" path="res://mainCafe/CatsBigSize/SphynxCat 1 2.png" id="40_u8fav"]
 [ext_resource type="Script" path="res://mainCafe/selectedFromSystem.gd" id="41_d4m5h"]
 [ext_resource type="Texture2D" uid="uid://dcmw35iph8dsl" path="res://mainCafe/transparentFrame.png" id="41_pb8f4"]
+[ext_resource type="Texture2D" uid="uid://biqsqef26ttcm" path="res://mainCafe/AccessoryPics/Option 1.png" id="46_dggpo"]
 [ext_resource type="Texture2D" uid="uid://sukbj4q2gn5h" path="res://mainCafe/Free_Kittens/textbox.png" id="46_y4k0e"]
 [ext_resource type="Script" path="res://mainCafe/CatAccessoriesMenu.gd" id="47_04aqu"]
+[ext_resource type="Texture2D" uid="uid://crltgd35nlp4k" path="res://mainCafe/AccessoryPics/Option 2.png" id="47_v02w6"]
+[ext_resource type="Texture2D" uid="uid://bl28od6k6d3ft" path="res://mainCafe/AccessoryPics/Option 3.png" id="48_uanqn"]
+[ext_resource type="Texture2D" uid="uid://dp645nfjyryrl" path="res://mainCafe/AccessoryPics/Option 4.png" id="49_mik02"]
+[ext_resource type="Texture2D" uid="uid://c8vd3bewk3lhp" path="res://mainCafe/AccessoryPics/Option 5.png" id="50_xwiu1"]
+[ext_resource type="Texture2D" uid="uid://7wyagv71pcra" path="res://mainCafe/AccessoryPics/Option 6.png" id="51_dcxi1"]
+[ext_resource type="Texture2D" uid="uid://bf7ack1p10fpf" path="res://mainCafe/AccessoryPics/Option 7.png" id="52_dtl2l"]
 
 [sub_resource type="GDScript" id="GDScript_klpkk"]
 script/source = "extends Node
@@ -228,7 +235,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c5jtv"]
@@ -378,7 +385,8 @@ stretch_mode = 2
 position = Vector2(774.417, 238.503)
 scale = Vector2(2.63929, 3.02725)
 sprite_frames = SubResource("SpriteFrames_el24c")
-frame = 8
+frame = 7
+frame_progress = 0.82256
 script = ExtResource("41_d4m5h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/TextureRect/selectedFromSystem"]
@@ -393,6 +401,48 @@ scale = Vector2(0.461876, 0.502911)
 mouse_filter = 1
 texture_normal = ExtResource("34_e1scr")
 texture_hover = ExtResource("34_4yrvg")
+
+[node name="Shirt" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(741.729, 360.255)
+scale = Vector2(3.68146, 5.04868)
+texture = ExtResource("46_dggpo")
+
+[node name="BFF" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(741.729, 280.199)
+scale = Vector2(3.96811, 3.96811)
+texture = ExtResource("47_v02w6")
+
+[node name="Tophat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(758.625, -54.5841)
+scale = Vector2(3.48719, 3.48719)
+texture = ExtResource("48_uanqn")
+
+[node name="Tie" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(734.971, 385.728)
+scale = Vector2(4.03758, 4.03758)
+texture = ExtResource("49_mik02")
+
+[node name="Bowtie" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(790.728, 302.032)
+scale = Vector2(3.87902, 3.87902)
+texture = ExtResource("50_xwiu1")
+
+[node name="Necklace" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(721.454, 276.56)
+scale = Vector2(3.8283, 3.8283)
+texture = ExtResource("51_dcxi1")
+
+[node name="Bell" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(765.384, 265.643)
+scale = Vector2(3.31191, 3.31191)
+texture = ExtResource("52_dtl2l")
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
