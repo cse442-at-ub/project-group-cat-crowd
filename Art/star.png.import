@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdnj6714jkil3"
-path="res://.godot/imported/54vfb6k0.bmp-85dec94ead54e8e267a9869cea2bb120.ctex"
+uid="uid://bkblckvutdnxb"
+path="res://.godot/imported/star.png-7953868fbd7392e6e06ff69587708912.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Kitchen/54vfb6k0.bmp"
-dest_files=["res://.godot/imported/54vfb6k0.bmp-85dec94ead54e8e267a9869cea2bb120.ctex"]
+source_file="res://Art/star.png"
+dest_files=["res://.godot/imported/star.png-7953868fbd7392e6e06ff69587708912.ctex"]
 
 [params]
 
