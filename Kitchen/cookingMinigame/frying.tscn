@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://c0000wapofvub"]
+[gd_scene load_steps=19 format=3 uid="uid://c0000wapofvub"]
 
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/frying.gd" id="1_77y12"]
 [ext_resource type="Texture2D" uid="uid://dx2pkieotkmqd" path="res://Kitchen/cookingMinigame/z15kn4ob.bmp" id="1_efokg"]
 [ext_resource type="Texture2D" uid="uid://blr4w8m8e6osk" path="res://Kitchen/cookingMinigame/niasnxff.bmp" id="2_6v4k2"]
+[ext_resource type="Texture2D" uid="uid://bkblckvutdnxb" path="res://Art/star.png" id="4_txgi2"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/Score.gd" id="5_7vnuv"]
 
 [sub_resource type="Shader" id="Shader_v13x2"]
@@ -294,26 +295,31 @@ offset_bottom = 652.0
 visible = false
 position = Vector2(336, 96)
 scale = Vector2(0.0565, 0.0565)
+texture = ExtResource("4_txgi2")
 
 [node name="Star2" type="Sprite2D" parent="EndScreen"]
 visible = false
 position = Vector2(456, 96)
 scale = Vector2(0.0565, 0.0565)
+texture = ExtResource("4_txgi2")
 
 [node name="Star3" type="Sprite2D" parent="EndScreen"]
 visible = false
 position = Vector2(576, 96)
 scale = Vector2(0.0565, 0.0565)
+texture = ExtResource("4_txgi2")
 
 [node name="Star4" type="Sprite2D" parent="EndScreen"]
 visible = false
 position = Vector2(696, 96)
 scale = Vector2(0.0565, 0.0565)
+texture = ExtResource("4_txgi2")
 
 [node name="Star5" type="Sprite2D" parent="EndScreen"]
 visible = false
 position = Vector2(816, 96)
 scale = Vector2(0.0565, 0.0565)
+texture = ExtResource("4_txgi2")
 
 [node name="Score" type="RichTextLabel" parent="EndScreen"]
 layout_mode = 0
