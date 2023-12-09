@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cxjlhqeoj03wr" path="res://Garden Screen/two-brown-wooden-sign-board-arrow-shape-on-pole-stick-simple-doodle-cartoon-drawing-png.png" id="4_i8cj4"]
 [ext_resource type="Script" path="res://Garden Screen/navigateCafe.gd" id="5_hvmm6"]
 [ext_resource type="Texture2D" uid="uid://c248lw3rcra4u" path="res://Garden Screen/Marie.webp" id="7_la387"]
+[ext_resource type="Script" path="res://Garden Screen/Button2.gd" id="8_7or3q"]
 [ext_resource type="Script" path="res://Garden Screen/Marie.gd" id="8_bbpxg"]
 [ext_resource type="Texture2D" uid="uid://bal5of6y561nk" path="res://Garden Screen/IMG_7229-fotor-bg-remover-20231019222616.png" id="9_4sdm5"]
 [ext_resource type="Texture2D" uid="uid://dp8lbfxjpwxh2" path="res://Garden Screen/Screenshot 2023-10-19 at 19.53.52-fotor-bg-remover-20231019224351.png" id="10_ekmnx"]
@@ -117,10 +118,27 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 160
 text = "Main Cafe"
 
-[node name="Button3" type="Button" parent="TextureRect"]
+[node name="Label2" type="Label" parent="TextureRect/navigateCafe"]
+layout_direction = 2
+layout_mode = 2
+offset_left = 269.896
+offset_top = 351.412
+offset_right = 1109.89
+offset_bottom = 581.412
+rotation = -0.0802028
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 160
+text = "Kitchen"
+
+[node name="Button2" type="Button" parent="TextureRect"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 63.0
+offset_top = 437.0
+offset_right = 264.0
+offset_bottom = 499.0
+flat = true
+script = ExtResource("8_7or3q")
 
 [node name="Img7229-fotor-bg-remover-20231019222616" type="Sprite2D" parent="."]
 position = Vector2(461.438, 505.892)
@@ -161,5 +179,6 @@ shape = SubResource("CircleShape2D_sijle")
 
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/navigateCafe" to="TextureRect/navigateCafe" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Button2" to="TextureRect/Button2" method="_on_pressed"]
 [connection signal="input_event" from="Marie/Area2D" to="Marie" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="cat2/Area2D" to="cat2" method="_on_area_2d_input_event"]
