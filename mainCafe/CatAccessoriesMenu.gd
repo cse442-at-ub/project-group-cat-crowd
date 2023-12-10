@@ -6,19 +6,61 @@ func _on_item_pressed(id):
 	var newID = get_popup().get_item_text(id)
 	match newID:
 		"Shirt":
-			print("Shirt")
+			$"../../CanvasLayer/TextureRect/Shirt".visible = true
+			$"../../CanvasLayer/TextureRect/BFF".visible = false
+			$"../../CanvasLayer/TextureRect/Tophat".visible = false
+			$"../../CanvasLayer/TextureRect/Tie".visible = false
+			$"../../CanvasLayer/TextureRect/Bowtie".visible = false
+			$"../../CanvasLayer/TextureRect/Necklace".visible = false
+			$"../../CanvasLayer/TextureRect/Bell".visible = false
 		"Bell":
-			print("Bell")
+			$"../../CanvasLayer/TextureRect/Shirt".visible = false
+			$"../../CanvasLayer/TextureRect/BFF".visible = false
+			$"../../CanvasLayer/TextureRect/Tophat".visible = false
+			$"../../CanvasLayer/TextureRect/Tie".visible = false
+			$"../../CanvasLayer/TextureRect/Bowtie".visible = false
+			$"../../CanvasLayer/TextureRect/Necklace".visible = false
+			$"../../CanvasLayer/TextureRect/Bell".visible = true
 		"BFF":
-			print("BFF")
+			$"../../CanvasLayer/TextureRect/Shirt".visible = false
+			$"../../CanvasLayer/TextureRect/BFF".visible = true
+			$"../../CanvasLayer/TextureRect/Tophat".visible = false
+			$"../../CanvasLayer/TextureRect/Tie".visible = false
+			$"../../CanvasLayer/TextureRect/Bowtie".visible = false
+			$"../../CanvasLayer/TextureRect/Necklace".visible = false
+			$"../../CanvasLayer/TextureRect/Bell".visible = false
 		"Bowtie":
-			print("Bowtie")
+			$"../../CanvasLayer/TextureRect/Shirt".visible = false
+			$"../../CanvasLayer/TextureRect/BFF".visible = false
+			$"../../CanvasLayer/TextureRect/Tophat".visible = false
+			$"../../CanvasLayer/TextureRect/Tie".visible = false
+			$"../../CanvasLayer/TextureRect/Bowtie".visible = true
+			$"../../CanvasLayer/TextureRect/Necklace".visible = false
+			$"../../CanvasLayer/TextureRect/Bell".visible = false
 		"Necklace":
-			print("Necklace")
+			$"../../CanvasLayer/TextureRect/Shirt".visible = false
+			$"../../CanvasLayer/TextureRect/BFF".visible = false
+			$"../../CanvasLayer/TextureRect/Tophat".visible = false
+			$"../../CanvasLayer/TextureRect/Tie".visible = false
+			$"../../CanvasLayer/TextureRect/Bowtie".visible = false
+			$"../../CanvasLayer/TextureRect/Necklace".visible = true
+			$"../../CanvasLayer/TextureRect/Bell".visible = false
 		"Tie":
-			print("Tie")
+			$"../../CanvasLayer/TextureRect/Shirt".visible = false
+			$"../../CanvasLayer/TextureRect/BFF".visible = false
+			$"../../CanvasLayer/TextureRect/Tophat".visible = false
+			$"../../CanvasLayer/TextureRect/Tie".visible = true
+			$"../../CanvasLayer/TextureRect/Bowtie".visible = false
+			$"../../CanvasLayer/TextureRect/Necklace".visible = false
+			$"../../CanvasLayer/TextureRect/Bell".visible = false
 		"Tophat":
-			print("Tophat")
+			$"../../CanvasLayer/TextureRect/Shirt".visible = false
+			$"../../CanvasLayer/TextureRect/BFF".visible = false
+			$"../../CanvasLayer/TextureRect/Tophat".visible = true
+			$"../../CanvasLayer/TextureRect/Tie".visible = false
+			$"../../CanvasLayer/TextureRect/Bowtie".visible = false
+			$"../../CanvasLayer/TextureRect/Necklace".visible = false
+			$"../../CanvasLayer/TextureRect/Bell".visible = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
