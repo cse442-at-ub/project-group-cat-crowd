@@ -374,6 +374,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="ErrorBox/NoIngredients"]
+layout_mode = 0
 offset_left = 155.676
 offset_top = 285.802
 offset_right = 765.676

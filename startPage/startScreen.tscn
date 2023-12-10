@@ -10,7 +10,8 @@
 follow_viewport_enabled = true
 
 [node name="Ab506e12-c60e-4080-9c21-670a1f1fdc7b1201A" type="Sprite2D" parent="ParallaxBackground"]
-position = Vector2(769, 497)
+position = Vector2(580, 324)
+scale = Vector2(0.75817, 0.6619)
 texture = ExtResource("1_5cp20")
 
 [node name="Control" type="Control" parent="."]
@@ -21,10 +22,11 @@ offset_bottom = 40.0
 
 [node name="playButton" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 1044.0
-offset_top = 628.0
-offset_right = 1473.0
-offset_bottom = 958.0
+offset_left = 784.0
+offset_top = 400.0
+offset_right = 1213.0
+offset_bottom = 730.0
+scale = Vector2(0.76, 0.76)
 icon = ExtResource("2_ssml1")
 flat = true
 script = ExtResource("3_lih7t")
