@@ -1,5 +1,5 @@
 **How to download app for Andriod using git repository:**  
-      1. Download  the two files from [here](https://ubuffalo-my.sharepoint.com/:f:/r/personal/codyrey_buffalo_edu/Documents/Cat%20Cafe?csf=1&web=1&e=Ht5jn6).   
+      1. Download  the two files from [here](https://ubuffalo-my.sharepoint.com/:f:/g/personal/codyrey_buffalo_edu/EjGLq3s9wBdLluNQbidIjegBtE9wVdbCELOh7wN4_qdC1Q).   
       2. Move file into your phone directory.  
       3. From your files app, open the catcafe.apk (NOT the .isdig one) and "install anyway" when unsafe app warning is prompted.  
       4. App should now be on your phone. Enjoy!  
