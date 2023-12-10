@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://dkf6gkryg4m7h"]
+[gd_scene load_steps=25 format=3 uid="uid://dkf6gkryg4m7h"]
 
 [ext_resource type="Script" path="res://Kitchen/LeftDoorButton.gd" id="1_6suom"]
 [ext_resource type="Texture2D" uid="uid://cc08l7m5eoopv" path="res://Art/kitchen.png" id="1_sajjf"]
 [ext_resource type="Texture2D" uid="uid://dux8pxhywgdrm" path="res://Art/cat1.png" id="2_dx61r"]
 [ext_resource type="Script" path="res://Kitchen/RightDoor.gd" id="2_n2cej"]
 [ext_resource type="Script" path="res://Kitchen/Cat1.gd" id="3_jgrvn"]
+[ext_resource type="Texture2D" uid="uid://sukbj4q2gn5h" path="res://mainCafe/Free_Kittens/textbox.png" id="4_513gy"]
 [ext_resource type="Texture2D" uid="uid://cdamuedoxyaou" path="res://Art/bubble.png" id="4_j4ucp"]
 [ext_resource type="Texture2D" uid="uid://dm388tl8gpifi" path="res://Art/cat1fed.png" id="5_g6ipd"]
 [ext_resource type="Texture2D" uid="uid://cminrm3sylrwo" path="res://Art/cat2.png" id="6_1phkv"]
@@ -88,7 +89,7 @@ height = 353.139
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 43.0
-offset_top = 129.0
+offset_top = 70.0
 offset_right = 152.0
 offset_bottom = 585.0
 action_mode = 0
@@ -99,7 +100,7 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 1000.0
 offset_top = 85.0
-offset_right = 1118.0
+offset_right = 1109.0
 offset_bottom = 575.0
 script = ExtResource("2_n2cej")
 
@@ -107,6 +108,44 @@ script = ExtResource("2_n2cej")
 position = Vector2(576, 322.25)
 scale = Vector2(1, 1.00696)
 texture = ExtResource("1_sajjf")
+
+[node name="CafeDoor" type="TextureRect" parent="Kitchen"]
+offset_left = -605.993
+offset_top = -244.617
+offset_right = -402.993
+offset_bottom = -152.617
+rotation = -0.462512
+texture = ExtResource("4_513gy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Kitchen/CafeDoor"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 31.0
+offset_right = 170.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Main Cafe"
+
+[node name="GardenDoor" type="TextureRect" parent="Kitchen"]
+offset_left = 422.256
+offset_top = -333.158
+offset_right = 625.256
+offset_bottom = -241.158
+rotation = 0.462512
+texture = ExtResource("4_513gy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Kitchen/GardenDoor"]
+layout_mode = 0
+offset_left = 46.0316
+offset_top = 27.8802
+offset_right = 174.032
+offset_bottom = 72.8802
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Garden"
 
 [node name="Cat1" type="Sprite2D" parent="."]
 position = Vector2(368, 552)

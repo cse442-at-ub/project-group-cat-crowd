@@ -10,18 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Cat Cafe Creator"
-run/main_scene="res://cafeScreen.tscn"
+config/name="Project-group-cat-crowd"
+run/main_scene="res://lounge.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-config/icon="res://Cat Shop/icon.svg"
+config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://Global.gd"
-
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

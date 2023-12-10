@@ -1,0 +1,155 @@
+[gd_scene load_steps=20 format=3 uid="uid://bewhwmfr8tgis"]
+
+[ext_resource type="Texture2D" uid="uid://blb5xidy3nde5" path="res://House_interior_by_Styl0o/living/individuals files/computer.png" id="1_1432m"]
+[ext_resource type="Script" path="res://Minigame.gd" id="1_ie5pj"]
+[ext_resource type="Texture2D" uid="uid://dux8pxhywgdrm" path="res://Art/cat1.png" id="1_r1w5t"]
+[ext_resource type="Texture2D" uid="uid://dm388tl8gpifi" path="res://Art/cat1fed.png" id="4_afga2"]
+[ext_resource type="Texture2D" uid="uid://cttja8wj7mfr0" path="res://Bathroom furniture set/Toothbrusher_red.png" id="6_cp8w5"]
+[ext_resource type="Script" path="res://Brush.gd" id="7_naf78"]
+[ext_resource type="Texture2D" uid="uid://ixhujxppbhen" path="res://Bathroom furniture set/Accessories_shampoo_9.png" id="8_b5yf6"]
+[ext_resource type="Script" path="res://Shampoo.gd" id="9_7nq8w"]
+[ext_resource type="Texture2D" uid="uid://sp1vphk7idyi" path="res://Menu Buttons/Large Buttons/Large Buttons/Start Button.png" id="10_qtdo1"]
+[ext_resource type="Texture2D" uid="uid://xyauyssr7fib" path="res://Images and Vectors/Exit Icon (1).png" id="11_tr1b4"]
+
+[sub_resource type="GDScript" id="GDScript_p1t0c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0s7u"]
+atlas = ExtResource("1_r1w5t")
+region = Rect2(0, 0, 107, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqu72"]
+atlas = ExtResource("4_afga2")
+region = Rect2(0, 0, 107, 146)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_twcsq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0s7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqu72")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_omn6q"]
+radius = 39.5251
+height = 149.62
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwc7m"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i0pf"]
+bg_color = Color(0.831373, 0.792157, 0.12549, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hakuo"]
+size = Vector2(24, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkqra"]
+size = Vector2(35, 72)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ie5pj")
+
+[node name="Computer" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(257, 317)
+scale = Vector2(45.606, 37.9028)
+texture = ExtResource("1_1432m")
+
+[node name="Cat" type="Sprite2D" parent="."]
+position = Vector2(257, 317)
+scale = Vector2(45.606, 37.9028)
+script = SubResource("GDScript_p1t0c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cat"]
+position = Vector2(6.92891, 3.21876)
+scale = Vector2(0.0388332, 0.0437312)
+sprite_frames = SubResource("SpriteFrames_twcsq")
+
+[node name="Area2D" type="Area2D" parent="Cat"]
+position = Vector2(6.92891, 3.21876)
+scale = Vector2(0.0388332, 0.0437312)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat/Area2D"]
+position = Vector2(-1.12924, 0.603302)
+shape = SubResource("CapsuleShape2D_omn6q")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 1044.0
+offset_top = 208.0
+offset_right = 1106.0
+offset_bottom = 563.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lwc7m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5i0pf")
+fill_mode = 3
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+
+[node name="Brush" type="Sprite2D" parent="."]
+position = Vector2(332, 343)
+texture = ExtResource("6_cp8w5")
+script = ExtResource("7_naf78")
+
+[node name="Button" type="Button" parent="Brush"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -14.0
+offset_top = -37.0
+offset_right = 8.0
+offset_bottom = 41.0
+
+[node name="Area2D" type="Area2D" parent="Brush"]
+position = Vector2(0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brush/Area2D"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_hakuo")
+
+[node name="Shampoo" type="Sprite2D" parent="."]
+position = Vector2(328, 462)
+texture = ExtResource("8_b5yf6")
+script = ExtResource("9_7nq8w")
+
+[node name="Button" type="Button" parent="Shampoo"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -23.0
+offset_top = -36.0
+offset_right = 24.0
+offset_bottom = 35.0
+
+[node name="Area2D" type="Area2D" parent="Shampoo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shampoo/Area2D"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_tkqra")
+
+[node name="Start" type="TouchScreenButton" parent="."]
+position = Vector2(225, 204)
+scale = Vector2(0.343333, 0.335)
+texture_normal = ExtResource("10_qtdo1")
+texture_pressed = ExtResource("10_qtdo1")
+
+[node name="BackToLounge" type="TouchScreenButton" parent="."]
+position = Vector2(1086, 22)
+scale = Vector2(1.27273, 1.31818)
+texture_normal = ExtResource("11_tr1b4")
+texture_pressed = ExtResource("11_tr1b4")
+
+[connection signal="area_entered" from="Cat/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Cat" method="_on_timer_timeout"]
+[connection signal="child_entered_tree" from="Brush" to="Cat" method="_on_brush_child_entered_tree"]
+[connection signal="child_exiting_tree" from="Brush" to="Cat" method="_on_brush_child_exiting_tree"]
+[connection signal="button_down" from="Brush/Button" to="Brush" method="_on_button_button_down"]
+[connection signal="button_up" from="Brush/Button" to="Brush" method="_on_button_button_up"]
+[connection signal="child_entered_tree" from="Shampoo" to="Cat" method="_on_shampoo_child_entered_tree"]
+[connection signal="child_exiting_tree" from="Shampoo" to="Cat" method="_on_shampoo_child_exiting_tree"]
+[connection signal="button_down" from="Shampoo/Button" to="Shampoo" method="_on_button_button_down"]
+[connection signal="button_up" from="Shampoo/Button" to="Shampoo" method="_on_button_button_up"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="BackToLounge" to="." method="_on_back_to_lounge_pressed"]
