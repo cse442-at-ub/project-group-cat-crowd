@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://lq6fkm38osu8"]
+[gd_scene load_steps=62 format=3 uid="uid://lq6fkm38osu8"]
 
 [ext_resource type="Script" path="res://Navigation.gd" id="1_jkrfa"]
 [ext_resource type="Texture2D" uid="uid://bps6tdqpest1p" path="res://House_interior_by_Styl0o/living/individuals files/living-wall.png" id="1_r0qct"]
@@ -13,11 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://id8mw5841gfw" path="res://BVA2/ballBounceHard.png" id="10_xf654"]
 [ext_resource type="Script" path="res://Ball.gd" id="11_e3b8t"]
 [ext_resource type="Script" path="res://LoungeCat1.gd" id="13_4caca"]
-[ext_resource type="Texture2D" uid="uid://2o5uda58u4np" path="res://cute-kitten-animation-RUN/cute-kitten-animation-RUN/sheets_500px/black.png" id="13_xymhd"]
+[ext_resource type="Texture2D" uid="uid://2o5uda58u4np" path="res://run/cute-kitten-animation-RUN/sheets_500px/black.png" id="13_xymhd"]
 [ext_resource type="Script" path="res://Cat2.gd" id="14_odfjg"]
-[ext_resource type="Texture2D" uid="uid://ub1km0bnysdx" path="res://cute-kitten-animation-MEOW/meow-sheets-500px/orange-marks-sheet.png" id="15_y36q0"]
+[ext_resource type="Texture2D" uid="uid://ub1km0bnysdx" path="res://meow/meow-sheets-500px/orange-marks-sheet.png" id="15_y36q0"]
 [ext_resource type="Texture2D" uid="uid://djghm8buy67p6" path="res://sleeping-kittens1.1/sleeping-kittens-new/grey-marks4.png" id="16_gjmck"]
-[ext_resource type="Texture2D" uid="uid://decsjf1uug2g7" path="res://PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/PS4 BUTTONS - Premium Assets/Main Buttons/Button - PS Triangle 2.png" id="19_2fo0b"]
+[ext_resource type="Shader" path="res://OutlineShader.gdshader" id="17_fboov"]
+[ext_resource type="Texture2D" uid="uid://qjxjrc7kevuq" path="res://mainCafe/Free_Kittens/textboxCafe.png" id="18_52ff2"]
 [ext_resource type="Texture2D" uid="uid://dv03610qirkrx" path="res://Images and Vectors/Cat Shop Icon.png" id="22_m7qtp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3up5"]
@@ -291,6 +292,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1p7x"]
 radius = 362.029
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ldybs"]
+shader = ExtResource("17_fboov")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 0.5
+
 [node name="Lounge" type="Node2D"]
 script = ExtResource("1_jkrfa")
 
@@ -314,7 +320,7 @@ texture = ExtResource("3_j52k1")
 
 [node name="Sofa" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(758, 452)
+position = Vector2(786, 450)
 scale = Vector2(6.94388, 5.75)
 texture = ExtResource("4_rnnu1")
 
@@ -323,18 +329,6 @@ texture_filter = 1
 position = Vector2(663, 208)
 scale = Vector2(4.11842, 4.13372)
 texture = ExtResource("5_xvvlb")
-
-[node name="Computer" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(111, 187)
-scale = Vector2(2.82609, 2.41667)
-texture = ExtResource("6_8oyvi")
-
-[node name="Door" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(1032.13, 344)
-scale = Vector2(4.98077, 4.95333)
-texture = ExtResource("7_oom72")
 
 [node name="Carpet" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -374,15 +368,17 @@ scale = Vector2(0.18675, 0.189)
 script = ExtResource("13_4caca")
 
 [node name="cat1_ani" type="AnimatedSprite2D" parent="Cat1"]
-position = Vector2(53.5471, -15.873)
+position = Vector2(-1943.77, 21.1641)
 scale = Vector2(2.06526, 2.12302)
 sprite_frames = SubResource("SpriteFrames_ne5lk")
 frame = 4
 frame_progress = 0.454884
 
 [node name="Area2D" type="Area2D" parent="Cat1"]
+position = Vector2(-1965.19, 79.3652)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cat1/Area2D"]
+position = Vector2(-21.4189, -5.29102)
 shape = SubResource("CircleShape2D_1ny2q")
 
 [node name="Cat 2" type="Sprite2D" parent="."]
@@ -407,20 +403,41 @@ scale = Vector2(0.160645, 0.125081)
 texture = ExtResource("16_gjmck")
 
 [node name="NavToCafe" type="TouchScreenButton" parent="."]
-position = Vector2(1150, 6)
-rotation = -4.71239
-scale = Vector2(0.166667, 0.160417)
-texture_normal = ExtResource("19_2fo0b")
-texture_pressed = ExtResource("19_2fo0b")
+position = Vector2(939, 158)
+scale = Vector2(4.94872, 5)
+texture_normal = ExtResource("7_oom72")
+texture_pressed = ExtResource("7_oom72")
+
+[node name="Door" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ldybs")
+position = Vector2(1032.13, 344)
+scale = Vector2(4.98077, 4.95333)
+texture = ExtResource("7_oom72")
+
+[node name="CafeDoor" type="TextureRect" parent="Door"]
+offset_left = -21.308
+offset_top = -55.5182
+offset_right = 21.692
+offset_bottom = -33.5182
+texture = ExtResource("18_52ff2")
+expand_mode = 1
 
 [node name="NavToShop" type="TouchScreenButton" parent="."]
-position = Vector2(1006, 7)
+position = Vector2(1061, 7)
 scale = Vector2(0.556338, 0.560976)
 texture_normal = ExtResource("22_m7qtp")
 texture_pressed = ExtResource("22_m7qtp")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(32, 133)
+scale = Vector2(3.63043, 2.69444)
+texture_normal = ExtResource("6_8oyvi")
+texture_pressed = ExtResource("6_8oyvi")
 
 [connection signal="input_event" from="Ball/Area2D" to="Ball" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Cat1/Area2D" to="Cat1" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Cat 2/Area2D" to="Cat 2" method="_on_area_2d_input_event"]
 [connection signal="pressed" from="NavToCafe" to="." method="_on_nav_to_cafe_pressed"]
 [connection signal="pressed" from="NavToShop" to="." method="_on_nav_to_shop_pressed"]
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]

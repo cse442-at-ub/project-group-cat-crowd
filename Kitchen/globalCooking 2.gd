@@ -1,0 +1,1 @@
+var notEmpty = 0

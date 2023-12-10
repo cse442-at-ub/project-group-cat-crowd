@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://dkf6gkryg4m7h"]
+[gd_scene load_steps=31 format=3 uid="uid://dkf6gkryg4m7h"]
 
 [ext_resource type="Script" path="res://Kitchen/LeftDoorButton.gd" id="1_6suom"]
 [ext_resource type="Texture2D" uid="uid://cc08l7m5eoopv" path="res://Art/kitchen.png" id="1_sajjf"]
 [ext_resource type="Texture2D" uid="uid://dux8pxhywgdrm" path="res://Art/cat1.png" id="2_dx61r"]
 [ext_resource type="Script" path="res://Kitchen/RightDoor.gd" id="2_n2cej"]
 [ext_resource type="Script" path="res://Kitchen/Cat1.gd" id="3_jgrvn"]
+[ext_resource type="Texture2D" uid="uid://sukbj4q2gn5h" path="res://mainCafe/Free_Kittens/textbox.png" id="4_513gy"]
 [ext_resource type="Texture2D" uid="uid://cdamuedoxyaou" path="res://Art/bubble.png" id="4_j4ucp"]
 [ext_resource type="Texture2D" uid="uid://dm388tl8gpifi" path="res://Art/cat1fed.png" id="5_g6ipd"]
 [ext_resource type="Texture2D" uid="uid://cminrm3sylrwo" path="res://Art/cat2.png" id="6_1phkv"]
@@ -15,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dbpyophb3qfej" path="res://Art/catfood2.png" id="10_xhkxx"]
 [ext_resource type="Script" path="res://Kitchen/Tree.gd" id="11_g5fuv"]
 [ext_resource type="Script" path="res://Kitchen/StoveButton.gd" id="15_367vw"]
+[ext_resource type="Texture2D" uid="uid://d3v4tamwfurj" path="res://Art/arrow.png" id="17_hpsp0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ilcpd"]
 animations = [{
@@ -80,6 +82,70 @@ height = 353.139
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wppr8"]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_60jgm"]
+emission_shape = 1
+emission_sphere_radius = 10.43
+particle_flag_disable_z = true
+gravity = Vector3(5, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.01
+scale_max = 3.0
+color = Color(1, 0.87451, 1, 1)
+turbulence_enabled = true
+turbulence_noise_strength = 8.58
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rmmmn"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+direction = Vector3(0, 100, 0)
+spread = 180.0
+gravity = Vector3(0, 30, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.01
+scale_max = 3.0
+color = Color(1, 0.87451, 1, 1)
+turbulence_enabled = true
+turbulence_noise_strength = 8.58
+
+[sub_resource type="Animation" id="Animation_usv3q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(604, 74)]
+}
+
+[sub_resource type="Animation" id="Animation_sdbll"]
+resource_name = "bounce"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(604, 74), Vector2(604, 50), Vector2(604, 74)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ndbcj"]
+_data = {
+"RESET": SubResource("Animation_usv3q"),
+"bounce": SubResource("Animation_sdbll")
+}
+
 [node name="Kitchen Screen" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -88,7 +154,7 @@ height = 353.139
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 43.0
-offset_top = 129.0
+offset_top = 70.0
 offset_right = 152.0
 offset_bottom = 585.0
 action_mode = 0
@@ -99,7 +165,7 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 1000.0
 offset_top = 85.0
-offset_right = 1118.0
+offset_right = 1109.0
 offset_bottom = 575.0
 script = ExtResource("2_n2cej")
 
@@ -107,6 +173,44 @@ script = ExtResource("2_n2cej")
 position = Vector2(576, 322.25)
 scale = Vector2(1, 1.00696)
 texture = ExtResource("1_sajjf")
+
+[node name="CafeDoor" type="TextureRect" parent="Kitchen"]
+offset_left = -605.993
+offset_top = -244.617
+offset_right = -402.993
+offset_bottom = -152.617
+rotation = -0.462512
+texture = ExtResource("4_513gy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Kitchen/CafeDoor"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 31.0
+offset_right = 170.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Main Cafe"
+
+[node name="GardenDoor" type="TextureRect" parent="Kitchen"]
+offset_left = 422.256
+offset_top = -333.158
+offset_right = 625.256
+offset_bottom = -241.158
+rotation = 0.462512
+texture = ExtResource("4_513gy")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Kitchen/GardenDoor"]
+layout_mode = 0
+offset_left = 46.0316
+offset_top = 27.8802
+offset_right = 174.032
+offset_bottom = 72.8802
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Garden"
 
 [node name="Cat1" type="Sprite2D" parent="."]
 position = Vector2(368, 552)
@@ -149,7 +253,7 @@ position = Vector2(0.000244141, 0)
 scale = Vector2(1.01493, 1.01493)
 
 [node name="CollisionFood" type="CollisionShape2D" parent="Catfood/AreaFood"]
-position = Vector2(-0.00012207, 38.2354)
+position = Vector2(-2.94128, 32.3527)
 shape = SubResource("CircleShape2D_0yf60")
 
 [node name="Tree" type="Sprite2D" parent="."]
@@ -178,6 +282,33 @@ scale = Vector2(-7, -12)
 shape = SubResource("RectangleShape2D_wppr8")
 shape_visible = false
 script = ExtResource("15_367vw")
+
+[node name="CPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(604, 534)
+scale = Vector2(3.75, 3.75)
+process_material = SubResource("ParticleProcessMaterial_60jgm")
+lifetime = 5.0
+explosiveness = 0.57
+randomness = 0.39
+
+[node name="CPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(937, 253)
+scale = Vector2(0.555, 2.4)
+process_material = SubResource("ParticleProcessMaterial_rmmmn")
+lifetime = 5.0
+explosiveness = 0.57
+randomness = 0.39
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(604, 74)
+rotation = 1.5708
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("17_hpsp0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
+libraries = {
+"": SubResource("AnimationLibrary_ndbcj")
+}
 
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]

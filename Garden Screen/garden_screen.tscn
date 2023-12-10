@@ -1,31 +1,49 @@
-[gd_scene load_steps=17 format=3 uid="uid://dx6nwy4nhdpo7"]
+[gd_scene load_steps=21 format=3 uid="uid://dx6nwy4nhdpo7"]
 
 [ext_resource type="Script" path="res://Garden Screen/garden_screen.gd" id="1_0w5wk"]
 [ext_resource type="Texture2D" uid="uid://b1xx7a34xke41" path="res://Garden Screen/2785102.png" id="2_6mpgy"]
 [ext_resource type="Texture2D" uid="uid://d05rqgftjcw43" path="res://Garden Screen/garden_background.jpg" id="2_bk40c"]
+[ext_resource type="Shader" path="res://OutlineShader.gdshader" id="3_6b760"]
 [ext_resource type="Script" path="res://Garden Screen/Button.gd" id="3_jr841"]
 [ext_resource type="Texture2D" uid="uid://cxjlhqeoj03wr" path="res://Garden Screen/two-brown-wooden-sign-board-arrow-shape-on-pole-stick-simple-doodle-cartoon-drawing-png.png" id="4_i8cj4"]
 [ext_resource type="Script" path="res://Garden Screen/navigateCafe.gd" id="5_hvmm6"]
 [ext_resource type="Texture2D" uid="uid://c248lw3rcra4u" path="res://Garden Screen/Marie.webp" id="7_la387"]
+[ext_resource type="Script" path="res://Garden Screen/Button2.gd" id="8_7or3q"]
 [ext_resource type="Script" path="res://Garden Screen/Marie.gd" id="8_bbpxg"]
 [ext_resource type="Texture2D" uid="uid://bal5of6y561nk" path="res://Garden Screen/IMG_7229-fotor-bg-remover-20231019222616.png" id="9_4sdm5"]
 [ext_resource type="Texture2D" uid="uid://dp8lbfxjpwxh2" path="res://Garden Screen/Screenshot 2023-10-19 at 19.53.52-fotor-bg-remover-20231019224351.png" id="10_ekmnx"]
 [ext_resource type="Script" path="res://Garden Screen/cat2.gd" id="11_u820y"]
 [ext_resource type="Texture2D" uid="uid://br3w64esfxtmw" path="res://Garden Screen/Screenshot 2023-10-19 at 19.53.45-fotor-bg-remover-20231019224341.png" id="12_2k0qt"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6m683"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_la387")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_4sdm5")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ylvnm"]
+shader = ExtResource("3_6b760")
+shader_parameter/line_color = Color(0.309804, 0, 0.109804, 1)
+shader_parameter/line_thickness = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_unis2"]
+shader = ExtResource("3_6b760")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 10.0
+
+[sub_resource type="Animation" id="Animation_lqwn2"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jadeu"]
+_data = {
+"new_animation": SubResource("Animation_lqwn2")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_clbwu"]
 radius = 141.437
@@ -64,6 +82,7 @@ tooltip_text = "Let's plant"
 
 [node name="Button" type="Button" parent="TextureRect"]
 editor_description = "Let's plant!"
+material = SubResource("ShaderMaterial_ylvnm")
 layout_mode = 0
 offset_left = 595.0
 offset_top = 350.0
@@ -75,6 +94,7 @@ flat = true
 script = ExtResource("3_jr841")
 
 [node name="navigateCafe" type="Button" parent="TextureRect"]
+material = SubResource("ShaderMaterial_unis2")
 layout_mode = 0
 offset_left = 71.0
 offset_top = 421.0
@@ -85,10 +105,45 @@ icon = ExtResource("4_i8cj4")
 flat = true
 script = ExtResource("5_hvmm6")
 
-[node name="Button3" type="Button" parent="TextureRect"]
+[node name="Label" type="Label" parent="TextureRect/navigateCafe"]
+layout_direction = 2
+layout_mode = 2
+offset_left = 197.023
+offset_top = 806.54
+offset_right = 1037.02
+offset_bottom = 1036.54
+rotation = 0.0837758
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 160
+text = "Main Cafe"
+
+[node name="Label2" type="Label" parent="TextureRect/navigateCafe"]
+layout_direction = 2
+layout_mode = 2
+offset_left = 269.896
+offset_top = 351.412
+offset_right = 1109.89
+offset_bottom = 581.412
+rotation = -0.0802028
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 160
+text = "Kitchen"
+
+[node name="Button2" type="Button" parent="TextureRect"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 63.0
+offset_top = 437.0
+offset_right = 264.0
+offset_bottom = 499.0
+flat = true
+script = ExtResource("8_7or3q")
+
+[node name="Img7229-fotor-bg-remover-20231019222616" type="Sprite2D" parent="."]
+position = Vector2(461.438, 505.892)
+scale = Vector2(0.331745, 0.331745)
+texture = ExtResource("9_4sdm5")
 
 [node name="Marie" type="Sprite2D" parent="."]
 position = Vector2(461, 507)
@@ -96,8 +151,10 @@ scale = Vector2(0.524013, 0.508329)
 texture = ExtResource("7_la387")
 script = ExtResource("8_bbpxg")
 
-[node name="cat_anim" type="AnimatedSprite2D" parent="Marie"]
-sprite_frames = SubResource("SpriteFrames_6m683")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Marie"]
+libraries = {
+"": SubResource("AnimationLibrary_jadeu")
+}
 
 [node name="Area2D" type="Area2D" parent="Marie"]
 
@@ -122,5 +179,6 @@ shape = SubResource("CircleShape2D_sijle")
 
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/navigateCafe" to="TextureRect/navigateCafe" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Button2" to="TextureRect/Button2" method="_on_pressed"]
 [connection signal="input_event" from="Marie/Area2D" to="Marie" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="cat2/Area2D" to="cat2" method="_on_area_2d_input_event"]

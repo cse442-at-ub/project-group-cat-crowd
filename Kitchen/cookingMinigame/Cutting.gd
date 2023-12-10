@@ -5,54 +5,19 @@ var positionEnd: Vector2
 var threshold = 500
 var xCount = 0
 var yCount = 0
-var cutVeggies = []
 var currVeggie
 var cutCount = 0
 var veggieCount = 0
 
-var tom = 1
-var onion = 2
-var cucumber = 3
-var corn = 4
+var veggieArray = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if GlobalVeggies.onion:
-		veggieCount += 1
-	if GlobalVeggies.cucumber:
-		veggieCount += 1
-	if GlobalVeggies.corn:
-		veggieCount += 1
-	if GlobalVeggies.tomato:
-		veggieCount += 1
-		cutCount += 1
-		$Tomato/AnimationPlayer.play("tomato")
-		currVeggie = "tomato"
-		cutVeggies.append(tom)
-		$horizontalLine.show()
-		$Cut.show()
-	if GlobalVeggies.onion and cutCount == 0:
-		cutCount += 1
-		$Onion/AnimationPlayer.play("onion")
-		cutVeggies.append(onion)
-		currVeggie = "onion"
-		$horizontalLine.show()
-		$Cut.show()
-	if GlobalVeggies.cucumber and cutCount == 0:
-		cutCount += 1
-		$Cucumber/AnimationPlayer.play("cucumber")
-		cutVeggies.append(cucumber)
-		currVeggie = "cucumber"
-		$verticalLine.show()
-		$Cut.show()
-	if GlobalVeggies.corn and cutCount == 0:
-		cutCount += 1
-		$Corn/AnimationPlayer.play(corn)
-		cutVeggies.append("corn")
-		currVeggie = "corn"
-		$verticalLine.show()
-		$Cut.show()
-
+	for x in GlobalVeggies.currRecipe:
+		veggieArray.append(x)
+	currVeggie = veggieArray[0]
+	enterAnim()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -81,78 +46,67 @@ func touchDirection():
 	return direction
 
 func cutVeggie():
-	if currVeggie == "corn" or currVeggie == "cucumber":
+	if xCount >= 3:
+		$horizontalLine.hide()
+		$verticalLine.show()
+		if xCount == 3:
+			xCount += 1
+			if yCount > 0:
+				GlobalVeggies.score -= 350 * (yCount)
+			yCount = 0
 		if yCount == 3:
+			if xCount > 4:
+				GlobalVeggies.score -= 350 * (xCount-4)
 			$"Great!".show()
 			yCount = 0
 			xCount = 0
-			nextVeggie()
-			
-	else:
-		if xCount >= 3:
-			$horizontalLine.hide()
-			$verticalLine.show()
-			if xCount == 3:
-				xCount += 1
-				yCount = 0
-			if yCount == 3:
-				$"Great!".show()
-				yCount = 0
-				xCount = 0
-				nextVeggie()
+			cutCount += 1
+			leaveAnim()
+			if cutCount < veggieArray.size():
+				currVeggie = veggieArray[cutCount]
+				enterAnim()
+		
 
-func nextVeggie():
-	if currVeggie == "tomato":
-		$verticalLine.hide()
-		$horizontalLine.hide()
-		$Tomato/AnimationPlayer.play("tomLeave")
-		await get_tree().create_timer(1.0).timeout
-		$"Great!".hide()
-	elif currVeggie == "onion":
-		$verticalLine.hide()
-		$horizontalLine.hide()
-		$Onion/AnimationPlayer.play("onionLeave")
-		await get_tree().create_timer(1.0).timeout
-		$"Great!".hide()
-	elif currVeggie == "cucumber":
-		$verticalLine.hide()
-		$horizontalLine.hide()
-		$Cucumber/AnimationPlayer.play("cucLeave")
-		await get_tree().create_timer(1.0).timeout
-		$"Great!".hide()
-	else:
-		$verticalLine.hide()
-		$horizontalLine.hide()
-		$Corn/AnimationPlayer.play("cornLeave")
-		await get_tree().create_timer(1.0).timeout
-		$"Great!".hide()
-	if cutCount < veggieCount:
-		if GlobalVeggies.tomato and cutVeggies.find(tom) == -1:
-			cutCount += 1
-			$Tomato/AnimationPlayer.play("tomato")
-			cutVeggies.append(tom)
-			currVeggie = "tomato"
-			$horizontalLine.show()
-		elif GlobalVeggies.onion and cutVeggies.find(onion) == -1:
-			cutCount += 1
-			cutVeggies.append(onion)
-			$Onion/AnimationPlayer.play("onion")
-			currVeggie = "onion"
-			$horizontalLine.show()
-		elif GlobalVeggies.cucumber and cutVeggies.find(cucumber) == -1:
-			cutCount += 1
-			cutVeggies.append(cucumber)
-			$Cucumber/AnimationPlayer.play("cucumber")
-			currVeggie = "cucumber"
-			$verticalLine.show()
-		elif GlobalVeggies.corn and cutVeggies.find(corn) == -1:
-			cutCount += 1
-			cutVeggies.append(corn)
-			$Corn/AnimationPlayer.play("corn")
-			currVeggie = "corn"
-			$verticalLine.show()
-		else:
-			pass
-	else:
-		get_tree().change_scene_to_file("res://Kitchen/cookingMinigame/cookingGame.tscn")
-	pass
+func enterAnim():
+	match currVeggie:
+		"tomato":
+			$Tomato/AnimationPlayer.play("enter")
+			GlobalVeggies.tomato -= 1
+		"onion":
+			$Onion/AnimationPlayer.play("enter")
+			GlobalVeggies.onion -= 1
+		"corn":
+			$Corn/AnimationPlayer.play("enter")
+			GlobalVeggies.corn -= 1
+		"cucumber":
+			$Cucumber/AnimationPlayer.play("enter")
+			GlobalVeggies.cucumber -= 1
+		"potato":
+			$Potato/AnimationPlayer.play("enter")
+			GlobalVeggies.potato -= 1
+		"carrot":
+			$Carrot/AnimationPlayer.play("enter")
+			GlobalVeggies.carrot -= 1
+	$horizontalLine.show()
+	$Cut.show()
+	
+func leaveAnim():
+	match currVeggie:
+		"tomato":
+			$Tomato/AnimationPlayer.play("leave")
+		"onion":
+			$Onion/AnimationPlayer.play("leave")
+		"corn":
+			$Corn/AnimationPlayer.play("leave")
+		"cucumber":
+			$Cucumber/AnimationPlayer.play("leave")
+		"potato":
+			$Potato/AnimationPlayer.play("leave")
+		"carrot":
+			$Carrot/AnimationPlayer.play("leave")
+	$verticalLine.hide()
+	$horizontalLine.hide()
+	await get_tree().create_timer(1.0).timeout
+	$"Great!".hide()
+	if cutCount == veggieArray.size():
+		get_tree().change_scene_to_file("res://Kitchen/cookingMinigame/frying.tscn")

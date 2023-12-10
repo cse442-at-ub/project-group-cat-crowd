@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=67 format=3 uid="uid://i58q7o3xprky"]
 
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
@@ -28,14 +28,34 @@
 [ext_resource type="Texture2D" uid="uid://bd8oobb57lb3w" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten7.png" id="17_7r105"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/shop-button.gd" id="17_c5dm7"]
 [ext_resource type="Texture2D" uid="uid://d2vsg5l10an0f" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten8.png" id="18_xjd7e"]
+[ext_resource type="Texture2D" uid="uid://fshbg31yaqr7" path="res://mainCafe/output-onlinejpgtools (1).png" id="20_rfnyq"]
 [ext_resource type="Texture2D" uid="uid://cke7q1hgljxv0" path="res://mainCafe/buttons/equipIcon.png" id="29_efvnj"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/catEquip.gd" id="30_uo8ed"]
 [ext_resource type="Script" path="res://mainCafe/CanvasLayer.gd" id="32_0tiko"]
 [ext_resource type="Texture2D" uid="uid://c0lv505fwgrte" path="res://mainCafe/IMG_1128.jpg" id="32_px6ur"]
 [ext_resource type="FontFile" uid="uid://dvqwvwbvstckb" path="res://mainCafe/Chalkboard-Regular.ttf" id="33_efr7g"]
+[ext_resource type="Texture2D" uid="uid://b1pbm7gegav6h" path="res://mainCafe/CatsBigSize/BurmeseCat 1 2.png" id="33_qpxfr"]
 [ext_resource type="Texture2D" uid="uid://cpsgb3nbypiud" path="res://mainCafe/greencheckimg.png" id="34_4yrvg"]
 [ext_resource type="Texture2D" uid="uid://b7le7msig8byl" path="res://mainCafe/kisspng-check-mark-checkbox-clip-art-yes-5ac17c66130666.2548912615226297340779-removebg-preview.png" id="34_e1scr"]
+[ext_resource type="Texture2D" uid="uid://234x2eqsp7pv" path="res://mainCafe/CatsBigSize/HimalayanCat 1.png" id="34_g3ojp"]
+[ext_resource type="Texture2D" uid="uid://bcpxuhel6ruv7" path="res://mainCafe/CatsBigSize/PersianCat 1 2.png" id="35_m0dct"]
 [ext_resource type="Script" path="res://mainCafe/ColorButton.gd" id="36_4doux"]
+[ext_resource type="Texture2D" uid="uid://6t4qm0xn1y8e" path="res://mainCafe/CatsBigSize/RagdollCat 1 2.png" id="36_kn4r4"]
+[ext_resource type="Texture2D" uid="uid://ttkux4x7pvkl" path="res://mainCafe/CatsBigSize/RussianBlue 1 2.png" id="37_crojr"]
+[ext_resource type="Texture2D" uid="uid://dsyb0y6nbqufd" path="res://mainCafe/CatsBigSize/ScottishFold 1 2.png" id="38_co3sn"]
+[ext_resource type="Texture2D" uid="uid://cw41pn45cnhaf" path="res://mainCafe/CatsBigSize/SiameseCat 1 2.png" id="39_2b1r0"]
+[ext_resource type="Texture2D" uid="uid://bjj4g3gixwbgy" path="res://mainCafe/CatsBigSize/SphynxCat 1 2.png" id="40_u8fav"]
+[ext_resource type="Script" path="res://mainCafe/selectedFromSystem.gd" id="41_d4m5h"]
+[ext_resource type="Texture2D" uid="uid://dcmw35iph8dsl" path="res://mainCafe/transparentFrame.png" id="41_pb8f4"]
+[ext_resource type="Texture2D" uid="uid://biqsqef26ttcm" path="res://mainCafe/AccessoryPics/Option 1.png" id="46_dggpo"]
+[ext_resource type="Texture2D" uid="uid://sukbj4q2gn5h" path="res://mainCafe/Free_Kittens/textbox.png" id="46_y4k0e"]
+[ext_resource type="Script" path="res://mainCafe/CatAccessoriesMenu.gd" id="47_04aqu"]
+[ext_resource type="Texture2D" uid="uid://crltgd35nlp4k" path="res://mainCafe/AccessoryPics/Option 2.png" id="47_v02w6"]
+[ext_resource type="Texture2D" uid="uid://bl28od6k6d3ft" path="res://mainCafe/AccessoryPics/Option 3.png" id="48_uanqn"]
+[ext_resource type="Texture2D" uid="uid://dp645nfjyryrl" path="res://mainCafe/AccessoryPics/Option 4.png" id="49_mik02"]
+[ext_resource type="Texture2D" uid="uid://c8vd3bewk3lhp" path="res://mainCafe/AccessoryPics/Option 5.png" id="50_xwiu1"]
+[ext_resource type="Texture2D" uid="uid://7wyagv71pcra" path="res://mainCafe/AccessoryPics/Option 6.png" id="51_dcxi1"]
+[ext_resource type="Texture2D" uid="uid://bf7ack1p10fpf" path="res://mainCafe/AccessoryPics/Option 7.png" id="52_dtl2l"]
 
 [sub_resource type="GDScript" id="GDScript_klpkk"]
 script/source = "extends Node
@@ -44,16 +64,17 @@ script/source = "extends Node
 
 
 func _ready():
-	pass
+	$CanvasLayer/TextureRect/selectedFromSystem.frame = Global.selectedCatFrame
 	#var scene = preload(\"equippingSystem\").instantiate()
 	#var scenescript = scene.get_node(\"exitSys\")
 	#scenescript.get_frame.connect(Callable(self,\"on_get_frame\"))
 
 
 	
-func on_get_frame(frame):
+func on_get_frame(_frame):
 	print(\"scene\")
-	$selectedCat2.texture = frame
+	#$selectedCat2.texture = frame
+
 	
 
 func _on_button_pressed():
@@ -182,6 +203,41 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_el24c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_qpxfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_g3ojp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_m0dct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_kn4r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_crojr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_2b1r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_co3sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_u8fav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_pb8f4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c5jtv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7knro"]
@@ -234,16 +290,21 @@ position = Vector2(1468, 916)
 scale = Vector2(2.01281, 1.73526)
 texture = ExtResource("2_rx5ql")
 
+[node name="Overlay" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(1468, 916)
+scale = Vector2(2.01281, 1.73526)
+texture = ExtResource("20_rfnyq")
+
 [node name="Image2" type="Sprite2D" parent="."]
 position = Vector2(133, 51.5)
 scale = Vector2(1.11111, 1.02826)
 texture = ExtResource("9_k687a")
 
 [node name="LoungeButton" type="Button" parent="."]
-offset_left = 407.0
-offset_top = -108.0
-offset_right = 982.0
-offset_bottom = 95.0
+offset_left = 410.0
+offset_top = -105.0
+offset_right = 985.0
+offset_bottom = 98.0
 scale = Vector2(0.526965, 0.607897)
 action_mode = 0
 icon = ExtResource("10_k036k")
@@ -258,29 +319,29 @@ autoplay = "default"
 frame_progress = 0.944868
 
 [node name="KitchenButton" type="Button" parent="."]
-offset_left = 408.0
-offset_top = 91.0
-offset_right = 997.0
-offset_bottom = 301.0
+offset_left = 410.0
+offset_top = 80.0
+offset_right = 999.0
+offset_bottom = 290.0
 scale = Vector2(0.526965, 0.607897)
 icon = ExtResource("12_ex7ly")
 script = ExtResource("13_3yysu")
 metadata/_edit_use_anchors_ = true
 
 [node name="GardenButton" type="Button" parent="."]
-offset_left = 980.0
-offset_top = 79.0
-offset_right = 1546.0
-offset_bottom = 286.0
+offset_left = 970.0
+offset_top = 80.0
+offset_right = 1536.0
+offset_bottom = 287.0
 scale = Vector2(0.526965, 0.607897)
 icon = ExtResource("13_j1vkb")
 script = ExtResource("15_6hgod")
 metadata/_edit_use_anchors_ = true
 
 [node name="ShopButton" type="Button" parent="."]
-offset_left = 967.0
+offset_left = 970.0
 offset_top = -105.0
-offset_right = 1520.0
+offset_right = 1523.0
 offset_bottom = 89.0
 scale = Vector2(0.526965, 0.607897)
 icon = ExtResource("14_udo3l")
@@ -294,10 +355,10 @@ position = Vector2(751, 624)
 zoom = Vector2(0.365, 0.365)
 
 [node name="catEquip" type="Button" parent="."]
-offset_left = 722.0
-offset_top = -109.0
-offset_right = 1206.0
-offset_bottom = 289.0
+offset_left = 725.0
+offset_top = -54.0
+offset_right = 1076.0
+offset_bottom = 238.0
 scale = Vector2(0.692398, 0.718273)
 icon = ExtResource("29_efvnj")
 flat = true
@@ -317,6 +378,18 @@ offset_right = 2139.42
 offset_bottom = 1097.66
 scale = Vector2(0.59186, 0.54961)
 texture = ExtResource("32_px6ur")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="selectedFromSystem" type="AnimatedSprite2D" parent="CanvasLayer/TextureRect"]
+position = Vector2(774.417, 238.503)
+scale = Vector2(2.63929, 3.02725)
+sprite_frames = SubResource("SpriteFrames_el24c")
+frame = 7
+frame_progress = 0.82256
+script = ExtResource("41_d4m5h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/TextureRect/selectedFromSystem"]
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
@@ -328,6 +401,48 @@ scale = Vector2(0.461876, 0.502911)
 mouse_filter = 1
 texture_normal = ExtResource("34_e1scr")
 texture_hover = ExtResource("34_4yrvg")
+
+[node name="Shirt" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(741.729, 360.255)
+scale = Vector2(3.68146, 5.04868)
+texture = ExtResource("46_dggpo")
+
+[node name="BFF" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(741.729, 280.199)
+scale = Vector2(3.96811, 3.96811)
+texture = ExtResource("47_v02w6")
+
+[node name="Tophat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(758.625, -54.5841)
+scale = Vector2(3.48719, 3.48719)
+texture = ExtResource("48_uanqn")
+
+[node name="Tie" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(734.971, 385.728)
+scale = Vector2(4.03758, 4.03758)
+texture = ExtResource("49_mik02")
+
+[node name="Bowtie" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(790.728, 302.032)
+scale = Vector2(3.87902, 3.87902)
+texture = ExtResource("50_xwiu1")
+
+[node name="Necklace" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(721.454, 276.56)
+scale = Vector2(3.8283, 3.8283)
+texture = ExtResource("51_dcxi1")
+
+[node name="Bell" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(765.384, 265.643)
+scale = Vector2(3.31191, 3.31191)
+texture = ExtResource("52_dtl2l")
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
@@ -351,15 +466,46 @@ clear_button_enabled = true
 
 [node name="selectedCat2" type="TextureRect" parent="."]
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 58.0
 
-[node name="MenuButton" type="MenuButton" parent="."]
-offset_left = 1274.0
-offset_top = -69.0
-offset_right = 1498.0
-offset_bottom = -17.0
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+offset_left = 275.0
+offset_top = 310.0
+offset_right = 843.0
+offset_bottom = 458.0
+texture = ExtResource("46_y4k0e")
+
+[node name="Cat Accessories" type="MenuButton" parent="NinePatchRect2"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 52.0
+offset_right = 399.0
+offset_bottom = 104.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.384314, 0.384314, 0.384314, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "Cat Accessories"
+script = ExtResource("47_04aqu")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 840.0
+offset_top = 310.0
+offset_right = 1408.0
+offset_bottom = 458.0
+texture = ExtResource("46_y4k0e")
+
+[node name="InteriorColors" type="MenuButton" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 52.0
+offset_right = 399.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.384314, 0.384314, 0.384314, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "Interior Colors"
 script = ExtResource("36_4doux")

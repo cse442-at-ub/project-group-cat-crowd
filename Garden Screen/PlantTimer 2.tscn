@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bteabpi5ffwuj"]
+
+[ext_resource type="Script" path="res://Garden Screen/cucumber_timer.gd" id="1_h5pmp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="cucumber_timer" type="Timer" parent="."]
+wait_time = 10.0
+script = ExtResource("1_h5pmp")

@@ -11,15 +11,21 @@ config_version=5
 [application]
 
 config/name="Cat Cafe Creator"
-run/main_scene="res://cafeScreen.tscn"
+run/main_scene="res://startPage/startScreen.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://Cat Shop/icon.svg"
 
 [autoload]
 
 Global="*res://Global.gd"
-GlobalVeggies="*res://Kitchen/cookingMinigame/vegetables.gd"
 PlantGame="*res://plant_game.gd"
+GlobalCooking="*res://Kitchen/globalCooking.gd"
+GlobalVeggies="*res://vegetables.gd"
+GardenTimer="*res://garden_timer.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input_devices]
 
@@ -28,3 +34,4 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

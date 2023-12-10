@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dnxq1qxtsm7t0"]
+[gd_scene load_steps=16 format=3 uid="uid://dnxq1qxtsm7t0"]
 
 [ext_resource type="Texture2D" uid="uid://b74lxcte37mym" path="res://Garden Screen/shop_background.jpg" id="1_pebxl"]
 [ext_resource type="Texture2D" uid="uid://4udxbf46twwo" path="res://Garden Screen/tomato.png" id="2_qm0wd"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Garden Screen/cucumber_button.gd" id="7_obp05"]
 [ext_resource type="Script" path="res://Garden Screen/potato_button.gd" id="9_ajpyv"]
 [ext_resource type="Script" path="res://Garden Screen/carrot_button.gd" id="11_b0h10"]
+[ext_resource type="Texture2D" uid="uid://dl6jxff4pdxe" path="res://Art/Price Tag.png" id="13_csbjs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lj2cc"]
 radius = 450.22
@@ -24,8 +25,17 @@ script/source = "extends TouchScreenButton
 
 
 func _on_pressed():
-	PlantGame.tomato = true
-	get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
+	if PlantGame.tomato == false:
+		PlantGame.tomato = true
+		if Global.cat_coins >= 10:
+			Global.cat_coins = Global.cat_coins - 10
+			PlantGame.plant_purchased[\"Tomato\"] = true
+		else:
+			$\"../../CurrencyPopup\".visible = true
+			await get_tree().create_timer(3.0).timeout
+			$\"../../CurrencyPopup\".visible = false
+		get_tree().change_scene_to_file(\"res://Garden Screen/planting.tscn\")
+
 "
 
 [node name="plant_shop" type="Node2D"]
@@ -74,11 +84,95 @@ shape = SubResource("CircleShape2D_lj2cc")
 script = ExtResource("9_ajpyv")
 
 [node name="carrot_button" type="TouchScreenButton" parent="TextureRect"]
-position = Vector2(766, 346)
+position = Vector2(766, 350)
 scale = Vector2(0.317768, 0.291918)
 texture_normal = ExtResource("7_e2cd1")
 shape = SubResource("CircleShape2D_lj2cc")
 script = ExtResource("11_b0h10")
+
+[node name="PriceTag" type="Sprite2D" parent="."]
+position = Vector2(252.25, 293)
+scale = Vector2(0.539886, 0.588235)
+texture = ExtResource("13_csbjs")
+
+[node name="Label" type="Label" parent="PriceTag"]
+offset_left = -134.0
+offset_top = -51.0
+offset_right = 131.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "      10"
+
+[node name="PriceTag2" type="Sprite2D" parent="."]
+position = Vector2(585.25, 293)
+scale = Vector2(0.539886, 0.588235)
+texture = ExtResource("13_csbjs")
+
+[node name="Label2" type="Label" parent="PriceTag2"]
+offset_left = -132.148
+offset_top = -52.7
+offset_right = 132.852
+offset_bottom = 49.3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "      30"
+
+[node name="PriceTag4" type="Sprite2D" parent="."]
+position = Vector2(905.25, 293)
+scale = Vector2(0.539886, 0.588235)
+texture = ExtResource("13_csbjs")
+
+[node name="Label3" type="Label" parent="PriceTag4"]
+offset_left = -134.0
+offset_top = -51.0
+offset_right = 131.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "      35"
+
+[node name="PriceTag3" type="Sprite2D" parent="."]
+position = Vector2(252.25, 580)
+scale = Vector2(0.539886, 0.588235)
+texture = ExtResource("13_csbjs")
+
+[node name="Label4" type="Label" parent="PriceTag3"]
+offset_left = -134.0
+offset_top = -49.3001
+offset_right = 131.0
+offset_bottom = 52.6999
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "      20"
+
+[node name="PriceTag5" type="Sprite2D" parent="."]
+position = Vector2(585.25, 580)
+scale = Vector2(0.539886, 0.588235)
+texture = ExtResource("13_csbjs")
+
+[node name="Label5" type="Label" parent="PriceTag5"]
+offset_left = -134.0
+offset_top = -49.3001
+offset_right = 131.0
+offset_bottom = 52.6999
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "      25"
+
+[node name="PriceTag6" type="Sprite2D" parent="."]
+position = Vector2(905.25, 573)
+scale = Vector2(0.539886, 0.588235)
+texture = ExtResource("13_csbjs")
+
+[node name="Label6" type="Label" parent="PriceTag6"]
+offset_left = -135.852
+offset_top = -47.6
+offset_right = 129.148
+offset_bottom = 54.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "      15"
 
 [connection signal="pressed" from="TextureRect/tomato-button" to="TextureRect/tomato-button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/corn_button" to="TextureRect/corn_button" method="_on_pressed"]

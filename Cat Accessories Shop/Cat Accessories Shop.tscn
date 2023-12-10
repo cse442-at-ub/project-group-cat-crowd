@@ -172,6 +172,7 @@ script = ExtResource("26_4dsqg")
 
 [node name="CurrencyPopup" type="NinePatchRect" parent="TextureRect"]
 visible = false
+layout_mode = 0
 offset_left = 464.0
 offset_top = 232.0
 offset_right = 833.0
