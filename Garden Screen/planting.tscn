@@ -85,6 +85,12 @@ position = Vector2(-0.25946, -13.2676)
 scale = Vector2(0.0736827, 0.0639447)
 texture = ExtResource("6_j16en")
 
+[node name="onion_plant4" type="Sprite2D" parent="TextureRect/onion"]
+visible = false
+position = Vector2(-0.259399, -13.2676)
+scale = Vector2(0.0736827, 0.0639446)
+texture = ExtResource("7_graej")
+
 [node name="cucumber" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(983, 514)
 scale = Vector2(6, 6)
@@ -108,6 +114,12 @@ visible = false
 position = Vector2(-1.57397, -12.4342)
 scale = Vector2(0.0736827, 0.0639447)
 texture = ExtResource("6_j16en")
+
+[node name="cucumber_plant4" type="Sprite2D" parent="TextureRect/cucumber"]
+visible = false
+position = Vector2(-0.0927734, -13.101)
+scale = Vector2(0.0736827, 0.0639446)
+texture = ExtResource("7_graej")
 
 [node name="corn" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(775, 514)
@@ -133,6 +145,12 @@ position = Vector2(-0.407227, -10.4342)
 scale = Vector2(0.0736827, 0.0639447)
 texture = ExtResource("6_j16en")
 
+[node name="corn_plant4" type="Sprite2D" parent="TextureRect/corn"]
+visible = false
+position = Vector2(-0.592651, -13.101)
+scale = Vector2(0.0736827, 0.0639446)
+texture = ExtResource("7_graej")
+
 [node name="potato" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(1185, 511)
 scale = Vector2(6, 6)
@@ -156,6 +174,12 @@ visible = false
 position = Vector2(-1.0929, -12.601)
 scale = Vector2(0.0736827, 0.0639447)
 texture = ExtResource("6_j16en")
+
+[node name="potato_plant4" type="Sprite2D" parent="TextureRect/potato"]
+visible = false
+position = Vector2(-0.592651, -12.601)
+scale = Vector2(0.0736827, 0.0639446)
+texture = ExtResource("7_graej")
 
 [node name="carrot" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(1270, 468)
@@ -181,6 +205,12 @@ visible = false
 position = Vector2(953.63, -272.351)
 scale = Vector2(5.05254, 3.41414)
 texture = ExtResource("6_j16en")
+
+[node name="carrot_plant4" type="Sprite2D" parent="TextureRect/carrot"]
+visible = false
+position = Vector2(976.505, -290.148)
+scale = Vector2(5.05253, 3.41414)
+texture = ExtResource("7_graej")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="TextureRect"]
 position = Vector2(288, 228)

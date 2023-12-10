@@ -45,6 +45,9 @@ func _process(_delta):
 	elif 4<GardenTimer.onionTimer and GardenTimer.onionTimer<6:
 		$TextureRect/onion/onion_plant2.hide()
 		$TextureRect/onion/onion_plant3.show()
+	elif 6<GardenTimer.onionTimer and GardenTimer.onionTimer<8:
+		$TextureRect/onion/onion_plant3.hide()
+		$TextureRect/onion/onion_plant4.show()
 		GardenTimer.growOnion = false
 		
 	if 2<GardenTimer.cucTimer and GardenTimer.cucTimer<4:
@@ -53,6 +56,9 @@ func _process(_delta):
 	elif 4<GardenTimer.cucTimer and GardenTimer.cucTimer<6:
 		$TextureRect/cucumber/cucumber_plant2.hide()
 		$TextureRect/cucumber/cucumber_plant3.show()
+	elif 6<GardenTimer.cucTimer and GardenTimer.cucTimer<8:
+		$TextureRect/cucumber/cucumber_plant3.hide()
+		$TextureRect/cucumber/cucumber_plant4.show()
 		GardenTimer.growCuc = false
 		
 	if 2<GardenTimer.cornTimer and GardenTimer.cornTimer<4:
@@ -61,6 +67,9 @@ func _process(_delta):
 	elif 4<GardenTimer.cornTimer and GardenTimer.cornTimer<6:
 		$TextureRect/corn/corn_plant2.hide()
 		$TextureRect/corn/corn_plant3.show()
+	elif 6<GardenTimer.cornTimer and GardenTimer.cornTimer<8:
+		$TextureRect/corn/corn_plant3.hide()
+		$TextureRect/corn/corn_plant4.show()
 		GardenTimer.growCorn = false
 		
 	if 2<GardenTimer.potTimer and GardenTimer.potTimer<4:
@@ -69,6 +78,9 @@ func _process(_delta):
 	elif 4<GardenTimer.potTimer and GardenTimer.potTimer<6:
 		$TextureRect/potato/potato_plant2.hide()
 		$TextureRect/potato/potato_plant3.show()
+	elif 6<GardenTimer.potTimer and GardenTimer.potTimer<8:
+		$TextureRect/potato/potato_plant3.hide()
+		$TextureRect/potato/potato_plant4.show()
 		GardenTimer.growPot = false
 	
 	if 2<GardenTimer.carrTimer and GardenTimer.carrTimer<4:
@@ -77,5 +89,8 @@ func _process(_delta):
 	elif 4<GardenTimer.carrTimer and GardenTimer.carrTimer<6:
 		$TextureRect/carrot/carrot_plant2.hide()
 		$TextureRect/carrot/carrot_plant3.show()
+	elif 6<GardenTimer.carrTimer and GardenTimer.carrTimer<8:
+		$TextureRect/carrot/carrot_plant3.hide()
+		$TextureRect/carrot/carrot_plant4.show()
 		GardenTimer.growCarr = false
 	

@@ -311,3 +311,8 @@ func _on_cucumber_sandwich_pressed():
 		GlobalVeggies.currRecipe = GlobalVeggies.cucSandwich
 	list.erase("cucumber")
 	canCook = true
+
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://Garden Screen/garden_screen.tscn")

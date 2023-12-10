@@ -4,7 +4,7 @@ extends Node
 var corn = 0
 var onion = 0
 var cucumber = 0
-var tomato = 0
+var tomato = 1
 var potato = 0
 var carrot = 0
 
@@ -33,3 +33,5 @@ var recipies = [potatoSoup, carrotSoup, onionSoup, cornChowder, tomatoSoup,
 				pasta, steak, tacos, cucSandwich]
 
 var currRecipe = {}
+
+var score = 5000
