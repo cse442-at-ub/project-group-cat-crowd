@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bqn8hvhuttrit"]
+[gd_scene load_steps=26 format=3 uid="uid://bqn8hvhuttrit"]
 
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/cookingGame.gd" id="1_r3p4k"]
 [ext_resource type="Texture2D" uid="uid://ctnllgja4o5jj" path="res://Kitchen/cookingMinigame/Board.png" id="1_r88wp"]
@@ -12,10 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://cpmbx6abf1p3l" path="res://Kitchen/cookingMinigame/cucumber.png" id="7_ocbrn"]
 [ext_resource type="Texture2D" uid="uid://dohjhw6s1cvnm" path="res://Kitchen/cookingMinigame/playButton.bmp" id="11_nw5q4"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/startGame.gd" id="12_w5c01"]
+[ext_resource type="Texture2D" uid="uid://d1bcgwe84x7lp" path="res://Images and Vectors/Coins Amount (1).png" id="13_gn31x"]
 [ext_resource type="Texture2D" uid="uid://7vyub2piyyeo" path="res://Images and Vectors/Cat Shop Background.png" id="13_sanxo"]
 [ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="13_tw4mc"]
 [ext_resource type="Script" path="res://Kitchen/cookingMinigame/KitchenGameExit.gd" id="14_18cyx"]
 [ext_resource type="Texture2D" uid="uid://vkfu8qp3tvqu" path="res://Images and Vectors/Rectangle 11.png" id="14_jay70"]
+[ext_resource type="Script" path="res://Cat Shop/CurrencyLabel.gd" id="14_n13cc"]
 [ext_resource type="Texture2D" uid="uid://c4v4010p63waj" path="res://Images and Vectors/Rectangle 12.png" id="15_5sqca"]
 [ext_resource type="Texture2D" uid="uid://cyd4itwc2iu81" path="res://Kitchen/cookingMinigame/Recipies/soup.png" id="15_8kw3n"]
 [ext_resource type="Texture2D" uid="uid://3f8ajdwn1ek2" path="res://Kitchen/cookingMinigame/Recipies/salad.png" id="16_407ai"]
@@ -117,6 +119,25 @@ offset_bottom = 589.0
 action_mode = 0
 text = "Recipies"
 script = ExtResource("3_64215")
+
+[node name="Cat Coin Background" type="TextureRect" parent="."]
+offset_left = 18.0
+offset_top = 7.0
+offset_right = 269.0
+offset_bottom = 73.0
+texture = ExtResource("13_gn31x")
+
+[node name="Cat Coin Amount" type="Label" parent="Cat Coin Background"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 9.0
+offset_right = 224.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("14_n13cc")
 
 [node name="PlayButton" type="Button" parent="."]
 offset_left = 484.0
