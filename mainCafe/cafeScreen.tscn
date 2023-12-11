@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=65 format=3 uid="uid://i58q7o3xprky"]
 
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
@@ -53,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://dp645nfjyryrl" path="res://mainCafe/AccessoryPics/Option 4.png" id="49_mik02"]
 [ext_resource type="Texture2D" uid="uid://c8vd3bewk3lhp" path="res://mainCafe/AccessoryPics/Option 5.png" id="50_xwiu1"]
 [ext_resource type="Texture2D" uid="uid://7wyagv71pcra" path="res://mainCafe/AccessoryPics/Option 6.png" id="51_dcxi1"]
+[ext_resource type="Script" path="res://mainCafe/LineEdit1.gd" id="52_53qut"]
 [ext_resource type="Texture2D" uid="uid://bf7ack1p10fpf" path="res://mainCafe/AccessoryPics/Option 7.png" id="52_dtl2l"]
 
 [sub_resource type="GDScript" id="GDScript_klpkk"]
@@ -444,44 +445,44 @@ texture = ExtResource("43_rsgu6")
 
 [node name="Shirt" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(838.036, 347.519)
-scale = Vector2(3.68146, 5.04868)
+position = Vector2(844.794, 329.324)
+scale = Vector2(3.05797, 4.98555)
 texture = ExtResource("46_dggpo")
 
 [node name="BFF" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(838.036, 249.268)
-scale = Vector2(3.96811, 3.96811)
+position = Vector2(854.993, 256.573)
+scale = Vector2(3.68358, 3.68358)
 texture = ExtResource("47_v02w6")
 
 [node name="Tophat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(849.863, -90.9735)
-scale = Vector2(3.48719, 3.48719)
+position = Vector2(851.552, -52.7646)
+scale = Vector2(3.2896, 3.2896)
 texture = ExtResource("48_uanqn")
 
 [node name="Tie" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(831.278, 323.866)
-scale = Vector2(4.03758, 4.03758)
+position = Vector2(858.311, 302.032)
+scale = Vector2(3.59658, 3.59658)
 texture = ExtResource("49_mik02")
 
 [node name="Bowtie" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(831.278, 240.17)
+position = Vector2(848.173, 218.337)
 scale = Vector2(3.87902, 3.87902)
 texture = ExtResource("50_xwiu1")
 
 [node name="Necklace" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(834.657, 221.976)
-scale = Vector2(3.8283, 3.8283)
+position = Vector2(858.311, 218.337)
+scale = Vector2(2.05115, 3.90574)
 texture = ExtResource("51_dcxi1")
 
 [node name="Bell" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(844.794, 221.976)
-scale = Vector2(3.31191, 3.31191)
+position = Vector2(856.622, 240.17)
+scale = Vector2(3.56223, 3.56224)
 texture = ExtResource("52_dtl2l")
 
 [node name="LineEdit" type="LineEdit" parent="CanvasLayer/TextureRect"]
@@ -503,6 +504,7 @@ theme_override_styles/read_only = SubResource("StyleBoxEmpty_nukme")
 placeholder_text = "enter name"
 max_length = 20
 clear_button_enabled = true
+script = ExtResource("52_53qut")
 
 [node name="selectedCat2" type="TextureRect" parent="."]
 offset_right = 40.0

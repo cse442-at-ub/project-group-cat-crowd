@@ -6,5 +6,4 @@ func _ready():
 
 func _on_texture_button_pressed():
 	line_edit.editable = false
-	print("yes")
-	print(line_edit.text)
+	Global.lineText = line_edit.text
