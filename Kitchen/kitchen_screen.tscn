@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dkf6gkryg4m7h"]
+[gd_scene load_steps=33 format=3 uid="uid://dkf6gkryg4m7h"]
 
 [ext_resource type="Script" path="res://Kitchen/LeftDoorButton.gd" id="1_6suom"]
 [ext_resource type="Texture2D" uid="uid://cc08l7m5eoopv" path="res://Art/kitchen.png" id="1_sajjf"]
@@ -17,6 +17,8 @@
 [ext_resource type="Script" path="res://Kitchen/Tree.gd" id="11_g5fuv"]
 [ext_resource type="Script" path="res://Kitchen/StoveButton.gd" id="15_367vw"]
 [ext_resource type="Texture2D" uid="uid://d3v4tamwfurj" path="res://Art/arrow.png" id="17_hpsp0"]
+[ext_resource type="Texture2D" uid="uid://d1bcgwe84x7lp" path="res://Images and Vectors/Coins Amount (1).png" id="18_13p4h"]
+[ext_resource type="Script" path="res://Cat Shop/CurrencyLabel.gd" id="19_sxkpo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ilcpd"]
 animations = [{
@@ -309,6 +311,26 @@ texture = ExtResource("17_hpsp0")
 libraries = {
 "": SubResource("AnimationLibrary_ndbcj")
 }
+
+[node name="Cat Coin Background" type="TextureRect" parent="."]
+offset_left = 205.0
+offset_top = 4.0
+offset_right = 357.0
+offset_bottom = 44.0
+texture = ExtResource("18_13p4h")
+expand_mode = 1
+
+[node name="Cat Coin Amount" type="Label" parent="Cat Coin Background"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -3.0
+offset_right = 161.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("19_sxkpo")
 
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_pressed"]

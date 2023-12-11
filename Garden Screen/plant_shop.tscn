@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dnxq1qxtsm7t0"]
+[gd_scene load_steps=20 format=3 uid="uid://dnxq1qxtsm7t0"]
 
 [ext_resource type="Texture2D" uid="uid://b74lxcte37mym" path="res://Garden Screen/shop_background.jpg" id="1_pebxl"]
 [ext_resource type="Texture2D" uid="uid://4udxbf46twwo" path="res://Garden Screen/tomato.png" id="2_qm0wd"]
@@ -13,6 +13,10 @@
 [ext_resource type="Script" path="res://Garden Screen/potato_button.gd" id="9_ajpyv"]
 [ext_resource type="Script" path="res://Garden Screen/carrot_button.gd" id="11_b0h10"]
 [ext_resource type="Texture2D" uid="uid://dl6jxff4pdxe" path="res://Art/Price Tag.png" id="13_csbjs"]
+[ext_resource type="Texture2D" uid="uid://d1bcgwe84x7lp" path="res://Images and Vectors/Coins Amount (1).png" id="14_w5rr5"]
+[ext_resource type="Script" path="res://Cat Shop/CurrencyLabel.gd" id="15_urtdv"]
+[ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="16_v03u7"]
+[ext_resource type="Script" path="res://Garden Screen/Exit ButtonPlant.gd" id="17_kfvdh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lj2cc"]
 radius = 450.22
@@ -174,9 +178,37 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 62
 text = "      15"
 
+[node name="Cat Coin Background" type="TextureRect" parent="."]
+offset_left = 18.0
+offset_top = 7.0
+offset_right = 269.0
+offset_bottom = 73.0
+texture = ExtResource("14_w5rr5")
+
+[node name="Cat Coin Amount" type="Label" parent="Cat Coin Background"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 9.0
+offset_right = 224.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("15_urtdv")
+
+[node name="Exit Button" type="Button" parent="."]
+offset_left = 1077.0
+offset_top = 8.0
+offset_right = 1141.0
+offset_bottom = 72.0
+theme = ExtResource("16_v03u7")
+script = ExtResource("17_kfvdh")
+
 [connection signal="pressed" from="TextureRect/tomato-button" to="TextureRect/tomato-button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/corn_button" to="TextureRect/corn_button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/onion_button" to="TextureRect/onion_button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/cucumber_button" to="TextureRect/cucumber_button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/potato_button" to="TextureRect/potato_button" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/carrot_button" to="TextureRect/carrot_button" method="_on_pressed"]
+[connection signal="pressed" from="Exit Button" to="Exit Button" method="_on_pressed"]

@@ -6,21 +6,29 @@ func _on_item_pressed(id):
 	var newID = get_popup().get_item_text(id)
 	match newID:
 		"Red":
-			$"../../ParallaxBackground/Img1060".modulate = Color(0.862745, 0.0784314, 0.235294, 1)
+			Global.colorSelected = "Red"
+			get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 		"Cyan":
-			$"../../ParallaxBackground/Img1060".modulate = Color(0, 1, 1, 1)
+			Global.colorSelected = "Cyan"
+			get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 		"Green":
-			$"../../ParallaxBackground/Img1060".modulate = Color(0.560784, 0.737255, 0.560784, 1)
+			Global.colorSelected = "Green"
+			get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 		"Blue":
-			$"../../ParallaxBackground/Img1060".modulate = Color(0.254902, 0.411765, 0.882353, 1)
+			Global.colorSelected = "Blue"
+			get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 		"Purple":
-			$"../../ParallaxBackground/Img1060".modulate = Color(0.6, 0.196078, 0.8, 1)
+			Global.colorSelected = "Purple"
+			get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 		"Pink":
-			$"../../ParallaxBackground/Img1060".modulate = Color(1, 0, 1, 1)
+			Global.colorSelected = "Pink"
+			get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 		"Midnight":
-			$"../../ParallaxBackground/Img1060".modulate = Color(0.411765, 0.411765, 0.411765, 1)
+			Global.colorSelected = "Midnight"
+			get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 		"Gold":
-			$"../../ParallaxBackground/Img1060".modulate = Color(0.854902, 0.647059, 0.12549, 1)
+			Global.colorSelected = "Gold"
+			get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
