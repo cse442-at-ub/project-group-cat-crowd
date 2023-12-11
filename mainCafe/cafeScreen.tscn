@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://i58q7o3xprky"]
+[gd_scene load_steps=64 format=3 uid="uid://i58q7o3xprky"]
 
 [ext_resource type="Script" path="res://mainCafe/catOnChair.gd" id="1_swnrk"]
 [ext_resource type="Script" path="res://mainCafe/catOnTower.gd" id="1_y6b2j"]
@@ -28,25 +28,23 @@
 [ext_resource type="Texture2D" uid="uid://bd8oobb57lb3w" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten7.png" id="17_7r105"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/shop-button.gd" id="17_c5dm7"]
 [ext_resource type="Texture2D" uid="uid://d2vsg5l10an0f" path="res://mainCafe/Free_Kittens/Sleeping-Kittens-black/black-kitten8.png" id="18_xjd7e"]
-[ext_resource type="Texture2D" uid="uid://fshbg31yaqr7" path="res://mainCafe/output-onlinejpgtools (1).png" id="20_rfnyq"]
+[ext_resource type="Texture2D" uid="uid://cvw5ll6ahasay" path="res://mainCafe/bgoverlay.png" id="20_d8vmv"]
 [ext_resource type="Texture2D" uid="uid://cke7q1hgljxv0" path="res://mainCafe/buttons/equipIcon.png" id="29_efvnj"]
 [ext_resource type="Script" path="res://mainCafe/buttonScripts/catEquip.gd" id="30_uo8ed"]
 [ext_resource type="Script" path="res://mainCafe/CanvasLayer.gd" id="32_0tiko"]
 [ext_resource type="Texture2D" uid="uid://c0lv505fwgrte" path="res://mainCafe/IMG_1128.jpg" id="32_px6ur"]
 [ext_resource type="FontFile" uid="uid://dvqwvwbvstckb" path="res://mainCafe/Chalkboard-Regular.ttf" id="33_efr7g"]
-[ext_resource type="Texture2D" uid="uid://b1pbm7gegav6h" path="res://mainCafe/CatsBigSize/BurmeseCat 1 2.png" id="33_qpxfr"]
 [ext_resource type="Texture2D" uid="uid://cpsgb3nbypiud" path="res://mainCafe/greencheckimg.png" id="34_4yrvg"]
 [ext_resource type="Texture2D" uid="uid://b7le7msig8byl" path="res://mainCafe/kisspng-check-mark-checkbox-clip-art-yes-5ac17c66130666.2548912615226297340779-removebg-preview.png" id="34_e1scr"]
 [ext_resource type="Texture2D" uid="uid://234x2eqsp7pv" path="res://mainCafe/CatsBigSize/HimalayanCat 1.png" id="34_g3ojp"]
-[ext_resource type="Texture2D" uid="uid://bcpxuhel6ruv7" path="res://mainCafe/CatsBigSize/PersianCat 1 2.png" id="35_m0dct"]
 [ext_resource type="Script" path="res://mainCafe/ColorButton.gd" id="36_4doux"]
-[ext_resource type="Texture2D" uid="uid://6t4qm0xn1y8e" path="res://mainCafe/CatsBigSize/RagdollCat 1 2.png" id="36_kn4r4"]
-[ext_resource type="Texture2D" uid="uid://ttkux4x7pvkl" path="res://mainCafe/CatsBigSize/RussianBlue 1 2.png" id="37_crojr"]
-[ext_resource type="Texture2D" uid="uid://dsyb0y6nbqufd" path="res://mainCafe/CatsBigSize/ScottishFold 1 2.png" id="38_co3sn"]
-[ext_resource type="Texture2D" uid="uid://cw41pn45cnhaf" path="res://mainCafe/CatsBigSize/SiameseCat 1 2.png" id="39_2b1r0"]
-[ext_resource type="Texture2D" uid="uid://bjj4g3gixwbgy" path="res://mainCafe/CatsBigSize/SphynxCat 1 2.png" id="40_u8fav"]
-[ext_resource type="Script" path="res://mainCafe/selectedFromSystem.gd" id="41_d4m5h"]
-[ext_resource type="Texture2D" uid="uid://dcmw35iph8dsl" path="res://mainCafe/transparentFrame.png" id="41_pb8f4"]
+[ext_resource type="Texture2D" uid="uid://o8yxmqntlguv" path="res://mainCafe/CatsBigSize/BurmeseCat 1.png" id="36_lkuwf"]
+[ext_resource type="Texture2D" uid="uid://duntfvgdthn8a" path="res://mainCafe/CatsBigSize/PersianCat 1.png" id="38_fq852"]
+[ext_resource type="Texture2D" uid="uid://b3oabubjibcko" path="res://mainCafe/CatsBigSize/RagdollCat 1.png" id="39_p2ane"]
+[ext_resource type="Texture2D" uid="uid://minamg861nfv" path="res://mainCafe/CatsBigSize/RussianBlue 1.png" id="40_h6hhe"]
+[ext_resource type="Texture2D" uid="uid://d0ohqn6un4a56" path="res://mainCafe/CatsBigSize/ScottishFold 1.png" id="41_58m3w"]
+[ext_resource type="Texture2D" uid="uid://bkxbmr4i30do7" path="res://mainCafe/CatsBigSize/SiameseCat 1.png" id="42_d7cut"]
+[ext_resource type="Texture2D" uid="uid://bmkv5g2takpee" path="res://mainCafe/CatsBigSize/SphynxCat 1.png" id="43_rsgu6"]
 [ext_resource type="Texture2D" uid="uid://biqsqef26ttcm" path="res://mainCafe/AccessoryPics/Option 1.png" id="46_dggpo"]
 [ext_resource type="Texture2D" uid="uid://sukbj4q2gn5h" path="res://mainCafe/Free_Kittens/textbox.png" id="46_y4k0e"]
 [ext_resource type="Script" path="res://mainCafe/CatAccessoriesMenu.gd" id="47_04aqu"]
@@ -60,45 +58,84 @@
 [sub_resource type="GDScript" id="GDScript_klpkk"]
 script/source = "extends Node
 
-
-
-
 func _ready():
-	$CanvasLayer/TextureRect/selectedFromSystem.frame = Global.selectedCatFrame
-	#var scene = preload(\"equippingSystem\").instantiate()
-	#var scenescript = scene.get_node(\"exitSys\")
-	#scenescript.get_frame.connect(Callable(self,\"on_get_frame\"))
-
-
-	
-func on_get_frame(_frame):
-	print(\"scene\")
-	#$selectedCat2.texture = frame
-
-	
+	var frame = Global.selectedCatFrame
+	match frame:
+		1:
+			$CanvasLayer/TextureRect/BurmeseCat.visible = true
+			$CanvasLayer/TextureRect/HimalayanCat.visible = false
+			$CanvasLayer/TextureRect/PersianCat.visible = false
+			$CanvasLayer/TextureRect/RagdollCat.visible = false
+			$CanvasLayer/TextureRect/RussianBlue.visible = false
+			$CanvasLayer/TextureRect/ScottishFold.visible = false
+			$CanvasLayer/TextureRect/SiameseCat.visible = false
+			$CanvasLayer/TextureRect/SpynxCat.visible = false
+		2:
+			$CanvasLayer/TextureRect/BurmeseCat.visible = false
+			$CanvasLayer/TextureRect/HimalayanCat.visible = true
+			$CanvasLayer/TextureRect/PersianCat.visible = false
+			$CanvasLayer/TextureRect/RagdollCat.visible = false
+			$CanvasLayer/TextureRect/RussianBlue.visible = false
+			$CanvasLayer/TextureRect/ScottishFold.visible = false
+			$CanvasLayer/TextureRect/SiameseCat.visible = false
+			$CanvasLayer/TextureRect/SpynxCat.visible = false
+		3:
+			$CanvasLayer/TextureRect/BurmeseCat.visible = false
+			$CanvasLayer/TextureRect/HimalayanCat.visible = false
+			$CanvasLayer/TextureRect/PersianCat.visible = true
+			$CanvasLayer/TextureRect/RagdollCat.visible = false
+			$CanvasLayer/TextureRect/RussianBlue.visible = false
+			$CanvasLayer/TextureRect/ScottishFold.visible = false
+			$CanvasLayer/TextureRect/SiameseCat.visible = false
+			$CanvasLayer/TextureRect/SpynxCat.visible = false
+		4:
+			$CanvasLayer/TextureRect/BurmeseCat.visible = false
+			$CanvasLayer/TextureRect/HimalayanCat.visible = false
+			$CanvasLayer/TextureRect/PersianCat.visible = false
+			$CanvasLayer/TextureRect/RagdollCat.visible = true
+			$CanvasLayer/TextureRect/RussianBlue.visible = false
+			$CanvasLayer/TextureRect/ScottishFold.visible = false
+			$CanvasLayer/TextureRect/SiameseCat.visible = false
+			$CanvasLayer/TextureRect/SpynxCat.visible = false
+		5:
+			$CanvasLayer/TextureRect/BurmeseCat.visible = false
+			$CanvasLayer/TextureRect/HimalayanCat.visible = false
+			$CanvasLayer/TextureRect/PersianCat.visible = false
+			$CanvasLayer/TextureRect/RagdollCat.visible = false
+			$CanvasLayer/TextureRect/RussianBlue.visible = true
+			$CanvasLayer/TextureRect/ScottishFold.visible = false
+			$CanvasLayer/TextureRect/SiameseCat.visible = false
+			$CanvasLayer/TextureRect/SpynxCat.visible = false
+		6:
+			$CanvasLayer/TextureRect/BurmeseCat.visible = false
+			$CanvasLayer/TextureRect/HimalayanCat.visible = false
+			$CanvasLayer/TextureRect/PersianCat.visible = false
+			$CanvasLayer/TextureRect/RagdollCat.visible = false
+			$CanvasLayer/TextureRect/RussianBlue.visible = false
+			$CanvasLayer/TextureRect/ScottishFold.visible = true
+			$CanvasLayer/TextureRect/SiameseCat.visible = false
+			$CanvasLayer/TextureRect/SpynxCat.visible = false
+		7:
+			$CanvasLayer/TextureRect/BurmeseCat.visible = false
+			$CanvasLayer/TextureRect/HimalayanCat.visible = false
+			$CanvasLayer/TextureRect/PersianCat.visible = false
+			$CanvasLayer/TextureRect/RagdollCat.visible = false
+			$CanvasLayer/TextureRect/RussianBlue.visible = false
+			$CanvasLayer/TextureRect/ScottishFold.visible = false
+			$CanvasLayer/TextureRect/SiameseCat.visible = true
+			$CanvasLayer/TextureRect/SpynxCat.visible = false
+		8:
+			$CanvasLayer/TextureRect/BurmeseCat.visible = false
+			$CanvasLayer/TextureRect/HimalayanCat.visible = false
+			$CanvasLayer/TextureRect/PersianCat.visible = false
+			$CanvasLayer/TextureRect/RagdollCat.visible = false
+			$CanvasLayer/TextureRect/RussianBlue.visible = false
+			$CanvasLayer/TextureRect/ScottishFold.visible = false
+			$CanvasLayer/TextureRect/SiameseCat.visible = false
+			$CanvasLayer/TextureRect/SpynxCat.visible = true
 
 func _on_button_pressed():
 	get_tree().change_scene(\"res://lounge.tscn\")
-
-
-func _on_area_2d_input_event(_viewport, _event, _shape_idx):
-	pass # Replace with function body.
-	
-	
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
 "
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hdb81"]
@@ -203,41 +240,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_el24c"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("33_qpxfr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_g3ojp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_m0dct")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_kn4r4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_crojr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_2b1r0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_co3sn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_u8fav")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_pb8f4")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c5jtv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7knro"]
@@ -293,7 +295,7 @@ texture = ExtResource("2_rx5ql")
 [node name="Overlay" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(1468, 916)
 scale = Vector2(2.01281, 1.73526)
-texture = ExtResource("20_rfnyq")
+texture = ExtResource("20_d8vmv")
 
 [node name="Image2" type="Sprite2D" parent="."]
 position = Vector2(133, 51.5)
@@ -381,16 +383,6 @@ texture = ExtResource("32_px6ur")
 expand_mode = 1
 stretch_mode = 2
 
-[node name="selectedFromSystem" type="AnimatedSprite2D" parent="CanvasLayer/TextureRect"]
-position = Vector2(774.417, 238.503)
-scale = Vector2(2.63929, 3.02725)
-sprite_frames = SubResource("SpriteFrames_el24c")
-frame = 7
-frame_progress = 0.82256
-script = ExtResource("41_d4m5h")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/TextureRect/selectedFromSystem"]
-
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
 offset_left = 1375.33
@@ -402,45 +394,93 @@ mouse_filter = 1
 texture_normal = ExtResource("34_e1scr")
 texture_hover = ExtResource("34_4yrvg")
 
+[node name="BurmeseCat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(731.592, 267.462)
+scale = Vector2(3.78019, 3.78019)
+texture = ExtResource("36_lkuwf")
+
+[node name="HimalayanCat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(903.429, 265.931)
+scale = Vector2(3.11338, 3.11338)
+texture = ExtResource("34_g3ojp")
+
+[node name="PersianCat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(783.847, 263.083)
+scale = Vector2(2.92569, 2.92569)
+texture = ExtResource("38_fq852")
+
+[node name="RagdollCat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(714.696, 207.42)
+scale = Vector2(4.05291, 4.05291)
+texture = ExtResource("39_p2ane")
+
+[node name="RussianBlue" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(795.796, 249.268)
+scale = Vector2(3.57961, 3.57961)
+texture = ExtResource("40_h6hhe")
+
+[node name="ScottishFold" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(802.972, 276.652)
+scale = Vector2(3.16574, 3.16574)
+texture = ExtResource("41_58m3w")
+
+[node name="SiameseCat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(954.617, 283.838)
+scale = Vector2(4.36937, 4.36937)
+texture = ExtResource("42_d7cut")
+
+[node name="SpynxCat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
+visible = false
+position = Vector2(827.899, 247.448)
+scale = Vector2(3.83797, 3.18082)
+texture = ExtResource("43_rsgu6")
+
 [node name="Shirt" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(741.729, 360.255)
+position = Vector2(838.036, 347.519)
 scale = Vector2(3.68146, 5.04868)
 texture = ExtResource("46_dggpo")
 
 [node name="BFF" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(741.729, 280.199)
+position = Vector2(838.036, 249.268)
 scale = Vector2(3.96811, 3.96811)
 texture = ExtResource("47_v02w6")
 
 [node name="Tophat" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(758.625, -54.5841)
+position = Vector2(849.863, -90.9735)
 scale = Vector2(3.48719, 3.48719)
 texture = ExtResource("48_uanqn")
 
 [node name="Tie" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(734.971, 385.728)
+position = Vector2(831.278, 323.866)
 scale = Vector2(4.03758, 4.03758)
 texture = ExtResource("49_mik02")
 
 [node name="Bowtie" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(790.728, 302.032)
+position = Vector2(831.278, 240.17)
 scale = Vector2(3.87902, 3.87902)
 texture = ExtResource("50_xwiu1")
 
 [node name="Necklace" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(721.454, 276.56)
+position = Vector2(834.657, 221.976)
 scale = Vector2(3.8283, 3.8283)
 texture = ExtResource("51_dcxi1")
 
 [node name="Bell" type="Sprite2D" parent="CanvasLayer/TextureRect"]
 visible = false
-position = Vector2(765.384, 265.643)
+position = Vector2(844.794, 221.976)
 scale = Vector2(3.31191, 3.31191)
 texture = ExtResource("52_dtl2l")
 

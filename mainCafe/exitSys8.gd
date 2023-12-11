@@ -2,8 +2,8 @@ extends Button
 
 
 func _on_pressed():
-	if Global.cat_purchased["Burmese"] == true:
-		Global.selectedCatFrame = 1
+	if Global.cat_purchased["Sphynx"] == true:
+		Global.selectedCatFrame = 8
 		get_tree().change_scene_to_file("res://mainCafe/cafeScreen.tscn")
 	else:
 		$"../CurrencyPopup".visible = true

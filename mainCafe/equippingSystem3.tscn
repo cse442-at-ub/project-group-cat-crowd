@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://rv1tvtr7cum0"]
+[gd_scene load_steps=10 format=3 uid="uid://dju3quua0qbjs"]
 
-[ext_resource type="Texture2D" uid="uid://bw0if8p0cons0" path="res://mainCafe/buttons/arrow.png" id="1_dyi7u"]
-[ext_resource type="Script" path="res://mainCafe/rightArrow.gd" id="2_oh3t4"]
-[ext_resource type="Texture2D" uid="uid://vdor7aqyos3o" path="res://mainCafe/buttons/IMG_7AE63B21CF36-1.jpeg" id="2_woghs"]
-[ext_resource type="Script" path="res://mainCafe/exitSys.gd" id="3_gh5e0"]
-[ext_resource type="Texture2D" uid="uid://o8yxmqntlguv" path="res://mainCafe/CatsBigSize/BurmeseCat 1.png" id="4_boc2l"]
-[ext_resource type="Texture2D" uid="uid://x61x1m47s0iu" path="res://Images and Vectors/TextBox1.png" id="6_npu8n"]
-[ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="7_pb3o7"]
-[ext_resource type="Script" path="res://Cat Shop/Exit Button.gd" id="8_cgb8b"]
-[ext_resource type="Texture2D" uid="uid://kryujskjqrvr" path="res://mainCafe/IMG_563492E0C1AC-1.jpeg" id="11_ugs20"]
+[ext_resource type="Texture2D" uid="uid://vdor7aqyos3o" path="res://mainCafe/buttons/IMG_7AE63B21CF36-1.jpeg" id="1_7r6da"]
+[ext_resource type="Texture2D" uid="uid://bw0if8p0cons0" path="res://mainCafe/buttons/arrow.png" id="2_i1y2f"]
+[ext_resource type="Script" path="res://mainCafe/exitSys3.gd" id="2_svdcc"]
+[ext_resource type="Texture2D" uid="uid://kryujskjqrvr" path="res://mainCafe/IMG_563492E0C1AC-1.jpeg" id="4_ej8sc"]
+[ext_resource type="Script" path="res://mainCafe/rightArrow3.gd" id="4_qhx1k"]
+[ext_resource type="Texture2D" uid="uid://duntfvgdthn8a" path="res://mainCafe/CatsBigSize/PersianCat 1.png" id="6_scfyo"]
+[ext_resource type="Texture2D" uid="uid://x61x1m47s0iu" path="res://Images and Vectors/TextBox1.png" id="7_12wju"]
+[ext_resource type="Theme" uid="uid://cssfqltobv5if" path="res://Cat Shop/Exit Button.tres" id="8_2f33h"]
+[ext_resource type="Script" path="res://Cat Shop/Exit Button.gd" id="9_7rn5y"]
 
 [node name="equippingSystem" type="Node2D"]
 
@@ -18,8 +18,8 @@ offset_top = 507.0
 offset_right = 430.0
 offset_bottom = 646.0
 scale = Vector2(0.769067, 0.717381)
-icon = ExtResource("2_woghs")
-script = ExtResource("3_gh5e0")
+icon = ExtResource("1_7r6da")
+script = ExtResource("2_svdcc")
 
 [node name="rightArrow" type="Button" parent="."]
 offset_left = 888.0
@@ -27,9 +27,9 @@ offset_top = 337.0
 offset_right = 1296.0
 offset_bottom = 671.0
 scale = Vector2(0.495287, 0.478762)
-icon = ExtResource("1_dyi7u")
+icon = ExtResource("2_i1y2f")
 flat = true
-script = ExtResource("2_oh3t4")
+script = ExtResource("4_qhx1k")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 follow_viewport_enabled = true
@@ -37,12 +37,12 @@ follow_viewport_enabled = true
 [node name="Img563492e0c1ac-1" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(575, 319.938)
 scale = Vector2(0.643991, 0.600315)
-texture = ExtResource("11_ugs20")
+texture = ExtResource("4_ej8sc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(562, 353)
 scale = Vector2(1.58036, 1.58036)
-texture = ExtResource("4_boc2l")
+texture = ExtResource("6_scfyo")
 
 [node name="CurrencyPopup" type="NinePatchRect" parent="."]
 visible = false
@@ -50,7 +50,7 @@ offset_left = 5.0
 offset_top = 187.0
 offset_right = 374.0
 offset_bottom = 533.0
-texture = ExtResource("6_npu8n")
+texture = ExtResource("7_12wju")
 
 [node name="Label" type="Label" parent="CurrencyPopup"]
 layout_mode = 2
@@ -68,8 +68,8 @@ offset_left = 1072.0
 offset_top = 15.0
 offset_right = 1136.0
 offset_bottom = 79.0
-theme = ExtResource("7_pb3o7")
-script = ExtResource("8_cgb8b")
+theme = ExtResource("8_2f33h")
+script = ExtResource("9_7rn5y")
 
 [connection signal="pressed" from="exitSys" to="exitSys" method="_on_pressed"]
 [connection signal="pressed" from="rightArrow" to="rightArrow" method="_on_pressed"]
